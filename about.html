@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="vi" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Về dự án Tiếng Mường — Tầm nhìn, lộ trình & cách đóng góp | muong.wiki</title>
+<meta name="description" content="Tìm hiểu về dự án từ điển Việt–Mường cộng đồng: ý nghĩa logo cạp váy, tầm nhìn bảo tồn ngôn ngữ, lộ trình hướng tới Google Translate và cách bạn có thể đóng góp.">
+<meta name="keywords" content="về dự án tiếng Mường, bảo tồn tiếng Mường, từ điển Mường, Google Translate tiếng Mường, văn hóa dân tộc Mường">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://muong.wiki/ve-du-an/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://muong.wiki/ve-du-an/">
+<meta property="og:title" content="Về dự án Tiếng Mường — Tầm nhìn, lộ trình & cách đóng góp">
+<meta property="og:description" content="Dự án cộng đồng phi lợi nhuận xây dựng từ điển Việt–Mường đầu tiên. Hướng tới Google Translate.">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Tiếng Mường">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","url":"https://muong.wiki/ve-du-an/","name":"Về dự án Tiếng Mường","inLanguage":"vi","breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://muong.wiki/"},{"@type":"ListItem","position":2,"name":"Về dự án","item":"https://muong.wiki/ve-du-an/"}]}},
+{"@type":"Organization","@id":"https://muong.wiki/#org","name":"Tiếng Mường","url":"https://muong.wiki/","description":"Dự án cộng đồng phi lợi nhuận bảo tồn và số hóa tiếng Mường","foundingDate":"2025"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Tại sao dự án này ra đời?","acceptedAnswer":{"@type":"Answer","text":"Tiếng Mường là ngôn ngữ của hơn 1,4 triệu người nhưng chưa có từ điển số hóa toàn diện và chưa có mặt trên Google Translate. Dự án ra đời để ghi lại trước khi quá muộn."}},
+{"@type":"Question","name":"Logo có ý nghĩa gì?","acceptedAnswer":{"@type":"Answer","text":"Logo lấy cảm hứng từ hoa văn cạp váy Mường. Hình thoi 4 góc tượng trưng cho 4 vùng phương ngữ. Đường kẻ vàng là hoa văn thổ cẩm. Vòng tròn trung tâm rỗng biểu trưng cho sự tiếp nối."}},
+{"@type":"Question","name":"Tiền đóng góp văn hóa đi đâu?","acceptedAnswer":{"@type":"Answer","text":"Tiền chuyển trực tiếp qua tài khoản chính thức của Hội VHNT tỉnh Phú Thọ hoặc Sở VHTTDL — không qua cá nhân. Có báo cáo sau mỗi dự án."}}
+]}
+]}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+<style>
+:root{
+  --d1:#071510; --d2:#0F2A1C; --d3:#1A3D2C; --d4:#0D3040;
+  --g1:#D4A017; --g2:#E8762A; --e1:#C0553A; --teal:#1A7A6E;
+  --cream:#FAF7F0; --ink2:#4A4A42; --ink3:#8A8A7E;
+  --bD:rgba(255,255,255,.08); --R:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cream);overflow-x:hidden;}
+
+/* ── SHARED ── */
+.wrap{max-width:900px;margin:0 auto;padding:0 28px;}
+.sec{padding:80px 0;position:relative;}
+
+/* eyebrow + title */
+.eye{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  background:linear-gradient(90deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:12px;}
+.sec-h{font-family:'Playfair Display',serif;font-size:clamp(24px,3.2vw,36px);font-weight:600;
+  color:var(--cream);line-height:1.2;margin-bottom:12px;}
+.sec-p{font-size:15px;color:rgba(250,247,240,.46);line-height:1.78;max-width:540px;}
+
+/* ambient orbs (absolute, inside each section) */
+.orb{position:absolute;border-radius:50%;pointer-events:none;}
+
+/* glass card */
+.glass{
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border:1px solid var(--bD);border-radius:var(--R);}
+
+/* ── NAV ── */
+nav.main{position:sticky;top:0;z-index:200;padding:0 32px;
+  display:flex;align-items:center;height:60px;gap:16px;
+  background:rgba(7,21,16,.82);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.05);}
+.nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none;}
+.logo-name{font-family:'Playfair Display',serif;font-size:18px;color:var(--cream);}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:4px;}
+.nl{font-size:12px;font-weight:500;color:rgba(250,247,240,.5);background:none;border:none;
+  cursor:pointer;padding:7px 13px;border-radius:9px;transition:.18s;
+  font-family:'Be Vietnam Pro',sans-serif;text-decoration:none;display:inline-flex;}
+.nl:hover{color:var(--cream);background:rgba(255,255,255,.07);}
+.nl.active{color:var(--cream);background:rgba(255,255,255,.1);}
+.nl-cta{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;font-weight:600;
+  cursor:pointer;padding:7px 16px;border-radius:9px;border:none;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;}
+
+/* ── BREADCRUMB ── */
+.bcrumb{padding:14px 0;display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(250,247,240,.3);}
+.bcrumb a{color:rgba(250,247,240,.35);text-decoration:none;transition:.15s;}
+.bcrumb a:hover{color:rgba(250,247,240,.65);}
+
+/* ══════════════════════
+   HERO
+══════════════════════ */
+.hero{
+  position:relative;
+  background:linear-gradient(135deg,#071510 0%,#0A2818 55%,#0D2030 100%);
+  padding:72px 0 80px;overflow:hidden;}
+.hero .o1{width:650px;height:650px;top:-200px;right:-120px;
+  background:radial-gradient(circle,rgba(212,160,23,.13) 0%,transparent 65%);}
+.hero .o2{width:450px;height:450px;bottom:-100px;left:-80px;
+  background:radial-gradient(circle,rgba(26,122,110,.16) 0%,transparent 65%);}
+.hero-inner{position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;}
+.logo-big{width:90px;height:90px;
+  filter:drop-shadow(0 0 30px rgba(212,160,23,.3));}
+.hero-eye{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  background:linear-gradient(90deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-h1{font-family:'Playfair Display',serif;
+  font-size:clamp(30px,4.5vw,52px);font-weight:600;
+  color:var(--cream);line-height:1.1;letter-spacing:-.01em;}
+.hero-h1 em{font-style:italic;
+  background:linear-gradient(135deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{font-size:15px;font-weight:300;color:rgba(250,247,240,.5);
+  max-width:460px;line-height:1.78;}
+
+/* ══════════════════════
+   LOGO SECTION
+   Accent: gold — slight warm tint
+══════════════════════ */
+.s-logo{
+  background:linear-gradient(180deg,#0A1A10 0%,#071510 100%);
+  border-top:1px solid rgba(212,160,23,.12);}
+.s-logo .o1{width:500px;height:500px;top:-100px;right:-80px;
+  background:radial-gradient(circle,rgba(212,160,23,.09) 0%,transparent 65%);}
+.anatomy{padding:28px 30px;display:grid;grid-template-columns:80px 1fr;gap:24px;align-items:center;margin-top:28px;}
+.la-items{display:flex;flex-direction:column;gap:16px;}
+.la-item{display:flex;gap:12px;}
+.la-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;margin-top:4px;}
+.la-strong{display:block;font-size:13px;font-weight:600;color:var(--cream);margin-bottom:3px;}
+.la-p{font-size:12px;color:rgba(250,247,240,.42);line-height:1.65;}
+
+/* ══════════════════════
+   VISION / PILLARS
+   Accent: teal — cool depth
+══════════════════════ */
+.s-vision{
+  background:linear-gradient(160deg,#071510 0%,#08202A 60%,#071510 100%);
+  border-top:1px solid rgba(26,122,110,.14);}
+.s-vision .o1{width:600px;height:600px;top:-200px;right:-100px;
+  background:radial-gradient(circle,rgba(26,122,110,.18) 0%,transparent 65%);}
+.s-vision .o2{width:350px;height:350px;bottom:-80px;left:-60px;
+  background:radial-gradient(circle,rgba(26,122,110,.1) 0%,transparent 65%);}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px;}
+.pillar{border-radius:var(--R);overflow:hidden;transition:.2s;border:1px solid rgba(26,122,110,.15);}
+.pillar:hover{transform:translateY(-3px);border-color:rgba(26,122,110,.3);}
+.pill-head{padding:18px 20px 16px;border-bottom:1px solid rgba(255,255,255,.06);}
+.pill-icon{font-size:26px;margin-bottom:9px;display:block;}
+.pill-title{font-family:'Playfair Display',serif;font-size:18px;color:var(--cream);}
+.pill-body{padding:14px 20px;font-size:13px;color:rgba(250,247,240,.44);line-height:1.72;}
+
+/* ══════════════════════
+   ROADMAP
+   Accent: gold — progress feel
+══════════════════════ */
+.s-roadmap{
+  background:linear-gradient(180deg,#071510 0%,#0F1E0A 100%);
+  border-top:1px solid rgba(212,160,23,.1);}
+.s-roadmap .o1{width:400px;height:400px;top:-80px;left:-60px;
+  background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 65%);}
+.timeline{margin-top:28px;display:flex;flex-direction:column;position:relative;}
+.timeline::before{content:'';position:absolute;left:21px;top:24px;bottom:24px;width:1px;
+  background:linear-gradient(180deg,var(--g1) 0%,rgba(212,160,23,.06) 100%);}
+.tl-item{display:grid;grid-template-columns:44px 1fr;gap:16px;padding-bottom:28px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-dot{width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:600;flex-shrink:0;position:relative;z-index:1;
+  font-family:'Be Vietnam Pro',sans-serif;}
+.tl-dot.done{background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;}
+.tl-dot.now{background:rgba(212,160,23,.15);border:2px solid var(--g1);color:var(--g1);}
+.tl-dot.soon{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.13);color:rgba(250,247,240,.28);}
+.tl-content{padding-top:10px;}
+.tl-phase{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(250,247,240,.28);margin-bottom:5px;}
+.tl-title{font-size:15px;font-weight:600;color:var(--cream);margin-bottom:7px;}
+.tl-desc{font-size:13px;color:rgba(250,247,240,.42);line-height:1.68;}
+.tl-badge{display:inline-block;font-size:10px;font-weight:600;padding:3px 10px;border-radius:10px;margin-top:9px;}
+.tl-badge.done{background:rgba(82,183,136,.15);color:#7DE8DC;border:1px solid rgba(82,183,136,.2);}
+.tl-badge.now{background:rgba(212,160,23,.15);color:var(--g1);border:1px solid rgba(212,160,23,.28);}
+
+/* ══════════════════════
+   ACTIONS
+   Accent: earth/coral
+══════════════════════ */
+.s-actions{
+  background:linear-gradient(160deg,#071510 0%,#180A08 60%,#071510 100%);
+  border-top:1px solid rgba(192,85,58,.12);}
+.s-actions .o1{width:500px;height:500px;top:-100px;right:-80px;
+  background:radial-gradient(circle,rgba(192,85,58,.12) 0%,transparent 65%);}
+.action-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px;}
+.ac{border-radius:var(--R);padding:20px 16px;text-align:center;cursor:pointer;transition:.2s;
+  border:1px solid rgba(192,85,58,.12);}
+.ac:hover{background:rgba(255,255,255,.07);border-color:rgba(192,85,58,.25);transform:translateY(-2px);}
+.ac-icon{font-size:28px;margin-bottom:12px;display:block;}
+.ac-title{font-size:13px;font-weight:600;color:var(--cream);margin-bottom:6px;}
+.ac-desc{font-size:11px;color:rgba(250,247,240,.36);line-height:1.6;}
+.ac-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:8px;margin-top:8px;}
+.ac-tag.need{background:rgba(192,85,58,.15);color:#F5C4B3;border:1px solid rgba(192,85,58,.22);}
+.ac-tag.open{background:rgba(26,122,110,.15);color:#7DE8DC;border:1px solid rgba(26,122,110,.22);}
+
+/* ══════════════════════
+   DONATE
+   Accent: teal-gold mix
+══════════════════════ */
+.s-donate{
+  background:linear-gradient(160deg,#071510 0%,#081820 100%);
+  border-top:1px solid rgba(26,122,110,.12);}
+.s-donate .o1{width:600px;height:600px;top:-150px;right:-100px;
+  background:radial-gradient(circle,rgba(26,122,110,.15) 0%,transparent 65%);}
+.s-donate .o2{width:400px;height:400px;bottom:-100px;left:-60px;
+  background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 65%);}
+.donate-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;}
+.dc{border-radius:var(--R);overflow:hidden;border:1px solid rgba(26,122,110,.15);}
+.dc-head{padding:20px 22px 16px;border-bottom:1px solid rgba(255,255,255,.07);}
+.dc-type{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(250,247,240,.28);margin-bottom:6px;}
+.dc-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);}
+.dc-body{padding:18px 22px;display:flex;flex-direction:column;gap:13px;}
+.dc-note{font-size:13px;color:rgba(250,247,240,.44);line-height:1.68;}
+.dc-highlight{background:rgba(255,221,0,.07);border:1px solid rgba(255,221,0,.14);
+  border-radius:9px;padding:11px 13px;font-size:12px;color:rgba(255,221,0,.65);line-height:1.65;}
+.dc-org{background:rgba(82,183,136,.07);border:1px solid rgba(82,183,136,.15);
+  border-radius:9px;padding:11px 13px;font-size:12px;color:rgba(125,232,220,.7);line-height:1.65;}
+.dc-projects{display:flex;flex-direction:column;gap:8px;}
+.dc-proj{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:11px 13px;}
+.dc-proj h4{font-size:12px;font-weight:500;color:var(--cream);margin-bottom:4px;line-height:1.4;}
+.dc-proj p{font-size:11px;color:rgba(250,247,240,.3);}
+.dc-proj-tag{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:8px;
+  margin-top:5px;background:rgba(212,160,23,.15);color:var(--g1);border:1px solid rgba(212,160,23,.22);}
+.dc-btn{font-family:'Be Vietnam Pro',sans-serif;font-size:13px;font-weight:600;
+  padding:12px;border-radius:10px;border:none;cursor:pointer;display:block;width:100%;transition:.15s;}
+.dc-btn.bmc{background:#FFDD00;color:#0A0A00;}
+.dc-btn.bmc:hover{background:#FFED40;}
+.dc-btn.culture{background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;}
+.dc-btn.culture:hover{opacity:.88;}
+
+/* ══════════════════════
+   FAQ
+   Accent: subtle purple
+══════════════════════ */
+.s-faq{
+  background:linear-gradient(160deg,#071510 0%,#0C0E1A 60%,#071510 100%);
+  border-top:1px solid rgba(127,119,221,.1);}
+.s-faq .o1{width:450px;height:450px;top:-80px;left:-60px;
+  background:radial-gradient(circle,rgba(127,119,221,.1) 0%,transparent 65%);}
+.faq-list{margin-top:28px;border:1px solid rgba(127,119,221,.12);border-radius:var(--R);overflow:hidden;
+  background:rgba(255,255,255,.03);backdrop-filter:blur(16px);}
+.fq{border-bottom:1px solid rgba(255,255,255,.07);}
+.fq:last-child{border-bottom:none;}
+.fq-btn{width:100%;background:none;border:none;cursor:pointer;padding:18px 22px;
+  text-align:left;display:flex;align-items:center;justify-content:space-between;gap:14px;
+  font-family:'Be Vietnam Pro',sans-serif;}
+.fq-btn:hover{background:rgba(127,119,221,.05);}
+.fq-btn h3{font-size:14px;font-weight:500;color:var(--cream);line-height:1.4;flex:1;}
+.fq-ic{font-size:16px;color:rgba(250,247,240,.28);transition:transform .25s;flex-shrink:0;}
+.fq.open .fq-ic{transform:rotate(45deg);color:var(--g1);}
+.fq-body{max-height:0;overflow:hidden;transition:max-height .32s ease;}
+.fq.open .fq-body{max-height:600px;}
+.fq-inner{padding:0 22px 18px;border-top:1px solid rgba(255,255,255,.06);}
+.fq-inner p{padding-top:14px;font-size:14px;color:rgba(250,247,240,.46);line-height:1.78;}
+.fq-inner a{color:#7DE8DC;font-weight:500;}
+.fq-inner strong{color:rgba(250,247,240,.78);font-weight:600;}
+
+/* ── CTA ── */
+.cta-strip{
+  background:linear-gradient(135deg,var(--d1) 0%,#0A2010 50%,var(--d4) 100%);
+  padding:64px 28px;text-align:center;position:relative;overflow:hidden;}
+.cta-orb{position:absolute;width:600px;height:600px;top:50%;left:50%;
+  transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 60%);pointer-events:none;}
+.cta-title{font-family:'Playfair Display',serif;font-size:clamp(22px,3.2vw,36px);
+  color:var(--cream);margin-bottom:10px;position:relative;z-index:1;}
+.cta-sub{font-size:15px;color:rgba(250,247,240,.44);margin-bottom:28px;position:relative;z-index:1;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.btn-grad{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:600;cursor:pointer;
+  padding:12px 26px;border-radius:10px;border:none;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;transition:.15s;}
+.btn-grad:hover{opacity:.88;}
+.btn-glass{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:500;cursor:pointer;
+  padding:12px 26px;border-radius:10px;
+  background:rgba(255,255,255,.07);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.14);color:var(--cream);transition:.15s;}
+.btn-glass:hover{background:rgba(255,255,255,.12);}
+
+/* ── FOOTER ── */
+footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05);}
+.ft{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.ft-logo{font-family:'Playfair Display',serif;font-size:16px;color:rgba(250,247,240,.4);}
+.ft-links{display:flex;gap:18px;}
+.ftl{font-size:12px;color:rgba(250,247,240,.24);text-decoration:none;transition:.15s;}
+.ftl:hover{color:rgba(250,247,240,.6);}
+.ft-copy{font-size:11px;color:rgba(250,247,240,.18);}
+
+@media(max-width:720px){
+  nav.main{padding:0 16px;}
+  .wrap{padding:0 18px;}
+  .sec{padding:56px 0;}
+  .pillars,.donate-grid,.action-grid{grid-template-columns:1fr;}
+  .anatomy{grid-template-columns:1fr;}
+  .la-svg{display:none;}
+  .timeline::before{left:19px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="main" aria-label="Điều hướng chính">
+  <a class="nav-logo" href="index.html" aria-label="Tiếng Mường — Trang chủ">
+    <svg width="33" height="33" viewBox="0 0 34 34" fill="none" aria-hidden="true">
+      <defs><linearGradient id="lg" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1A5C3A"/><stop offset="100%" stop-color="#0D3040"/></linearGradient></defs>
+      <rect width="34" height="34" rx="9" fill="url(#lg)"/>
+      <rect x="5" y="16" width="24" height="2.2" fill="#D4A017" opacity=".95"/>
+      <rect x="16" y="5" width="2.2" height="24" fill="#D4A017" opacity=".95"/>
+      <polygon points="8,8 12,12 8,16 4,12" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="26,8 30,12 26,16 22,12" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="8,26 12,22 16,26 12,30" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="26,26 30,22 26,18 22,22" fill="#7DE8DC" opacity=".8"/>
+      <circle cx="17" cy="17" r="4" fill="#D4A017"/>
+      <circle cx="17" cy="17" r="2" fill="#0A2018"/>
+    </svg>
+    <span class="logo-name">Tiếng Mường</span>
+  </a>
+  <div class="nav-links">
+    <a class="nl" href="index.html">Từ điển</a>
+    <a class="nl" href="index.html">Dịch thuật</a>
+    <a class="nl" href="index.html">Các vùng</a>
+    <a class="nl" href="index.html">Blog</a>
+    <a class="nl active" href="about.html">Về dự án</a>
+    <button class="nl-cta">+ Đóng góp</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" role="banner">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="wrap">
+    <nav class="bcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span aria-hidden="true">›</span>
+      <span aria-current="page">Về dự án</span>
+    </nav>
+    <div class="hero-inner">
+      <svg class="logo-big" viewBox="0 0 88 88" fill="none" aria-label="Logo Tiếng Mường — cạp váy Mường">
+        <defs><linearGradient id="lg2" x1="0" y1="0" x2="88" y2="88" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1A5C3A"/><stop offset="100%" stop-color="#0D3040"/></linearGradient></defs>
+        <rect width="88" height="88" rx="22" fill="url(#lg2)"/>
+        <rect x="12" y="41" width="64" height="6" fill="#D4A017" opacity=".92"/>
+        <rect x="41" y="12" width="6" height="64" fill="#D4A017" opacity=".92"/>
+        <polygon points="16,16 26,26 16,36 6,26" fill="#7DE8DC" opacity=".8"/>
+        <polygon points="72,16 82,26 72,36 62,26" fill="#7DE8DC" opacity=".8"/>
+        <polygon points="16,72 26,62 36,72 26,82" fill="#7DE8DC" opacity=".8"/>
+        <polygon points="72,72 82,62 72,52 62,62" fill="#7DE8DC" opacity=".8"/>
+        <circle cx="44" cy="44" r="10" fill="#D4A017"/>
+        <circle cx="44" cy="44" r="5" fill="#0A2018"/>
+      </svg>
+      <p class="hero-eye">Dự án cộng đồng phi lợi nhuận</p>
+      <h1 class="hero-h1">Về <em>Tiếng Mường</em></h1>
+      <p class="hero-sub">Câu chuyện, ý nghĩa logo, tầm nhìn bảo tồn ngôn ngữ và lộ trình hướng tới Google Translate.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- LOGO ── gold accent -->
+<section class="s-logo sec" aria-labelledby="logo-h">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <p class="eye">Nhận diện thương hiệu</p>
+    <h2 class="sec-h" id="logo-h">Logo — từ cạp váy đến biểu tượng số</h2>
+    <p class="sec-p">Logo không chỉ là hình ảnh — là câu chuyện văn hóa được mã hóa trong từng đường nét, lấy cảm hứng từ di sản phi vật thể đặc trưng nhất của người Mường.</p>
+    <div class="glass anatomy">
+      <div class="la-svg">
+        <svg width="68" height="68" viewBox="0 0 68 68" fill="none" aria-hidden="true">
+          <rect width="68" height="68" rx="14" fill="rgba(255,255,255,.06)"/>
+          <rect x="8" y="31" width="52" height="5" fill="#D4A017" opacity=".55"/>
+          <rect x="31" y="8" width="5" height="52" fill="#D4A017" opacity=".55"/>
+          <polygon points="10,10 18,18 10,26 2,18" fill="#7DE8DC" opacity=".5"/>
+          <polygon points="58,10 66,18 58,26 50,18" fill="#7DE8DC" opacity=".5"/>
+          <polygon points="10,58 18,50 26,58 18,66" fill="#7DE8DC" opacity=".5"/>
+          <polygon points="58,58 66,50 58,42 50,50" fill="#7DE8DC" opacity=".5"/>
+          <circle cx="34" cy="34" r="7" fill="#D4A017" opacity=".6"/>
+          <circle cx="34" cy="34" r="3.5" fill="#0A2018" opacity=".8"/>
+        </svg>
+      </div>
+      <div class="la-items">
+        <div class="la-item">
+          <div class="la-dot" style="background:#7DE8DC;margin-top:4px;"></div>
+          <div>
+            <span class="la-strong">Hình thoi 4 góc — Motif cạp váy Mường</span>
+            <p class="la-p">Hoa văn cạp váy là di sản phi vật thể đặc trưng nhất của người Mường. Bốn hình thoi tượng trưng cho 4 vùng phương ngữ: Hòa Bình · Thanh Hóa · Phú Thọ · Ninh Bình — mỗi vùng là một giọng nói riêng, không hơn không kém.</p>
+          </div>
+        </div>
+        <div class="la-item">
+          <div class="la-dot" style="background:#D4A017;margin-top:4px;"></div>
+          <div>
+            <span class="la-strong">Đường kẻ ngang dọc vàng — Hoa văn thổ cẩm</span>
+            <p class="la-p">Motif cơ bản của thổ cẩm Mường, xuất hiện trên mọi tấm vải truyền thống. Màu vàng là màu của lúa nước — nền văn minh lúa nước là gốc rễ văn hóa Mường.</p>
+          </div>
+        </div>
+        <div class="la-item">
+          <div class="la-dot" style="background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.25);margin-top:4px;"></div>
+          <div>
+            <span class="la-strong">Vòng tròn trung tâm rỗng — Điểm hội tụ</span>
+            <p class="la-p">Nơi 4 vùng gặp nhau. Vòng trong rỗng là không gian mở, nơi thế hệ sau tiếp nối. Ngôn ngữ sống là ngôn ngữ còn được truyền đi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION ── teal accent -->
+<section class="s-vision sec" aria-labelledby="vision-h">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <p class="eye">Tầm nhìn</p>
+    <h2 class="sec-h" id="vision-h">Ba trụ cột của dự án</h2>
+    <p class="sec-p">Không chỉ là từ điển — đây là dự án bảo tồn ký ức, kết nối thế hệ và đưa ngôn ngữ dân tộc vào thế giới số.</p>
+    <div class="pillars">
+      <div class="pillar glass">
+        <div class="pill-head">
+          <span class="pill-icon">🌿</span>
+          <p class="pill-title">Bảo tồn</p>
+        </div>
+        <div class="pill-body">Hơn 1,4 triệu người Mường ở Việt Nam, nhưng chưa có từ điển số hóa toàn diện. Thế hệ trẻ ngày càng ít dùng tiếng mẹ đẻ. Người cao tuổi — những người giữ giọng chuẩn nhất — dần ra đi. Mỗi ngày không ghi lại là một ngày mất mát vĩnh viễn.</div>
+      </div>
+      <div class="pillar glass">
+        <div class="pill-head">
+          <span class="pill-icon">🤝</span>
+          <p class="pill-title">Kết nối</p>
+        </div>
+        <div class="pill-body">Không có "tiếng Mường chuẩn" — và không nên có. Mường Hòa Bình nói khác Mường Thanh Hóa, và cả hai đều đúng. Dự án kết nối người bản ngữ với nhà nghiên cứu, thế hệ trẻ với ông bà, cộng đồng trong nước với người Mường xa quê.</div>
+      </div>
+      <div class="pillar glass">
+        <div class="pill-head">
+          <span class="pill-icon">🌍</span>
+          <p class="pill-title">Hội nhập</p>
+        </div>
+        <div class="pill-body">Mục tiêu dài hạn: đưa tiếng Mường lên Google Translate, vào các hệ thống AI đa ngôn ngữ, vào chương trình giảng dạy. Toàn bộ dữ liệu phát hành mã nguồn mở CC-BY để bất kỳ ai cũng có thể tiếp tục phát triển.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP ── gold accent -->
+<section class="s-roadmap sec" aria-labelledby="roadmap-h">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <p class="eye">Triển vọng</p>
+    <h2 class="sec-h" id="roadmap-h">Lộ trình 5 giai đoạn</h2>
+    <p class="sec-p">Từ một trang web đơn giản đến một ngôn ngữ được Google Translate hỗ trợ — rõ ràng, từng bước một.</p>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot done" aria-label="Hoàn thành">✓</div>
+        <div class="tl-content">
+          <p class="tl-phase">Giai đoạn 1 · 2025</p>
+          <p class="tl-title">Xây dựng nền tảng</p>
+          <p class="tl-desc">Thiết kế website, hệ thống đóng góp từ vựng có kiểm duyệt theo vùng phương ngữ, brand guideline với logo cạp váy Mường, component system nhất quán.</p>
+          <span class="tl-badge done">Đã hoàn thành</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot now" aria-label="Đang thực hiện">▶</div>
+        <div class="tl-content">
+          <p class="tl-phase">Giai đoạn 2 · 2025 · Đang diễn ra</p>
+          <p class="tl-title">Thu thập từ vựng & audio</p>
+          <p class="tl-desc">Mục tiêu 5.000 từ vựng cơ bản được người bản ngữ xác nhận từ ít nhất 2 vùng. Ưu tiên thu âm giọng người cao tuổi tại Tân Lạc (Hòa Bình) và Ngọc Lặc (Thanh Hóa).</p>
+          <span class="tl-badge now">4.128 / 5.000 từ · Đang tiến hành</span>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot soon">3</div>
+        <div class="tl-content">
+          <p class="tl-phase">Giai đoạn 3 · 2026</p>
+          <p class="tl-title">Xây dựng kho câu song ngữ</p>
+          <p class="tl-desc">Từ kho từ vựng đã có, xây dựng 50.000 cặp câu Việt–Mường hoàn chỉnh. Tổ chức các buổi thu thập thực địa định kỳ tại cộng đồng người Mường ở Hòa Bình, Thanh Hóa, Phú Thọ.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot soon">4</div>
+        <div class="tl-content">
+          <p class="tl-phase">Giai đoạn 4 · 2027</p>
+          <p class="tl-title">Nộp lên Google Translate Community</p>
+          <p class="tl-desc">Nộp dữ liệu theo quy trình chính thức. Đồng thời phát hành toàn bộ dataset dưới giấy phép CC-BY để cộng đồng nghiên cứu ngôn ngữ học toàn cầu tiếp cận.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot soon">5</div>
+        <div class="tl-content">
+          <p class="tl-phase">Giai đoạn 5 · Dài hạn</p>
+          <p class="tl-title">Mô hình dịch thuật tự chủ</p>
+          <p class="tl-desc">Xây dựng mô hình NMT (Neural Machine Translation) riêng cho tiếng Mường — không phụ thuộc AI bên ngoài, dịch nhanh và chính xác, tích hợp được vào ứng dụng di động và hệ thống giáo dục.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIONS ── earth accent -->
+<section class="s-actions sec" aria-labelledby="action-h">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <p class="eye">Hành động</p>
+    <h2 class="sec-h" id="action-h">Bạn có thể làm gì ngay hôm nay?</h2>
+    <p class="sec-p">Mỗi người một cách tham gia. Không cần biết lập trình, không cần là nhà nghiên cứu.</p>
+    <div class="action-grid">
+      <div class="ac glass">
+        <span class="ac-icon">✍️</span>
+        <p class="ac-title">Đóng góp từ vựng</p>
+        <p class="ac-desc">Nhập từ tiếng Việt và cách nói trong tiếng Mường của vùng bạn. 2 phút mỗi từ.</p>
+        <span class="ac-tag need">Cần người Mường</span>
+      </div>
+      <div class="ac glass">
+        <span class="ac-icon">🎙️</span>
+        <p class="ac-title">Ghi âm phát âm</p>
+        <p class="ac-desc">Điện thoại là đủ. Ưu tiên giọng người cao tuổi bản địa — quý nhất, hiếm nhất.</p>
+        <span class="ac-tag need">Cần người Mường</span>
+      </div>
+      <div class="ac glass">
+        <span class="ac-icon">✅</span>
+        <p class="ac-title">Kiểm duyệt từ</p>
+        <p class="ac-desc">Bình chọn từ đúng / sai của người cùng vùng. Không tốn nhiều thời gian.</p>
+        <span class="ac-tag need">Cần người Mường</span>
+      </div>
+      <div class="ac glass">
+        <span class="ac-icon">📢</span>
+        <p class="ac-title">Chia sẻ dự án</p>
+        <p class="ac-desc">Giới thiệu cho người Mường bạn biết, đặc biệt người cao tuổi biết nhiều từ cổ.</p>
+        <span class="ac-tag open">Ai cũng làm được</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE ── teal accent -->
+<section class="s-donate sec" aria-labelledby="donate-h">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <p class="eye">Đóng góp tài chính</p>
+    <h2 class="sec-h" id="donate-h">Hai kênh — hai mục đích hoàn toàn khác nhau</h2>
+    <p class="sec-p">Tiền đi đâu, dùng vào việc gì, do ai quản lý — đều công khai cụ thể.</p>
+    <div class="donate-grid">
+      <div class="dc glass">
+        <div class="dc-head">
+          <p class="dc-type">Kênh 1 — Ủng hộ website</p>
+          <p class="dc-title">☕ Buy Me a Coffee</p>
+        </div>
+        <div class="dc-body">
+          <p class="dc-note">Duy trì server, tên miền muong.wiki, chi phí API. Số người ủng hộ hiển thị công khai tự động — không cần báo cáo thêm.</p>
+          <div class="dc-highlight">Mỗi "ly cà phê" (~30.000đ) = 1 tháng API cho ~1.000 lượt dịch thử. Mỗi 5 ly = 1 năm tên miền.</div>
+          <button class="dc-btn bmc">☕ Ủng hộ qua Buy Me a Coffee</button>
+        </div>
+      </div>
+      <div class="dc glass">
+        <div class="dc-head">
+          <p class="dc-type">Kênh 2 — Ủng hộ văn hóa Mường</p>
+          <p class="dc-title">🌿 Dự án thực địa</p>
+        </div>
+        <div class="dc-body">
+          <p class="dc-note">Mỗi đợt gắn với một dự án cụ thể. Tiền chuyển trực tiếp qua tài khoản chính thức — không qua cá nhân. Báo cáo ảnh/video sau khi hoàn thành.</p>
+          <div class="dc-org">🏛️ Đơn vị nhận: <strong>Hội Văn học Nghệ thuật tỉnh Phú Thọ</strong> hoặc <strong>Sở VHTTDL tỉnh Phú Thọ</strong>.</div>
+          <div class="dc-projects">
+            <div class="dc-proj">
+              <h4>📍 Thu âm 200 từ với người cao tuổi tại Ngọc Lặc, Thanh Hóa</h4>
+              <p>Tháng 7/2025 · Cần 4 triệu đồng</p>
+              <span class="dc-proj-tag">Đang gây quỹ</span>
+            </div>
+            <div class="dc-proj">
+              <h4>📍 Số hoá sử thi Đẻ đất đẻ nước</h4>
+              <p>Quý 3/2025 · Cần 8 triệu đồng</p>
+              <span class="dc-proj-tag">Sắp mở</span>
+            </div>
+          </div>
+          <button class="dc-btn culture">🌿 Chọn dự án để ủng hộ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ ── purple accent -->
+<section class="s-faq sec" aria-labelledby="faq-h">
+  <div class="orb o1"></div>
+  <div class="wrap" style="position:relative;z-index:1;">
+    <p class="eye">Câu hỏi thường gặp</p>
+    <h2 class="sec-h" id="faq-h">Bạn muốn biết thêm?</h2>
+    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+      <div class="fq" itemscope itemtype="https://schema.org/Question">
+        <button class="fq-btn" onclick="fqT(this)" aria-expanded="false">
+          <h3 itemprop="name">Tại sao dự án này ra đời?</h3>
+          <i class="ti ti-plus fq-ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-body" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer">
+          <div class="fq-inner"><p itemprop="text">Tiếng Mường là ngôn ngữ của hơn 1,4 triệu người Việt Nam nhưng chưa có từ điển số hóa toàn diện và chưa có mặt trên Google Translate. Thế hệ trẻ người Mường ngày càng ít nói tiếng mẹ đẻ, trong khi người cao tuổi đang dần ra đi. Dự án ra đời để ghi lại trước khi quá muộn — và để cộng đồng người Mường tự xây dựng di sản số của chính mình.</p></div>
+        </div>
+      </div>
+
+      <div class="fq" itemscope itemtype="https://schema.org/Question">
+        <button class="fq-btn" onclick="fqT(this)" aria-expanded="false">
+          <h3 itemprop="name">Logo lấy cảm hứng từ đâu?</h3>
+          <i class="ti ti-plus fq-ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-body">
+          <div class="fq-inner"><p>Logo lấy cảm hứng trực tiếp từ <strong>hoa văn cạp váy Mường</strong> — di sản phi vật thể đặc trưng nhất của người Mường. Hình thoi 4 góc là motif trung tâm của cạp váy, tượng trưng cho 4 vùng phương ngữ. Đường kẻ vàng là hoa văn thổ cẩm. Vòng tròn trung tâm rỗng biểu trưng cho sự tiếp nối — ngôn ngữ sống là ngôn ngữ còn được truyền đi.</p></div>
+        </div>
+      </div>
+
+      <div class="fq" itemscope itemtype="https://schema.org/Question">
+        <button class="fq-btn" onclick="fqT(this)" aria-expanded="false">
+          <h3 itemprop="name">Tại sao không có "tiếng Mường chuẩn"?</h3>
+          <i class="ti ti-plus fq-ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-body">
+          <div class="fq-inner"><p>Tiếng Việt "chuẩn" có được nhờ chuẩn hóa hàng thế kỷ, lấy giọng Hà Nội làm trung tâm. Tiếng Mường chưa trải qua quá trình đó. Bộ chữ viết đầu tiên mới được UBND tỉnh Hòa Bình phê duyệt năm 2016. Dự án này <strong>không chọn phương ngữ chuẩn</strong> — thay vào đó ghi nhận tất cả biến thể với nhãn rõ ràng, không phán xét.</p></div>
+        </div>
+      </div>
+
+      <div class="fq" itemscope itemtype="https://schema.org/Question">
+        <button class="fq-btn" onclick="fqT(this)" aria-expanded="false">
+          <h3 itemprop="name">Dự án hướng tới Google Translate như thế nào?</h3>
+          <i class="ti ti-plus fq-ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-body">
+          <div class="fq-inner"><p>Google Translate hỗ trợ ngôn ngữ mới qua <a href="https://translate.google.com/about/intl/en_ALL/translate-community/" rel="noopener noreferrer">Google Translate Community</a> khi có đủ dữ liệu song ngữ được người bản ngữ xác nhận. Mục tiêu là đạt <strong>50.000 cặp câu Việt–Mường</strong>, sau đó nộp theo quy trình chính thức. Toàn bộ dataset phát hành CC-BY.</p></div>
+        </div>
+      </div>
+
+      <div class="fq" itemscope itemtype="https://schema.org/Question">
+        <button class="fq-btn" onclick="fqT(this)" aria-expanded="false">
+          <h3 itemprop="name">Tiền đóng góp văn hóa đi đâu, ai quản lý?</h3>
+          <i class="ti ti-plus fq-ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-body">
+          <div class="fq-inner"><p>Tiền chuyển <strong>trực tiếp qua tài khoản chính thức</strong> của Hội Văn học Nghệ thuật tỉnh Phú Thọ hoặc Sở VHTTDL — không qua tài khoản cá nhân. Sau mỗi dự án sẽ có báo cáo ảnh/video công khai trên website.</p></div>
+        </div>
+      </div>
+
+      <div class="fq" itemscope itemtype="https://schema.org/Question">
+        <button class="fq-btn" onclick="fqT(this)" aria-expanded="false">
+          <h3 itemprop="name">Tôi không phải người Mường có thể tham gia không?</h3>
+          <i class="ti ti-plus fq-ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-body">
+          <div class="fq-inner"><p>Hoàn toàn có thể: chia sẻ dự án, ủng hộ qua Buy Me a Coffee, hoặc tham gia kiểm tra giao diện. Riêng việc <strong>đóng góp từ vựng và kiểm duyệt</strong> cần là người bản ngữ hoặc có hiểu biết thực tế về tiếng Mường vùng đó.</p></div>
+        </div>
+      </div>
+
+      <div class="fq" itemscope itemtype="https://schema.org/Question">
+        <button class="fq-btn" onclick="fqT(this)" aria-expanded="false">
+          <h3 itemprop="name">Dữ liệu có được bảo vệ bản quyền không?</h3>
+          <i class="ti ti-plus fq-ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-body">
+          <div class="fq-inner"><p>Toàn bộ dữ liệu phát hành dưới <strong>Creative Commons CC-BY 4.0</strong> — ai cũng dùng được miễn phí, kể cả thương mại, với điều kiện ghi nguồn "Tiếng Mường — muong.wiki". Cam kết mã nguồn mở lâu dài.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="cta-orb"></div>
+  <h2 class="cta-title">Sẵn sàng đồng hành?</h2>
+  <p class="cta-sub">Dù bạn nói tiếng Mường hay không — đều có cách để góp phần.</p>
+  <div class="cta-btns">
+    <button class="btn-grad">+ Đóng góp từ vựng</button>
+    <button class="btn-glass">☕ Buy Me a Coffee</button>
+    <button class="btn-glass">🌿 Ủng hộ văn hóa</button>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <span class="ft-logo">Tiếng Mường</span>
+    <nav class="ft-links" aria-label="Liên kết footer">
+      <a href="index.html" class="ftl">Trang chủ</a>
+      <a href="#" class="ftl">Từ điển</a>
+      <a href="#" class="ftl">Đóng góp</a>
+      <a href="#" class="ftl">Blog</a>
+      <a href="about.html" class="ftl" style="color:rgba(250,247,240,.5);">Về dự án</a>
+    </nav>
+    <span class="ft-copy">Dự án cộng đồng phi lợi nhuận · CC-BY 4.0 · muong.wiki</span>
+  </div>
+</footer>
+
+<script>
+function fqT(btn){
+  const fq=btn.closest('.fq'),open=fq.classList.contains('open');
+  document.querySelectorAll('.fq.open').forEach(f=>{
+    f.classList.remove('open');
+    f.querySelector('button').setAttribute('aria-expanded','false');
+  });
+  if(!open){fq.classList.add('open');btn.setAttribute('aria-expanded','true');}
+}
+</script>
+</body>
+</html>

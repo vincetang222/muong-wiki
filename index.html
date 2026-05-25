@@ -251,31 +251,68 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cr
 
 .tl-wrap{
   background:rgba(255,255,255,.06);
-  backdrop-filter:blur(28px);
-  -webkit-backdrop-filter:blur(28px);
+  backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);
   border:1px solid rgba(255,255,255,.1);
   border-radius:var(--R);overflow:hidden;margin-top:28px;}
-.tl-g{display:grid;grid-template-columns:1fr 1px 1fr;}
-.ph{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;min-height:50px;}
+
+/*
+  GRID LAYOUT — 3 cột × 3 hàng
+  Col: [panel trái] [divider 1px] [panel phải]
+  Row: [header] [body] [footer]
+  → header/body/footer chia sẻ cùng row track
+  → border-bottom và border-top luôn thẳng pixel-perfect
+*/
+.tl-g{
+  display:grid;
+  grid-template-columns:1fr 1px 1fr;
+  grid-template-rows:52px 1fr 50px;
+}
+/* đặt từng phần tử vào đúng ô */
+.tl-head-l{ grid-column:1; grid-row:1; }
+.tl-dv    { grid-column:2; grid-row:1/4; background:rgba(255,255,255,.07); }
+.tl-head-r{ grid-column:3; grid-row:1; }
+.tl-body-l{ grid-column:1; grid-row:2; }
+.tl-body-r{ grid-column:3; grid-row:2; }
+.tl-foot-l{ grid-column:1; grid-row:3; }
+.tl-foot-r{ grid-column:3; grid-row:3; }
+
+/* header cells */
+.tl-head-l,.tl-head-r{
+  padding:0 20px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:space-between;
+}
+/* body cells */
+.tl-body-l,.tl-body-r{
+  padding:18px 20px;
+  overflow:hidden;
+}
+/* footer cells */
+.tl-foot-l,.tl-foot-r{
+  padding:0 20px;
+  border-top:1px solid rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:space-between;
+}
+
 .pl{font-size:13px;font-weight:600;color:var(--cream);display:flex;align-items:center;gap:8px;}
 .ld{width:7px;height:7px;border-radius:50%;}
 .lvi{background:#4A90D9;}
 .lmu{background:#52B788;}
 .rsel{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;font-weight:500;
-  color:#7DE8DC;
-  background:rgba(26,122,110,.2);
-  border:1px solid rgba(26,122,110,.3);
-  border-radius:8px;padding:4px 22px 4px 10px;cursor:pointer;outline:none;appearance:none;
+  color:#7DE8DC;background:rgba(26,122,110,.2);border:1px solid rgba(26,122,110,.3);
+  border-radius:8px;padding:5px 24px 5px 11px;cursor:pointer;outline:none;appearance:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%237DE8DC'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 8px center;
-  background-size:8px;}
-.pb2{padding:18px 20px;min-height:175px;}
-textarea{width:100%;border:none;outline:none;resize:none;font-family:'Be Vietnam Pro',sans-serif;font-size:15px;line-height:1.78;color:var(--cream);background:transparent;min-height:145px;}
+  background-repeat:no-repeat;background-position:right 9px center;background-size:8px;}
+textarea{width:100%;height:100%;border:none;outline:none;resize:none;
+  font-family:'Be Vietnam Pro',sans-serif;font-size:15px;line-height:1.78;
+  color:var(--cream);background:transparent;display:block;min-height:140px;}
 textarea::placeholder{color:rgba(250,247,240,.25);font-weight:300;}
-.oa{font-size:15px;line-height:1.78;color:#9FE1CB;min-height:145px;white-space:pre-wrap;word-break:break-word;}
+.oa{font-size:15px;line-height:1.78;color:#9FE1CB;
+  white-space:pre-wrap;word-break:break-word;min-height:140px;}
 .oph{color:rgba(250,247,240,.2);font-style:italic;font-weight:300;}
-.dv{background:rgba(255,255,255,.07);}
-.pf{padding:10px 20px;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;}
+.cc{font-size:11px;color:rgba(250,247,240,.28);}
+/* remove old classes */
+.tl-panel,.pb2,.ph,.pf,.dv{}
 .cc{font-size:11px;color:rgba(250,247,240,.28);}
 .tbtn{font-family:'Be Vietnam Pro',sans-serif;font-size:13px;font-weight:600;cursor:pointer;padding:8px 18px;border-radius:9px;border:none;
   background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;
@@ -286,8 +323,11 @@ textarea::placeholder{color:rgba(250,247,240,.25);font-weight:300;}
 .tbtn.loading .sp{display:block;}
 @keyframes spin{to{transform:rotate(360deg);}}
 .rb{font-size:10px;font-weight:600;padding:3px 10px;border-radius:10px;background:rgba(26,122,110,.25);color:#7DE8DC;border:1px solid rgba(26,122,110,.3);display:none;}
-.ib{width:30px;height:30px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);cursor:pointer;color:rgba(250,247,240,.4);font-size:14px;display:flex;align-items:center;justify-content:center;transition:.15s;}
-.ib:hover{background:rgba(255,255,255,.1);color:var(--cream);}
+.ib{width:32px;height:32px;border-radius:8px;border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.05);cursor:pointer;color:rgba(250,247,240,.5);
+  font-size:16px;line-height:1;display:flex;align-items:center;justify-content:center;
+  transition:.15s;font-family:sans-serif;}
+.ib:hover{background:rgba(255,255,255,.12);color:var(--cream);}
 .tlnote{margin:0 20px 14px;background:rgba(192,85,58,.15);border-left:2px solid var(--e1);border-radius:0 8px 8px 0;padding:8px 12px;font-size:11px;color:rgba(245,196,179,.9);line-height:1.6;display:none;}
 .tlnote.show{display:block;}
 .tlnote a{color:#F5C4B3;font-weight:600;}
@@ -397,7 +437,10 @@ textarea::placeholder{color:rgba(250,247,240,.25);font-weight:300;}
 .fq-q{width:100%;background:none;border:none;cursor:pointer;padding:18px 22px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:'Be Vietnam Pro',sans-serif;}
 .fq-q:hover{background:rgba(255,255,255,.03);}
 .fq-q h3{font-size:14px;font-weight:500;color:var(--cream);line-height:1.4;flex:1;}
-.fq-ic{font-size:16px;color:rgba(250,247,240,.3);transition:transform .25s;flex-shrink:0;}
+.fq-ic{font-size:18px;font-weight:300;color:rgba(250,247,240,.3);
+  transition:transform .25s, color .25s;flex-shrink:0;
+  line-height:1;font-family:sans-serif;display:flex;align-items:center;justify-content:center;
+  width:24px;height:24px;}
 .fq.open .fq-ic{transform:rotate(45deg);color:var(--g1);}
 .fq-a{max-height:0;overflow:hidden;transition:max-height .32s ease;}
 .fq.open .fq-a{max-height:500px;}
@@ -437,8 +480,18 @@ footer{background:#050F09;padding:32px 28px;border-top:1px solid rgba(255,255,25
 
 /* ── RESPONSIVE ── */
 @media(max-width:720px){
-  .tl-g,.bf{grid-template-columns:1fr;grid-template-rows:auto auto;}
-  .dv{width:100%;height:1px;}
+  /* translator grid — stack vertically on mobile */
+  .tl-g{
+    grid-template-columns:1fr;
+    grid-template-rows:52px 1fr 50px 1px 52px 1fr 50px;
+  }
+  .tl-head-l{grid-column:1;grid-row:1;}
+  .tl-body-l{grid-column:1;grid-row:2;}
+  .tl-foot-l{grid-column:1;grid-row:3;}
+  .tl-dv    {grid-column:1;grid-row:4;height:1px;width:100%;}
+  .tl-head-r{grid-column:1;grid-row:5;}
+  .tl-body-r{grid-column:1;grid-row:6;}
+  .tl-foot-r{grid-column:1;grid-row:7;}
   .bf{grid-column:auto;}
   .bf-img{min-height:150px;}
   .steps{grid-template-columns:1fr;}
@@ -585,33 +638,36 @@ footer{background:#050F09;padding:32px 28px;border-top:1px solid rgba(255,255,25
     </div>
     <div class="tl-wrap">
       <div class="tl-g">
-        <div>
-          <div class="ph">
-            <div class="pl"><div class="ld lvi" aria-hidden="true"></div>Tiếng Việt</div>
-            <button class="ib" onclick="clearTl()" aria-label="Xóa"><i class="ti ti-x" aria-hidden="true"></i></button>
-          </div>
-          <div class="pb2"><textarea id="tl-in" placeholder="Nhập văn bản tiếng Việt…" oninput="onIn()" onkeydown="onKey(event)" maxlength="1000"></textarea></div>
-          <div class="pf">
-            <span class="cc" id="cc">0 / 1000</span>
-            <button class="tbtn" id="tbtn" onclick="doTl()"><div class="sp" aria-hidden="true"></div><span>Dịch →</span></button>
-          </div>
+        <!-- header row -->
+        <div class="tl-head-l">
+          <div class="pl"><div class="ld lvi" aria-hidden="true"></div>Tiếng Việt</div>
+          <button class="ib" onclick="clearTl()" aria-label="Xóa">✕</button>
         </div>
-        <div class="dv" aria-hidden="true"></div>
-        <div>
-          <div class="ph">
-            <div class="pl"><div class="ld lmu" aria-hidden="true"></div>Tiếng Mường</div>
-            <select class="rsel" id="rsel" onchange="onRC()" aria-label="Chọn vùng">
-              <option value="hb">· Hòa Bình</option>
-              <option value="th">· Thanh Hóa</option>
-              <option value="pt">· Phú Thọ</option>
-              <option value="nb">· Ninh Bình</option>
-            </select>
-          </div>
-          <div class="pb2"><div class="oa" id="tl-out"><span class="oph">Bản dịch sẽ xuất hiện ở đây…</span></div></div>
-          <div class="pf">
-            <span class="rb" id="rb"></span>
-            <button class="ib" onclick="cpTl()" aria-label="Sao chép"><i class="ti ti-copy" aria-hidden="true"></i></button>
-          </div>
+        <div class="tl-dv" aria-hidden="true"></div>
+        <div class="tl-head-r">
+          <div class="pl"><div class="ld lmu" aria-hidden="true"></div>Tiếng Mường</div>
+          <select class="rsel" id="rsel" onchange="onRC()" aria-label="Chọn vùng">
+            <option value="hb">· Hòa Bình</option>
+            <option value="th">· Thanh Hóa</option>
+            <option value="pt">· Phú Thọ</option>
+            <option value="nb">· Ninh Bình</option>
+          </select>
+        </div>
+        <!-- body row -->
+        <div class="tl-body-l">
+          <textarea id="tl-in" placeholder="Nhập văn bản tiếng Việt…" oninput="onIn()" onkeydown="onKey(event)" maxlength="1000"></textarea>
+        </div>
+        <div class="tl-body-r">
+          <div class="oa" id="tl-out"><span class="oph">Bản dịch sẽ xuất hiện ở đây…</span></div>
+        </div>
+        <!-- footer row -->
+        <div class="tl-foot-l">
+          <span class="cc" id="cc">0 / 1000</span>
+          <button class="tbtn" id="tbtn" onclick="doTl()"><div class="sp" aria-hidden="true"></div><span>Dịch →</span></button>
+        </div>
+        <div class="tl-foot-r">
+          <span class="rb" id="rb"></span>
+          <button class="ib" onclick="cpTl()" aria-label="Sao chép">⧉</button>
         </div>
       </div>
       <div class="tlnote" id="tlnote"><strong>Lưu ý:</strong> Bản dịch do AI gợi ý, chưa được xác nhận bởi người bản ngữ. Hãy <a href="#">đóng góp bản dịch chính xác hơn</a>.</div>
@@ -631,7 +687,7 @@ footer{background:#050F09;padding:32px 28px;border-top:1px solid rgba(255,255,25
       <article class="wc"><div class="wcv">đi</div><div class="wcr"><div class="wcrow"><span class="wt hb">Hòa Bình</span><span class="wv">ti</span></div><div class="wcrow"><span class="wt th">Thanh Hóa</span><span class="wv">ti</span></div></div></article>
       <article class="wc"><div class="wcv">con bò</div><div class="wcr"><div class="wcrow"><span class="wt hb">Hòa Bình</span><span class="wv">coan pò</span></div><div class="wcrow"><span class="wt th">Thanh Hóa</span><span class="wv">con bò</span></div></div></article>
       <article class="wc"><div class="wcv">trời nắng</div><div class="wcr"><div class="wcrow"><span class="wt hb">Hòa Bình</span><span class="wv">trới đằng</span></div><div class="wcrow"><span class="wt th">Thanh Hóa</span><span class="wv">trới đắng</span></div></div></article>
-      <div class="wc wc-add" role="button" tabindex="0"><i class="ti ti-plus" aria-hidden="true" style="font-size:19px"></i>Đóng góp từ mới</div>
+      <div class="wc wc-add" role="button" tabindex="0">+Đóng góp từ mới</div>
     </div>
   </div>
 </section>
@@ -744,7 +800,7 @@ footer{background:#050F09;padding:32px 28px;border-top:1px solid rgba(255,255,25
         </div>
       </article>
     </div>
-    <div class="more-row"><a href="#" class="more-lnk">Xem tất cả bài viết <i class="ti ti-arrow-right" aria-hidden="true"></i></a></div>
+    <div class="more-row"><a href="#" class="more-lnk">Xem tất cả bài viết →</a></div>
   </div>
 </section>
 
@@ -755,29 +811,29 @@ footer{background:#050F09;padding:32px 28px;border-top:1px solid rgba(255,255,25
     <h2 class="sec-title" style="color:var(--cream);" id="faq-h">Bạn muốn biết thêm?</h2>
     <div class="faq" itemscope itemtype="https://schema.org/FAQPage">
       <div class="fq" itemscope itemtype="https://schema.org/Question">
-        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Tiếng Mường có bao nhiêu phương ngữ?</h3><i class="ti ti-plus fq-ic" aria-hidden="true"></i></button>
+        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Tiếng Mường có bao nhiêu phương ngữ?</h3><span class="fq-ic" aria-hidden="true">+</span></button>
         <div class="fq-a" itemscope itemtype="https://schema.org/Answer" itemprop="acceptedAnswer"><div class="fq-body"><p itemprop="text">Tiếng Mường được nói ở nhiều tỉnh: Hòa Bình, Thanh Hóa, Phú Thọ, Ninh Bình, Sơn La... Trong từng tỉnh lại có thể có nhiều tiểu phương ngữ. Dự án này không cố xây dựng "tiếng Mường chuẩn" mà ghi nhận tất cả biến thể theo từng vùng.</p></div></div>
       </div>
       <div class="fq" itemscope itemtype="https://schema.org/Question">
-        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Tôi có thể đóng góp từ vựng nếu không phải người Mường không?</h3><i class="ti ti-plus fq-ic" aria-hidden="true"></i></button>
+        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Tôi có thể đóng góp từ vựng nếu không phải người Mường không?</h3><span class="fq-ic" aria-hidden="true">+</span></button>
         <div class="fq-a"><div class="fq-body"><p>Chúng tôi ưu tiên đóng góp từ người bản ngữ. Nếu bạn không phải người Mường nhưng đã sống lâu ở vùng Mường hoặc có nghiên cứu về ngôn ngữ này, bạn vẫn có thể đóng góp — nhưng từ sẽ cần người bản ngữ xác nhận trước khi được chấp thuận.</p></div></div>
       </div>
       <div class="fq" itemscope itemtype="https://schema.org/Question">
-        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Tại sao không có "tiếng Mường chuẩn" như tiếng Việt chuẩn?</h3><i class="ti ti-plus fq-ic" aria-hidden="true"></i></button>
+        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Tại sao không có "tiếng Mường chuẩn" như tiếng Việt chuẩn?</h3><span class="fq-ic" aria-hidden="true">+</span></button>
         <div class="fq-a"><div class="fq-body"><p>Tiếng Việt "chuẩn" có được nhờ quá trình chuẩn hóa hàng thế kỷ, lấy giọng Hà Nội làm trung tâm. Tiếng Mường chưa trải qua quá trình đó. Bộ chữ viết đầu tiên của tiếng Mường mới được UBND tỉnh Hòa Bình phê duyệt năm 2016.</p></div></div>
       </div>
       <div class="fq" itemscope itemtype="https://schema.org/Question">
-        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Dữ liệu sẽ được dùng như thế nào để lên Google Translate?</h3><i class="ti ti-plus fq-ic" aria-hidden="true"></i></button>
+        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Dữ liệu sẽ được dùng như thế nào để lên Google Translate?</h3><span class="fq-ic" aria-hidden="true">+</span></button>
         <div class="fq-a"><div class="fq-body"><p>Mục tiêu là xây dựng 50.000 cặp câu Việt–Mường chất lượng cao được người bản ngữ xác nhận, sau đó nộp lên <a href="https://translate.google.com/about/intl/en_ALL/translate-community/" rel="noopener">Google Translate Community</a>. Toàn bộ dữ liệu sẽ là mã nguồn mở.</p></div></div>
       </div>
       <div class="fq" itemscope itemtype="https://schema.org/Question">
-        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Ủng hộ website và ủng hộ văn hóa khác nhau thế nào?</h3><i class="ti ti-plus fq-ic" aria-hidden="true"></i></button>
+        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Ủng hộ website và ủng hộ văn hóa khác nhau thế nào?</h3><span class="fq-ic" aria-hidden="true">+</span></button>
         <div class="fq-a"><div class="fq-body"><p itemprop="text">Dự án có <strong style="color:rgba(250,247,240,.8)">hai kênh đóng góp hoàn toàn khác nhau:</strong><br><br>
         ☕ <strong style="color:rgba(250,247,240,.8)">Ủng hộ phát triển website</strong> — qua Buy Me a Coffee. Tiền dùng để duy trì server, tên miền, chi phí API. Số người ủng hộ được Buy Me a Coffee hiển thị công khai tự động.<br><br>
         🌿 <strong style="color:rgba(250,247,240,.8)">Ủng hộ phát triển văn hóa Mường</strong> — đây là kênh khác biệt. Mỗi đợt gắn với một dự án cụ thể có đầu ra rõ ràng (ví dụ: "Thu âm 200 từ với người cao tuổi tại Ngọc Lặc — tháng 7/2025"). Tiền được chuyển qua tài khoản chính thức của Hội Văn học Nghệ thuật tỉnh hoặc Sở VHTTDL — không qua tay cá nhân. Sau khi hoàn thành, sẽ có báo cáo ảnh/video công khai.</p></div></div>
       </div>
       <div class="fq" itemscope itemtype="https://schema.org/Question">
-        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Tôi có thể ủng hộ website qua Buy Me a Coffee như thế nào?</h3><i class="ti ti-plus fq-ic" aria-hidden="true"></i></button>
+        <button class="fq-q" onclick="fqT(this)" aria-expanded="false"><h3 itemprop="name">Tôi có thể ủng hộ website qua Buy Me a Coffee như thế nào?</h3><span class="fq-ic" aria-hidden="true">+</span></button>
         <div class="fq-a"><div class="fq-body"><p>Truy cập trang Buy Me a Coffee của dự án, chọn số "ly cà phê" muốn tặng (mỗi ly tương đương ~30.000đ). Bạn có thể dùng thẻ quốc tế hoặc PayPal. Tên bạn sẽ xuất hiện trong danh sách supporter công khai trên trang. <a href="#">Ủng hộ ngay →</a></p></div></div>
       </div>
     </div>

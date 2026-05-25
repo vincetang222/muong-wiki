@@ -66,7 +66,44 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cr
 .nl-cta:hover{opacity:.9;}
 
 /* ── HERO ── */
-.hero{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;text-align:center;padding:100px 32px 0;overflow:hidden;}
+.hero{
+  position:relative;
+  display:flex;flex-direction:column;
+  justify-content:flex-end;align-items:center;
+  text-align:center;
+  padding:80px 32px 0;
+  overflow:hidden;
+  /* FIXED HEIGHT — không giật */
+  height:100vh;
+  min-height:640px;
+  max-height:900px;
+}
+
+/* ── HAMBURGER ── */
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;
+  background:none;border:none;padding:8px;border-radius:8px;transition:.15s;}
+.hamburger:hover{background:rgba(255,255,255,.08);}
+.hamburger span{display:block;width:22px;height:2px;background:var(--cream);
+  border-radius:2px;transition:transform .25s, opacity .25s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* mobile drawer */
+.mobile-menu{
+  display:none;
+  position:fixed;inset:60px 0 0 0;z-index:199;
+  background:rgba(7,21,16,.97);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  flex-direction:column;padding:24px 24px;gap:6px;
+  border-top:1px solid rgba(255,255,255,.06);}
+.mobile-menu.open{display:flex;}
+.mobile-menu .nl{font-size:16px;padding:14px 16px;border-radius:10px;
+  color:rgba(250,247,240,.65);justify-content:flex-start;width:100%;}
+.mobile-menu .nl:hover,.mobile-menu .nl.active{color:var(--cream);background:rgba(255,255,255,.07);}
+.mobile-menu .nl-cta{font-family:'Be Vietnam Pro',sans-serif;font-size:15px;font-weight:600;
+  cursor:pointer;padding:14px 16px;border-radius:10px;border:none;text-align:left;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;margin-top:8px;}
 
 /* gradient mesh bg */
 .hero-bg{position:absolute;inset:0;
@@ -362,8 +399,11 @@ footer{background:#050F09;padding:32px 28px;border-top:1px solid rgba(255,255,25
   .blog-g{grid-template-columns:1fr;}
   .nav{padding:0 16px;}
   .wrap{padding:0 18px;}
-  .hero{padding:80px 18px 0;}
+  .hero{padding:72px 18px 0;min-height:580px;}
   .sec,.steps-outer,.tl-outer,.faq-outer{padding:56px 0;}
+  /* hamburger */
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
 }
 </style>
 </head>
@@ -402,7 +442,20 @@ footer{background:#050F09;padding:32px 28px;border-top:1px solid rgba(255,255,25
     <a class="nl" href="about.html">Về dự án</a>
     <button class="nl-cta">+ Đóng góp</button>
   </div>
+  <button class="hamburger" onclick="toggleMenu(this)" aria-label="Mở menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menu điều hướng">
+  <button class="nl">Từ điển</button>
+  <button class="nl">Dịch thuật</button>
+  <button class="nl">Các vùng</button>
+  <button class="nl">Blog</button>
+  <a class="nl" href="about.html">Về dự án</a>
+  <button class="nl-cta">+ Đóng góp</button>
+</div>
 
 <!-- HERO -->
 <header class="hero" role="banner">
@@ -758,6 +811,23 @@ function fqT(btn){
   document.querySelectorAll('.fq.open').forEach(f=>{f.classList.remove('open');f.querySelector('button').setAttribute('aria-expanded','false');});
   if(!open){fq.classList.add('open');btn.setAttribute('aria-expanded','true');}
 }
+function toggleMenu(btn){
+  const menu=document.getElementById('mobile-menu');
+  const open=menu.classList.toggle('open');
+  btn.classList.toggle('open',open);
+  btn.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+// close menu on outside click
+document.addEventListener('click',e=>{
+  const menu=document.getElementById('mobile-menu');
+  const btn=document.querySelector('.hamburger');
+  if(menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target)){
+    menu.classList.remove('open');btn.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+    document.body.style.overflow='';
+  }
+});
 </script>
 </body>
 </html>

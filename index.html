@@ -68,15 +68,25 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cr
 /* ── HERO ── */
 .hero{
   position:relative;
-  display:flex;flex-direction:column;
-  justify-content:flex-end;align-items:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
   text-align:center;
-  padding:80px 32px 0;
+  padding:88px 32px 0;
   overflow:hidden;
-  /* FIXED HEIGHT — không giật */
   height:100vh;
-  min-height:640px;
-  max-height:900px;
+  min-height:700px;
+  max-height:960px;
+}
+.hero-content{
+  position:relative;z-index:2;
+  flex:1;
+  display:flex;flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:0 0 28px;
+  width:100%;
 }
 
 /* ── HAMBURGER ── */
@@ -124,7 +134,7 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cr
 /* thổ cẩm overlay */
 .hero-weave{position:absolute;inset:0;opacity:.04;pointer-events:none;}
 
-.hero-content{position:relative;z-index:2;}
+.hero-content{position:relative;z-index:2;padding-bottom:40px;}
 .hero-eye{font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
   background:linear-gradient(90deg,var(--g1),var(--g2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
@@ -153,10 +163,10 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cr
   backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
   border:1px solid rgba(255,255,255,.1);
   border-radius:20px 20px 0 0;
-  padding:24px 28px 0;
+  padding:20px 24px 0;
   text-align:left;
-  /* FIXED HEIGHT — không giật */
-  height:260px;
+  height:280px;
+  flex-shrink:0;
   display:flex;flex-direction:column;
 }
 .sc-lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,247,240,.35);margin-bottom:10px;flex-shrink:0;}
@@ -191,12 +201,25 @@ body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cr
 .sc-nav{display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 0 0;flex-shrink:0;}
 .dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.15);cursor:pointer;transition:.2s;}
 .dot.on{background:var(--g1);width:20px;border-radius:3px;}
-.sc-arr{position:absolute;top:24px;right:28px;display:flex;gap:5px;}
-.abtn{width:31px;height:31px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);color:rgba(250,247,240,.4);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.sc-arr{position:absolute;top:20px;right:20px;display:flex;gap:5px;}
+.abtn{width:34px;height:34px;border-radius:8px;border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.05);color:rgba(250,247,240,.55);cursor:pointer;
+  font-size:20px;line-height:1;
+  display:flex;align-items:center;justify-content:center;transition:.15s;
+  font-family:sans-serif;}
 .abtn:hover{background:rgba(255,255,255,.1);color:var(--cream);}
 
 /* ── PROGRESS ── */
-.pb-band{background:rgba(0,0,0,.3);backdrop-filter:blur(10px);padding:16px 32px;max-width:680px;margin:0 auto;border:1px solid rgba(255,255,255,.06);border-top:none;border-radius:0 0 20px 20px;}
+.pb-band{
+  position:relative;z-index:2;
+  background:rgba(0,0,0,.3);backdrop-filter:blur(10px);
+  padding:14px 28px;
+  max-width:680px;margin:0 auto;
+  width:100%;
+  border:1px solid rgba(255,255,255,.06);border-top:none;
+  border-radius:0 0 20px 20px;
+  flex-shrink:0;
+}
 .pb-inner{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
 .pb-lbl{font-size:12px;color:rgba(250,247,240,.38);}
 .pb-bar{flex:1;height:3px;background:rgba(255,255,255,.08);border-radius:2px;min-width:80px;}
@@ -421,13 +444,23 @@ footer{background:#050F09;padding:32px 28px;border-top:1px solid rgba(255,255,25
   .steps{grid-template-columns:1fr;}
   .stats{grid-template-columns:repeat(2,1fr);}
   .blog-g{grid-template-columns:1fr;}
-  .nav{padding:0 16px;}
-  .wrap{padding:0 18px;}
-  .hero{padding:72px 18px 0;min-height:580px;}
-  .sec,.steps-outer,.tl-outer,.faq-outer{padding:56px 0;}
   /* hamburger */
   .nav-links{display:none;}
   .hamburger{display:flex;}
+  /* hero mobile */
+  .nav{padding:0 16px;}
+  .wrap{padding:0 18px;}
+  .hero{padding:72px 16px 0;min-height:100svh;}
+  .hero-h1{font-size:clamp(32px,9vw,48px);}
+  .hero-sub{font-size:15px;margin-bottom:28px;}
+  .hero-btns{margin-bottom:0;gap:10px;}
+  .btn-grad,.btn-glass{font-size:13px;padding:11px 20px;}
+  .showcase{height:250px;padding:16px 18px 0;}
+  .sc-vi{font-size:clamp(22px,6vw,32px);}
+  .vw{font-size:18px;}
+  .pb-band{padding:12px 18px;}
+  .pb-lbl,.pb-g{display:none;}
+  .sec,.steps-outer,.tl-outer,.faq-outer{padding:56px 0;}
 }
 </style>
 </head>
@@ -512,8 +545,8 @@ footer{background:#050F09;padding:32px 28px;border-top:1px solid rgba(255,255,25
 
   <div class="showcase">
     <div class="sc-arr">
-      <button class="abtn" onclick="prevW()" aria-label="Trước"><i class="ti ti-chevron-left" aria-hidden="true"></i></button>
-      <button class="abtn" onclick="nextW()" aria-label="Tiếp theo"><i class="ti ti-chevron-right" aria-hidden="true"></i></button>
+      <button class="abtn" onclick="prevW()" aria-label="Trước">&#8249;</button>
+      <button class="abtn" onclick="nextW()" aria-label="Tiếp theo">&#8250;</button>
     </div>
     <p class="sc-lbl">Cùng một từ — nghe thử các vùng nói khác nhau</p>
     <div class="sc-vi" id="sc-vi" aria-live="polite"></div>

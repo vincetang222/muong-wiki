@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Tiếng Mường | Bài viết & Nguồn tham khảo về văn hóa Mường</title>
+<meta name="description" content="Bài viết về ngôn ngữ, văn hóa người Mường — từ cộng đồng Tiếng Mường và các nguồn báo chí uy tín được tuyển chọn.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://muong.wiki/blog/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://muong.wiki/blog/">
+<meta property="og:title" content="Blog Tiếng Mường — Bài viết & Nguồn tham khảo">
+<meta property="og:description" content="Bài viết về ngôn ngữ, văn hóa người Mường từ cộng đồng và báo chí uy tín.">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Tiếng Mường">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="theme-color" content="#1A5C3A">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --d1:#071510;--d2:#0F2A1C;--d4:#0D3040;
+  --g1:#D4A017;--g2:#E8762A;--e1:#C0553A;--teal:#1A7A6E;
+  --p:#6B3FA0;
+  --cream:#FAF7F0;--cream2:#EDE8DC;
+  --ink:#1A1A18;--ink2:#4A4A42;--ink3:#8A8A7E;
+  --bD:rgba(255,255,255,.08);--bL:rgba(0,0,0,.08);--R:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cream);overflow-x:hidden;}
+.wrap{max-width:960px;margin:0 auto;padding:0 28px;}
+
+/* ── NAV ── */
+nav.main{position:sticky;top:0;z-index:200;padding:0 32px;display:flex;align-items:center;height:60px;gap:16px;
+  background:rgba(7,21,16,.82);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05);}
+.nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none;}
+.logo-name{font-family:'Playfair Display',serif;font-size:18px;color:var(--cream);}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:4px;}
+.nl{font-size:12px;font-weight:500;color:rgba(250,247,240,.5);background:none;border:none;cursor:pointer;
+  padding:7px 13px;border-radius:9px;transition:.18s;font-family:'Be Vietnam Pro',sans-serif;
+  text-decoration:none;display:inline-flex;}
+.nl:hover{color:var(--cream);background:rgba(255,255,255,.07);}
+.nl.active{color:var(--cream);background:rgba(255,255,255,.1);}
+.nl-cta{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;font-weight:600;cursor:pointer;
+  padding:7px 16px;border-radius:9px;border:none;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;
+  padding:8px;border-radius:8px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--cream);border-radius:2px;transition:transform .25s,opacity .25s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;inset:60px 0 0 0;z-index:199;
+  background:rgba(7,21,16,.97);backdrop-filter:blur(24px);
+  flex-direction:column;padding:24px;gap:6px;border-top:1px solid rgba(255,255,255,.06);}
+.mobile-menu.open{display:flex;}
+.mobile-menu .nl{font-size:16px;padding:14px 16px;border-radius:10px;color:rgba(250,247,240,.65);}
+.mobile-menu .nl-cta{font-family:'Be Vietnam Pro',sans-serif;font-size:15px;font-weight:600;
+  cursor:pointer;padding:14px 16px;border-radius:10px;border:none;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;margin-top:8px;}
+
+/* ── PAGE HERO ── */
+.hero{background:linear-gradient(135deg,#071510 0%,#0A2818 55%,#0D2030 100%);
+  padding:60px 0 52px;position:relative;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;pointer-events:none;}
+.o1{width:500px;height:500px;top:-150px;right:-80px;
+  background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 65%);}
+.o2{width:350px;height:350px;bottom:-80px;left:-60px;
+  background:radial-gradient(circle,rgba(26,122,110,.12) 0%,transparent 65%);}
+.hero-inner{position:relative;z-index:1;}
+.bcrumb{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(250,247,240,.3);margin-bottom:20px;}
+.bcrumb a{color:rgba(250,247,240,.35);text-decoration:none;}
+.bcrumb a:hover{color:rgba(250,247,240,.65);}
+.hero-eye{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  background:linear-gradient(90deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,46px);
+  font-weight:600;color:var(--cream);line-height:1.1;margin-bottom:10px;}
+.hero-h1 em{font-style:italic;background:linear-gradient(135deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{font-size:15px;font-weight:300;color:rgba(250,247,240,.48);max-width:480px;line-height:1.75;}
+
+/* ── TAB SWITCHER ── */
+.tab-bar{
+  position:sticky;top:60px;z-index:100;
+  background:rgba(7,21,16,.92);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+  padding:0 28px;
+}
+.tab-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:0;}
+.tab{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:500;
+  color:rgba(250,247,240,.45);background:none;border:none;cursor:pointer;
+  padding:16px 20px;border-bottom:2px solid transparent;
+  transition:.2s;display:flex;align-items:center;gap:8px;}
+.tab:hover{color:rgba(250,247,240,.8);}
+.tab.active{color:var(--cream);border-bottom-color:var(--g1);}
+.tab-count{font-size:11px;font-weight:600;padding:2px 7px;border-radius:10px;
+  background:rgba(255,255,255,.08);color:rgba(250,247,240,.4);}
+.tab.active .tab-count{background:rgba(212,160,23,.2);color:var(--g1);}
+
+/* ── CONTENT PANELS ── */
+.panel{display:none;padding:52px 0 80px;}
+.panel.active{display:block;}
+
+/* ── OWN ARTICLES ── */
+/* Featured article */
+.featured{background:white;border:1px solid var(--bL);border-radius:var(--R);
+  overflow:hidden;display:grid;grid-template-columns:1fr 1fr;margin-bottom:28px;
+  cursor:pointer;transition:.18s;}
+.featured:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.1);}
+.ft-img{background:linear-gradient(135deg,var(--d2),var(--d4));
+  padding:32px 28px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px;
+  min-height:240px;position:relative;overflow:hidden;}
+.ft-pat{position:absolute;inset:0;opacity:.07;}
+.ft-badge{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  background:linear-gradient(90deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  position:relative;z-index:1;}
+.ft-title-img{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);
+  line-height:1.3;position:relative;z-index:1;}
+.ft-body{padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between;background:white;}
+.ft-cat{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:10px;}
+.ft-cat.lang{color:var(--teal);}
+.ft-cat.culture{color:var(--p);}
+.ft-cat.guide{color:var(--teal);}
+.ft-cat.compare{color:var(--e1);}
+.ft-cat.community{color:var(--d2);}
+.ft-h{font-family:'Playfair Display',serif;font-size:19px;color:var(--ink);line-height:1.3;margin-bottom:10px;}
+.ft-p{font-size:13px;color:var(--ink2);line-height:1.65;margin-bottom:16px;}
+.ft-meta{font-size:11px;color:var(--ink3);display:flex;align-items:center;gap:8px;}
+.ft-dot{width:3px;height:3px;border-radius:50%;background:var(--ink3);}
+
+/* Article grid */
+.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.ac{background:white;border:1px solid var(--bL);border-radius:var(--R);
+  overflow:hidden;cursor:pointer;transition:.18s;display:flex;flex-direction:column;}
+.ac:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.08);}
+.ac-head{padding:16px 18px;display:flex;align-items:flex-start;justify-content:space-between;gap:6px;}
+.ac-head h3{font-size:14px;font-weight:600;color:white;line-height:1.35;flex:1;}
+.ac-emoji{font-size:20px;flex-shrink:0;}
+.ac-head.culture{background:linear-gradient(135deg,#6B3FA0,#9B2D7F);}
+.ac-head.guide{background:linear-gradient(135deg,#1A7A6E,#0D5C7A);}
+.ac-head.compare{background:linear-gradient(135deg,#C0553A,#9A3020);}
+.ac-head.community{background:linear-gradient(135deg,#2D6A4F,#1A4A60);}
+.ac-head.lang{background:linear-gradient(135deg,#1A5C8A,#0D3A60);}
+.ac-body{padding:14px 18px;flex:1;display:flex;flex-direction:column;gap:7px;}
+.ac-cat{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;}
+.ac-cat.culture{color:#8B5CC0;}
+.ac-cat.guide{color:#1A7A6E;}
+.ac-cat.compare{color:#C0553A;}
+.ac-cat.community{color:#2D6A4F;}
+.ac-cat.lang{color:#1A5C8A;}
+.ac-desc{font-size:12px;color:var(--ink2);line-height:1.6;flex:1;}
+.ac-meta{font-size:11px;color:var(--ink3);}
+.ac-draft{font-size:10px;font-weight:600;padding:2px 7px;border-radius:6px;
+  background:rgba(0,0,0,.06);color:var(--ink3);margin-left:6px;}
+
+/* Coming soon overlay */
+.ac-coming{opacity:.6;position:relative;}
+.ac-coming::after{content:'Sắp có';position:absolute;top:12px;right:12px;
+  font-size:10px;font-weight:600;padding:2px 8px;border-radius:6px;
+  background:rgba(0,0,0,.12);color:var(--ink3);}
+
+/* ── EXTERNAL SOURCES ── */
+.sources-intro{
+  background:rgba(255,255,255,.04);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.07);border-radius:var(--R);
+  padding:18px 22px;margin-bottom:32px;
+  display:flex;align-items:flex-start;gap:14px;}
+.si-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.si-text{font-size:13px;color:rgba(250,247,240,.5);line-height:1.68;}
+.si-text strong{color:rgba(250,247,240,.8);}
+
+/* Filter chips */
+.filter-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:24px;}
+.chip{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;font-weight:500;
+  padding:5px 13px;border-radius:18px;cursor:pointer;border:1px solid;transition:.15s;}
+.chip.all{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:rgba(250,247,240,.65);}
+.chip.all.on{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:var(--cream);}
+.chip.culture{background:rgba(107,63,160,.15);border-color:rgba(107,63,160,.25);color:#C4A0F0;}
+.chip.culture.on{background:rgba(107,63,160,.3);border-color:#9B6AD0;}
+.chip.lang{background:rgba(26,92,138,.15);border-color:rgba(26,92,138,.25);color:#7BBFE8;}
+.chip.lang.on{background:rgba(26,92,138,.3);border-color:#2A7AB8;}
+.chip.history{background:rgba(192,85,58,.15);border-color:rgba(192,85,58,.25);color:#F5C4B3;}
+.chip.history.on{background:rgba(192,85,58,.3);border-color:#C0553A;}
+.chip.travel{background:rgba(26,122,110,.15);border-color:rgba(26,122,110,.25);color:#7DE8DC;}
+.chip.travel.on{background:rgba(26,122,110,.3);border-color:#1A7A6E;}
+
+/* Source cards */
+.sources-grid{display:grid;gap:14px;}
+.src{background:rgba(255,255,255,.04);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.07);border-radius:var(--R);
+  display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:18px;
+  padding:18px 20px;transition:.18s;cursor:pointer;text-decoration:none;}
+.src:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);transform:translateX(4px);}
+
+/* source logo placeholder */
+.src-logo{width:52px;height:52px;border-radius:10px;display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:600;text-align:center;line-height:1.3;flex-shrink:0;letter-spacing:.01em;}
+.sl-heritage{background:linear-gradient(135deg,#1A3A6E,#0D2A50);color:#A0C0F0;}
+.sl-nhandan{background:linear-gradient(135deg,#8A0000,#600000);color:#FFB0B0;}
+.sl-vnexpress{background:linear-gradient(135deg,#0E4A8A,#0A3060);color:#8ABCE8;}
+.sl-cand{background:linear-gradient(135deg,#1A1A5A,#0D0D40);color:#9090E0;}
+.sl-wiki{background:linear-gradient(135deg,#2A2A2A,#1A1A1A);color:#C0C0C0;}
+
+.src-content{}
+.src-source-name{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(250,247,240,.3);margin-bottom:5px;display:flex;align-items:center;gap:7px;}
+.src-badge{font-size:9px;padding:1px 6px;border-radius:5px;background:rgba(255,255,255,.07);color:rgba(250,247,240,.4);}
+.src-title{font-size:15px;font-weight:500;color:var(--cream);line-height:1.4;margin-bottom:6px;}
+.src-desc{font-size:12px;color:rgba(250,247,240,.42);line-height:1.6;}
+.src-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;}
+.src-tag{font-size:10px;padding:2px 8px;border-radius:8px;font-weight:500;}
+.src-tag.culture{background:rgba(107,63,160,.2);color:#C4A0F0;}
+.src-tag.lang{background:rgba(26,92,138,.2);color:#7BBFE8;}
+.src-tag.history{background:rgba(192,85,58,.2);color:#F5C4B3;}
+.src-tag.travel{background:rgba(26,122,110,.2);color:#7DE8DC;}
+
+.src-arrow{font-size:18px;color:rgba(250,247,240,.2);flex-shrink:0;transition:.15s;}
+.src:hover .src-arrow{color:var(--g1);transform:translateX(3px);}
+
+/* divider between source groups */
+.src-group-label{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(250,247,240,.22);margin:28px 0 12px;padding-bottom:8px;
+  border-bottom:1px solid rgba(255,255,255,.06);}
+
+/* ── CTA ── */
+.cta-strip{background:linear-gradient(135deg,var(--d1) 0%,#0A2010 50%,var(--d4) 100%);
+  padding:56px 28px;text-align:center;position:relative;overflow:hidden;}
+.cta-orb{position:absolute;width:500px;height:500px;top:50%;left:50%;
+  transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 60%);pointer-events:none;}
+.cta-title{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,30px);
+  color:var(--cream);margin-bottom:8px;position:relative;z-index:1;}
+.cta-sub{font-size:14px;color:rgba(250,247,240,.44);margin-bottom:24px;position:relative;z-index:1;}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.btn-grad{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:600;cursor:pointer;
+  padding:11px 24px;border-radius:10px;border:none;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;transition:.15s;text-decoration:none;}
+.btn-grad:hover{opacity:.88;}
+.btn-glass{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:500;cursor:pointer;
+  padding:11px 24px;border-radius:10px;background:rgba(255,255,255,.07);
+  backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.14);color:var(--cream);transition:.15s;text-decoration:none;}
+.btn-glass:hover{background:rgba(255,255,255,.12);}
+
+footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05);}
+.ft{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.ft-logo{font-family:'Playfair Display',serif;font-size:16px;color:rgba(250,247,240,.4);}
+.ft-links{display:flex;gap:18px;}
+.ftl{font-size:12px;color:rgba(250,247,240,.24);text-decoration:none;transition:.15s;}
+.ftl:hover{color:rgba(250,247,240,.6);}
+.ft-copy{font-size:11px;color:rgba(250,247,240,.18);}
+
+@media(max-width:720px){
+  nav.main{padding:0 16px;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .wrap{padding:0 18px;}
+  .featured{grid-template-columns:1fr;}
+  .ft-img{min-height:160px;}
+  .articles-grid{grid-template-columns:1fr;}
+  .src{grid-template-columns:auto 1fr;}
+  .src-arrow{display:none;}
+  .tab{font-size:13px;padding:14px 14px;}
+  .tab-bar{padding:0 18px;}
+  .panel{padding:36px 0 60px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="main" aria-label="Điều hướng chính">
+  <a class="nav-logo" href="index.html">
+    <svg width="33" height="33" viewBox="0 0 34 34" fill="none">
+      <defs><linearGradient id="lg" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1A5C3A"/><stop offset="100%" stop-color="#0D3040"/></linearGradient></defs>
+      <rect width="34" height="34" rx="9" fill="url(#lg)"/>
+      <rect x="5" y="16" width="24" height="2.2" fill="#D4A017" opacity=".95"/>
+      <rect x="16" y="5" width="2.2" height="24" fill="#D4A017" opacity=".95"/>
+      <polygon points="8,8 12,12 8,16 4,12" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="26,8 30,12 26,16 22,12" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="8,26 12,22 16,26 12,30" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="26,26 30,22 26,18 22,22" fill="#7DE8DC" opacity=".8"/>
+      <circle cx="17" cy="17" r="4" fill="#D4A017"/>
+      <circle cx="17" cy="17" r="2" fill="#0A2018"/>
+    </svg>
+    <span class="logo-name">Tiếng Mường</span>
+  </a>
+  <div class="nav-links">
+    <a class="nl" href="index.html">Trang chủ</a>
+    <a class="nl" href="index.html">Từ điển</a>
+    <a class="nl active" href="blog.html">Blog</a>
+    <a class="nl" href="about.html">Về dự án</a>
+    <a class="nl" href="ung-ho.html">Ủng hộ ♡</a>
+    <button class="nl-cta">+ Đóng góp</button>
+  </div>
+  <button class="hamburger" onclick="toggleMenu(this)" aria-label="Mở menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a class="nl" href="index.html">Trang chủ</a>
+  <a class="nl" href="index.html">Từ điển</a>
+  <a class="nl active" href="blog.html">Blog</a>
+  <a class="nl" href="about.html">Về dự án</a>
+  <a class="nl" href="ung-ho.html">Ủng hộ ♡</a>
+  <button class="nl-cta">+ Đóng góp</button>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="wrap hero-inner">
+    <nav class="bcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span>›</span>
+      <span aria-current="page">Blog</span>
+    </nav>
+    <p class="hero-eye">Đọc & Tìm hiểu</p>
+    <h1 class="hero-h1">Bài viết về <em>văn hóa Mường</em></h1>
+    <p class="hero-sub">Bài viết của cộng đồng và các nguồn báo chí uy tín được tuyển chọn — để hiểu sâu hơn về tiếng nói và văn hóa người Mường.</p>
+  </div>
+</header>
+
+<!-- TAB BAR -->
+<div class="tab-bar" role="tablist">
+  <div class="tab-inner">
+    <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-own" onclick="switchTab('own',this)">
+      ✍️ Bài viết của dự án
+      <span class="tab-count">5</span>
+    </button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-ext" onclick="switchTab('ext',this)">
+      📰 Nguồn tham khảo
+      <span class="tab-count">6</span>
+    </button>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══ TAB 1: BÀI VIẾT CỦA DỰ ÁN ═══ -->
+<div class="panel active" id="panel-own" role="tabpanel">
+  <div class="wrap">
+
+    <!-- FEATURED -->
+    <article class="featured" onclick="location.href='#'">
+      <div class="ft-img">
+        <svg class="ft-pat" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><pattern id="bp" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+            <rect x="0" y="13" width="30" height="3" fill="white"/>
+            <rect x="13" y="0" width="3" height="30" fill="white"/>
+            <rect x="5" y="5" width="5" height="5" fill="white"/>
+            <rect x="20" y="20" width="5" height="5" fill="white"/>
+          </pattern></defs>
+          <rect width="300" height="200" fill="url(#bp)"/>
+        </svg>
+        <span class="ft-badge">Bài viết nổi bật</span>
+        <p class="ft-title-img">Tiếng Mường ở Ngọc Lặc: "Mường Trong" và "Mường Ngoài" khác nhau thế nào?</p>
+      </div>
+      <div class="ft-body">
+        <div>
+          <p class="ft-cat lang">Ngôn ngữ học</p>
+          <p class="ft-h">Ngọc Lặc — nơi 70% dân số là người Mường — thực ra có hai nhóm phương ngữ khác nhau trong cùng một huyện.</p>
+          <p class="ft-p">Bài viết phân tích những điểm khác biệt cụ thể giữa Mường Trong (bản địa) và Mường Ngoài (di cư từ Hòa Bình), và ý nghĩa đối với dự án từ điển.</p>
+        </div>
+        <div class="ft-meta">
+          <span>Tiếng Mường</span>
+          <div class="ft-dot"></div>
+          <span>5 phút đọc</span>
+          <div class="ft-dot"></div>
+          <span>Tháng 5, 2025</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- ARTICLES GRID -->
+    <div class="articles-grid">
+
+      <article class="ac" onclick="location.href='#'">
+        <div class="ac-head culture">
+          <h3>Sử thi "Đẻ đất đẻ nước" — kho từ vựng cổ còn sót lại</h3>
+          <span class="ac-emoji">📖</span>
+        </div>
+        <div class="ac-body">
+          <p class="ac-cat culture">Văn hóa</p>
+          <p class="ac-desc">Thiên sử thi Mường chứa hàng trăm từ cổ không còn dùng trong hội thoại thường ngày. Chúng ta có thể khai thác như thế nào?</p>
+          <p class="ac-meta">Văn học dân gian · 4 phút đọc · Tháng 6, 2025</p>
+        </div>
+      </article>
+
+      <article class="ac" onclick="location.href='#'">
+        <div class="ac-head guide">
+          <h3>Cách ghi âm phát âm tiếng Mường đúng kỹ thuật bằng điện thoại</h3>
+          <span class="ac-emoji">🎙️</span>
+        </div>
+        <div class="ac-body">
+          <p class="ac-cat guide">Hướng dẫn</p>
+          <p class="ac-desc">Không cần thiết bị chuyên nghiệp. 5 mẹo đơn giản để có file audio chất lượng tốt phục vụ lưu trữ ngôn ngữ.</p>
+          <p class="ac-meta">Kỹ thuật · 3 phút đọc · Tháng 6, 2025</p>
+        </div>
+      </article>
+
+      <article class="ac" onclick="location.href='#'">
+        <div class="ac-head compare">
+          <h3>Tiếng Mường và tiếng Việt cổ: anh em tách ra từ thế kỷ 12</h3>
+          <span class="ac-emoji">🔍</span>
+        </div>
+        <div class="ac-body">
+          <p class="ac-cat compare">So sánh</p>
+          <p class="ac-desc">Ngôn ngữ học lịch sử cho thấy tiếng Mường là "hóa thạch sống" của tiếng Việt trước thời Nhà Lý. Những bằng chứng thú vị nhất.</p>
+          <p class="ac-meta">Ngôn ngữ học · 6 phút đọc · Sắp có</p>
+        </div>
+      </article>
+
+      <article class="ac ac-coming" onclick="location.href='#'">
+        <div class="ac-head community">
+          <h3>"Tôi sợ con mình không còn hiểu ông bà nói gì"</h3>
+          <span class="ac-emoji">🤝</span>
+        </div>
+        <div class="ac-body">
+          <p class="ac-cat community">Cộng đồng</p>
+          <p class="ac-desc">Phỏng vấn một người Mường ở Hòa Bình về hành trình ghi lại tiếng mẹ đẻ trước khi thế hệ trẻ quên hết.</p>
+          <p class="ac-meta">Phỏng vấn · 5 phút đọc · Sắp có</p>
+        </div>
+      </article>
+
+      <article class="ac ac-coming" onclick="location.href='#'">
+        <div class="ac-head lang">
+          <h3>Bộ chữ viết tiếng Mường 2016: ưu điểm, hạn chế và cách dự án này dùng</h3>
+          <span class="ac-emoji">✍️</span>
+        </div>
+        <div class="ac-body">
+          <p class="ac-cat lang">Ngôn ngữ học</p>
+          <p class="ac-desc">UBND tỉnh Hòa Bình phê duyệt bộ chữ Mường năm 2016. Đây là nền tảng chính tả mà dự án đang sử dụng — và những điều cần lưu ý.</p>
+          <p class="ac-meta">Chính sách ngôn ngữ · Sắp có</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TAB 2: NGUỒN THAM KHẢO ═══ -->
+<div class="panel" id="panel-ext" role="tabpanel">
+  <div class="wrap">
+
+    <div class="sources-intro">
+      <span class="si-icon">💡</span>
+      <p class="si-text">Các bài viết bên ngoài được tuyển chọn từ <strong>báo chí và tổ chức uy tín</strong>. Nội dung tóm tắt bằng lời của dự án, bấm để đọc bài gốc. Không sao chép — chỉ dẫn nguồn.</p>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-row" role="group" aria-label="Lọc theo chủ đề">
+      <button class="chip all on" onclick="filterSrc('all',this)">Tất cả</button>
+      <button class="chip culture" onclick="filterSrc('culture',this)">Văn hóa</button>
+      <button class="chip lang" onclick="filterSrc('lang',this)">Ngôn ngữ</button>
+      <button class="chip history" onclick="filterSrc('history',this)">Lịch sử</button>
+      <button class="chip travel" onclick="filterSrc('travel',this)">Du lịch & Di sản</button>
+    </div>
+
+    <!-- Sources -->
+    <p class="src-group-label">Báo chí & Tạp chí</p>
+
+    <div class="sources-grid" id="sources-grid">
+
+      <a class="src" href="https://heritagevietnamairlines.com/mo-muong-va-nghi-le-mat-nha/" target="_blank" rel="noopener" data-tags="culture">
+        <div class="src-logo sl-heritage">Heritage<br>VNA</div>
+        <div class="src-content">
+          <div class="src-source-name">
+            Heritage Vietnam Airlines
+            <span class="src-badge">Tạp chí hàng không</span>
+          </div>
+          <p class="src-title">Mo Mường và nghi lễ "mát nhà"</p>
+          <p class="src-desc">Giới thiệu về Mo Mường — di sản văn hóa phi vật thể của người Mường — và nghi lễ "mát nhà" mang ý nghĩa tâm linh đặc trưng. Có phiên bản tiếng Anh song song.</p>
+          <div class="src-tags">
+            <span class="src-tag culture">Văn hóa</span>
+            <span class="src-tag travel">Di sản</span>
+          </div>
+        </div>
+        <span class="src-arrow">→</span>
+      </a>
+
+      <a class="src" href="https://nhandan.vn/chu-de/dan-toc-muong" target="_blank" rel="noopener" data-tags="culture history">
+        <div class="src-logo sl-nhandan">Nhân<br>Dân</div>
+        <div class="src-content">
+          <div class="src-source-name">
+            Báo Nhân Dân
+            <span class="src-badge">Báo Trung ương</span>
+          </div>
+          <p class="src-title">Chuyên mục dân tộc Mường — Nhân Dân</p>
+          <p class="src-desc">Tổng hợp các bài viết về đời sống, văn hóa, phong tục và chính sách bảo tồn bản sắc dân tộc Mường trên báo Nhân Dân.</p>
+          <div class="src-tags">
+            <span class="src-tag culture">Văn hóa</span>
+            <span class="src-tag history">Lịch sử</span>
+          </div>
+        </div>
+        <span class="src-arrow">→</span>
+      </a>
+
+      <a class="src" href="https://vnexpress.net/tag/nguoi-muong" target="_blank" rel="noopener" data-tags="culture">
+        <div class="src-logo sl-vnexpress">VN<br>Express</div>
+        <div class="src-content">
+          <div class="src-source-name">
+            VnExpress
+            <span class="src-badge">Báo điện tử</span>
+          </div>
+          <p class="src-title">Người Mường — Chủ đề trên VnExpress</p>
+          <p class="src-desc">Tổng hợp tin tức, phóng sự và bài viết về người Mường trên VnExpress — từ văn hóa truyền thống đến đời sống hiện đại.</p>
+          <div class="src-tags">
+            <span class="src-tag culture">Văn hóa</span>
+          </div>
+        </div>
+        <span class="src-arrow">→</span>
+      </a>
+
+      <p class="src-group-label">Nghiên cứu & Bách khoa</p>
+
+      <a class="src" href="https://vi.wikipedia.org/wiki/Ng%C6%B0%E1%BB%9Di_M%C6%B0%E1%BB%9Dng" target="_blank" rel="noopener" data-tags="history lang">
+        <div class="src-logo sl-wiki">Wiki<br>pedia</div>
+        <div class="src-content">
+          <div class="src-source-name">
+            Wikipedia tiếng Việt
+            <span class="src-badge">Bách khoa mở</span>
+          </div>
+          <p class="src-title">Người Mường — Wikipedia</p>
+          <p class="src-desc">Tổng quan về dân tộc Mường: lịch sử, phân bố địa lý, ngôn ngữ, phong tục và văn hóa. Điểm khởi đầu tốt cho người mới tìm hiểu.</p>
+          <div class="src-tags">
+            <span class="src-tag history">Lịch sử</span>
+            <span class="src-tag lang">Ngôn ngữ</span>
+          </div>
+        </div>
+        <span class="src-arrow">→</span>
+      </a>
+
+      <a class="src" href="https://vi.wikipedia.org/wiki/Ti%E1%BA%BFng_M%C6%B0%E1%BB%9Dng" target="_blank" rel="noopener" data-tags="lang">
+        <div class="src-logo sl-wiki">Wiki<br>pedia</div>
+        <div class="src-content">
+          <div class="src-source-name">
+            Wikipedia tiếng Việt
+            <span class="src-badge">Bách khoa mở</span>
+          </div>
+          <p class="src-title">Tiếng Mường — Wikipedia</p>
+          <p class="src-desc">Mô tả ngôn ngữ Mường: phân loại ngôn ngữ học, hệ thống thanh điệu, phương ngữ vùng, mối quan hệ với tiếng Việt và lịch sử chữ viết.</p>
+          <div class="src-tags">
+            <span class="src-tag lang">Ngôn ngữ</span>
+          </div>
+        </div>
+        <span class="src-arrow">→</span>
+      </a>
+
+      <a class="src" href="https://svhttdl.thanhhoa.gov.vn/van-hoa/bao-ton-va-phat-huy-ban-sac-van-hoa-dan-toc-muong-bai-1-suc-song-manh-liet-lau-ben-cua-van-hoa-dan-toc-muong-1005262" target="_blank" rel="noopener" data-tags="culture history">
+        <div class="src-logo sl-cand" style="background:linear-gradient(135deg,#0D4A1A,#083510);color:#7DE8DC;font-size:9px;">Sở<br>VHTTDL<br>TH</div>
+        <div class="src-content">
+          <div class="src-source-name">
+            Sở VHTTDL Thanh Hóa
+            <span class="src-badge">Cơ quan nhà nước</span>
+          </div>
+          <p class="src-title">Sức sống mãnh liệt, lâu bền của văn hóa dân tộc Mường</p>
+          <p class="src-desc">Bài viết của Sở Văn hóa, Thể thao và Du lịch Thanh Hóa về bảo tồn và phát huy bản sắc văn hóa dân tộc Mường tỉnh Thanh Hóa.</p>
+          <div class="src-tags">
+            <span class="src-tag culture">Văn hóa</span>
+            <span class="src-tag history">Lịch sử</span>
+          </div>
+        </div>
+        <span class="src-arrow">→</span>
+      </a>
+
+    </div>
+
+    <p style="font-size:12px;color:rgba(250,247,240,.25);margin-top:24px;text-align:center;">
+      Biết bài viết hay về tiếng Mường? <a href="#" style="color:rgba(125,232,220,.6);">Gửi gợi ý cho chúng tôi →</a>
+    </p>
+
+  </div>
+</div>
+
+</main>
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="cta-orb"></div>
+  <h2 class="cta-title">Bạn có góc nhìn riêng về tiếng Mường?</h2>
+  <p class="cta-sub">Gửi bài viết cho dự án hoặc đề xuất nguồn tham khảo hay.</p>
+  <div class="cta-btns">
+    <a class="btn-grad" href="#">Gửi bài viết</a>
+    <a class="btn-glass" href="ung-ho.html">Ủng hộ dự án ♡</a>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <span class="ft-logo">Tiếng Mường</span>
+    <nav class="ft-links">
+      <a href="index.html" class="ftl">Trang chủ</a>
+      <a href="blog.html" class="ftl" style="color:rgba(250,247,240,.5);">Blog</a>
+      <a href="about.html" class="ftl">Về dự án</a>
+      <a href="ung-ho.html" class="ftl">Ủng hộ</a>
+    </nav>
+    <span class="ft-copy">muong.wiki · CC-BY 4.0</span>
+  </div>
+</footer>
+
+<script>
+// Tab switching
+function switchTab(id, btn){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>{t.classList.remove('active');t.setAttribute('aria-selected','false');});
+  document.getElementById('panel-'+id).classList.add('active');
+  btn.classList.add('active');
+  btn.setAttribute('aria-selected','true');
+}
+
+// Source filtering
+function filterSrc(tag, btn){
+  document.querySelectorAll('.filter-row .chip').forEach(c=>c.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('#sources-grid .src').forEach(s=>{
+    s.style.display = (tag==='all' || s.dataset.tags.includes(tag)) ? 'grid' : 'none';
+  });
+  // group labels
+  document.querySelectorAll('.src-group-label').forEach(l=>l.style.display = tag==='all' ? 'block' : 'none');
+}
+
+// Hamburger
+function toggleMenu(btn){
+  const menu=document.getElementById('mobile-menu');
+  const open=menu.classList.toggle('open');
+  btn.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+document.addEventListener('click',e=>{
+  const menu=document.getElementById('mobile-menu');
+  const btn=document.querySelector('.hamburger');
+  if(menu&&menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target)){
+    menu.classList.remove('open');btn.classList.remove('open');
+    document.body.style.overflow='';
+  }
+});
+</script>
+</body>
+</html>

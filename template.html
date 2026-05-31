@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--
+╔══════════════════════════════════════════════════════════╗
+║  HƯỚNG DẪN ĐIỀN THÔNG TIN KHI TẠO BÀI MỚI              ║
+║  Tìm và thay thế các phần có dấu [...]                   ║
+╚══════════════════════════════════════════════════════════╝
+-->
+
+<!-- ① TIÊU ĐỀ — dưới 60 ký tự, có từ khóa chính -->
+<title>[Tiêu đề bài viết] — Tiếng Mường | muong.wiki</title>
+
+<!-- ② MÔ TẢ — 120–155 ký tự, tóm tắt hấp dẫn -->
+<meta name="description" content="[Mô tả ngắn 1–2 câu về bài viết. Nên có từ khóa chính và gợi sự tò mò.]">
+
+<!-- ③ TỪ KHÓA — 4–6 từ khóa liên quan -->
+<meta name="keywords" content="[từ khóa 1], [từ khóa 2], tiếng Mường, văn hóa Mường">
+
+<meta name="author" content="Tiếng Mường — muong.wiki">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+
+<!-- ④ CANONICAL — đường dẫn thực của bài, không có / ở cuối nếu là file .html -->
+<link rel="canonical" href="https://muong.wiki/bai-viet/[slug-bai-viet]/">
+
+<!-- ── OPEN GRAPH (share mạng xã hội) ── -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://muong.wiki/bai-viet/[slug-bai-viet]/">
+<meta property="og:title" content="[Tiêu đề bài viết]">
+<meta property="og:description" content="[Mô tả ngắn — giống meta description]">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Tiếng Mường">
+<!-- ⑤ ẢNH SHARE — 1200×630px, nếu có -->
+<!-- <meta property="og:image" content="https://muong.wiki/assets/bai-viet/[slug]-og.jpg"> -->
+<!-- <meta property="og:image:width" content="1200"> -->
+<!-- <meta property="og:image:height" content="630"> -->
+<!-- <meta property="og:image:alt" content="[Mô tả ảnh]"> -->
+
+<!-- ── OPEN GRAPH: ARTICLE METADATA ── -->
+<!-- ⑥ NGÀY ĐĂNG — định dạng ISO 8601 -->
+<meta property="article:published_time" content="[2025-MM-DD]T00:00:00+07:00">
+<meta property="article:modified_time" content="[2025-MM-DD]T00:00:00+07:00">
+<meta property="article:author" content="https://muong.wiki/">
+<!-- ⑦ CATEGORY — chọn 1: Ngôn ngữ học / Văn hóa / Hướng dẫn / So sánh / Cộng đồng -->
+<meta property="article:section" content="[Category]">
+<meta property="article:tag" content="tiếng Mường">
+<meta property="article:tag" content="[tag phụ 1]">
+
+<!-- ── TWITTER CARD ── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[Tiêu đề bài viết]">
+<meta name="twitter:description" content="[Mô tả ngắn]">
+<!-- <meta name="twitter:image" content="https://muong.wiki/assets/bai-viet/[slug]-og.jpg"> -->
+
+<!-- ── STRUCTURED DATA: BlogPosting ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": "https://muong.wiki/bai-viet/[slug-bai-viet]/#article",
+      "url": "https://muong.wiki/bai-viet/[slug-bai-viet]/",
+      "headline": "[Tiêu đề bài viết đầy đủ]",
+      "description": "[Mô tả ngắn — giống meta description]",
+      "inLanguage": "vi",
+      "datePublished": "[2025-MM-DD]T00:00:00+07:00",
+      "dateModified": "[2025-MM-DD]T00:00:00+07:00",
+      "author": {
+        "@type": "Organization",
+        "name": "Tiếng Mường",
+        "url": "https://muong.wiki/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://muong.wiki/#org",
+        "name": "Tiếng Mường",
+        "url": "https://muong.wiki/"
+      },
+      "isPartOf": {
+        "@type": "Blog",
+        "@id": "https://muong.wiki/blog/#blog"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://muong.wiki/bai-viet/[slug-bai-viet]/"
+      },
+      "articleSection": "[Category]",
+      "keywords": ["tiếng Mường", "[từ khóa 1]", "[từ khóa 2]"],
+      "wordCount": [số-từ-ước-tính],
+      "timeRequired": "PT[X]M"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://muong.wiki/"},
+        {"@type":"ListItem","position":2,"name":"Blog","item":"https://muong.wiki/blog/"},
+        {"@type":"ListItem","position":3,"name":"[Tiêu đề ngắn]","item":"https://muong.wiki/bai-viet/[slug-bai-viet]/"}
+      ]
+    }
+  ]
+}
+</script>
+
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon-180.png">
+<meta name="theme-color" content="#1A5C3A">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --d1:#071510;--d2:#0F2A1C;--d4:#0D3040;
+  --g1:#D4A017;--g2:#E8762A;--e1:#C0553A;--teal:#1A7A6E;
+  --cream:#FAF7F0;--ink:#1A1A18;--ink2:#4A4A42;--ink3:#8A8A7E;
+  --bD:rgba(255,255,255,.08);--bL:rgba(0,0,0,.08);--R:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cream);overflow-x:hidden;}
+.wrap{max-width:780px;margin:0 auto;padding:0 28px;}
+
+/* NAV */
+nav.main{position:sticky;top:0;z-index:200;padding:0 32px;display:flex;align-items:center;height:60px;gap:16px;
+  background:rgba(7,21,16,.82);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.05);}
+.nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none;}
+.logo-name{font-family:'Playfair Display',serif;font-size:18px;color:var(--cream);}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:4px;}
+.nl{font-size:12px;font-weight:500;color:rgba(250,247,240,.5);background:none;border:none;cursor:pointer;
+  padding:7px 13px;border-radius:9px;transition:.18s;font-family:'Be Vietnam Pro',sans-serif;
+  text-decoration:none;display:inline-flex;}
+.nl:hover{color:var(--cream);background:rgba(255,255,255,.07);}
+.nl-cta{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;font-weight:600;cursor:pointer;
+  padding:7px 16px;border-radius:9px;border:none;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;}
+
+/* ARTICLE HEADER */
+.article-header{
+  background:linear-gradient(135deg,#071510 0%,#0A2818 55%,#0D2030 100%);
+  padding:56px 0 48px;position:relative;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;pointer-events:none;}
+.o1{width:500px;height:500px;top:-150px;right:-80px;
+  background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 65%);}
+.ah-inner{position:relative;z-index:1;}
+
+/* Breadcrumb */
+.bcrumb{display:flex;align-items:center;gap:7px;flex-wrap:wrap;
+  font-size:12px;color:rgba(250,247,240,.3);margin-bottom:20px;}
+.bcrumb a{color:rgba(250,247,240,.38);text-decoration:none;transition:.15s;}
+.bcrumb a:hover{color:rgba(250,247,240,.7);}
+.bcrumb span[aria-current]{color:rgba(250,247,240,.55);}
+
+/* Category badge */
+.art-cat{display:inline-flex;align-items:center;gap:6px;
+  font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  padding:4px 12px;border-radius:20px;margin-bottom:16px;}
+.cat-lang{background:rgba(26,92,138,.25);color:#7BBFE8;border:1px solid rgba(26,92,138,.3);}
+.cat-culture{background:rgba(107,63,160,.25);color:#C4A0F0;border:1px solid rgba(107,63,160,.3);}
+.cat-guide{background:rgba(26,122,110,.25);color:#7DE8DC;border:1px solid rgba(26,122,110,.3);}
+.cat-compare{background:rgba(192,85,58,.25);color:#F5C4B3;border:1px solid rgba(192,85,58,.3);}
+.cat-community{background:rgba(45,106,79,.25);color:#7DE8B0;border:1px solid rgba(45,106,79,.3);}
+
+/* Title */
+.art-h1{font-family:'Playfair Display',serif;
+  font-size:clamp(26px,4vw,44px);font-weight:600;
+  color:var(--cream);line-height:1.15;margin-bottom:14px;}
+
+/* Meta row */
+.art-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  font-size:13px;color:rgba(250,247,240,.42);}
+.meta-sep{width:3px;height:3px;border-radius:50%;background:rgba(250,247,240,.3);}
+.art-meta time{color:rgba(250,247,240,.42);}
+
+/* Lead paragraph */
+.art-lead{
+  font-size:17px;font-weight:300;color:rgba(250,247,240,.62);
+  line-height:1.78;max-width:620px;margin-top:20px;
+  border-left:2px solid var(--g1);padding-left:16px;}
+
+/* ARTICLE BODY */
+.article-body{
+  background:var(--cream);
+  padding:56px 0 80px;}
+.art-content{color:var(--ink);}
+
+/* Typography */
+.art-content h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(20px,2.5vw,28px);font-weight:600;
+  color:var(--d2);line-height:1.2;
+  margin:40px 0 14px;
+  padding-top:8px;border-top:1px solid var(--bL);}
+.art-content h3{
+  font-size:18px;font-weight:600;color:var(--ink);
+  margin:28px 0 10px;line-height:1.3;}
+.art-content p{
+  font-size:16px;line-height:1.85;color:var(--ink2);
+  margin-bottom:20px;}
+.art-content p:last-child{margin-bottom:0;}
+.art-content ul,.art-content ol{
+  margin:0 0 20px 20px;
+  display:flex;flex-direction:column;gap:8px;}
+.art-content li{font-size:16px;line-height:1.75;color:var(--ink2);}
+.art-content strong{color:var(--ink);font-weight:600;}
+.art-content em{font-style:italic;}
+.art-content a{color:var(--teal);font-weight:500;text-decoration:underline;
+  text-underline-offset:3px;}
+.art-content a:hover{color:var(--d2);}
+.art-content blockquote{
+  border-left:3px solid var(--g1);
+  background:#FBF6E7;
+  padding:14px 18px;border-radius:0 10px 10px 0;
+  margin:24px 0;
+  font-size:16px;font-style:italic;color:var(--ink2);line-height:1.75;}
+.art-content blockquote cite{
+  display:block;margin-top:8px;
+  font-size:13px;font-style:normal;color:var(--ink3);}
+
+/* Word example box */
+.word-box{
+  background:white;border:1px solid var(--bL);border-radius:var(--R);
+  padding:18px 20px;margin:24px 0;display:flex;flex-direction:column;gap:10px;}
+.wb-vi{font-family:'Playfair Display',serif;font-size:26px;color:var(--d2);margin-bottom:4px;}
+.wb-row{display:flex;align-items:baseline;gap:10px;}
+.wb-tag{font-size:10px;font-weight:600;padding:2px 8px;border-radius:6px;flex-shrink:0;}
+.wb-tag.hb{background:#EAF3E5;color:#2D6A4F;}
+.wb-tag.th{background:#FDF6E8;color:#9A7200;}
+.wb-tag.pt{background:#EEF2FE;color:#3D50A0;}
+.wb-tag.nb{background:#FEEAE5;color:#963020;}
+.wb-muong{font-size:18px;font-weight:500;color:var(--ink);}
+.wb-phonetic{font-size:13px;color:var(--ink3);font-style:italic;}
+
+/* Note / callout */
+.note{background:#EAF3E8;border-left:3px solid var(--teal);
+  border-radius:0 10px 10px 0;padding:14px 18px;margin:24px 0;
+  font-size:14px;color:var(--ink2);line-height:1.7;}
+.note.warn{background:#FAF0EC;border-color:var(--e1);}
+.note.gold{background:#FBF6E7;border-color:var(--g1);}
+
+/* IMAGE placeholder (thay bằng <img> khi có ảnh thật) */
+.art-img{
+  background:linear-gradient(135deg,var(--d2),var(--d4));
+  border-radius:var(--R);height:300px;margin:32px 0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;color:rgba(250,247,240,.3);}
+.art-img img{width:100%;height:100%;object-fit:cover;border-radius:var(--R);display:block;}
+.art-img figcaption{font-size:12px;color:var(--ink3);text-align:center;margin-top:8px;}
+
+/* Divider */
+.art-divider{height:1px;background:var(--bL);margin:40px 0;}
+
+/* Tags */
+.art-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:40px;padding-top:24px;border-top:1px solid var(--bL);}
+.art-tag{font-size:12px;padding:4px 12px;border-radius:16px;background:rgba(0,0,0,.06);color:var(--ink3);
+  text-decoration:none;border:1px solid var(--bL);transition:.15s;}
+.art-tag:hover{border-color:var(--teal);color:var(--teal);}
+
+/* RELATED ARTICLES */
+.related{padding:52px 0;background:var(--d1);}
+.related-h{font-family:'Playfair Display',serif;font-size:22px;color:var(--cream);margin-bottom:20px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.rel-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);
+  border-radius:var(--R);padding:16px;cursor:pointer;transition:.18s;text-decoration:none;display:block;}
+.rel-card:hover{background:rgba(255,255,255,.09);transform:translateY(-2px);}
+.rel-cat{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(250,247,240,.3);margin-bottom:7px;}
+.rel-title{font-size:14px;font-weight:500;color:var(--cream);line-height:1.4;}
+
+/* CTA */
+.art-cta{background:linear-gradient(135deg,var(--d1) 0%,#0A2010 50%,var(--d4) 100%);
+  padding:52px 28px;text-align:center;position:relative;overflow:hidden;}
+.cta-orb{position:absolute;width:400px;height:400px;top:50%;left:50%;
+  transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 60%);pointer-events:none;}
+.cta-t{font-family:'Playfair Display',serif;font-size:clamp(18px,2.5vw,28px);
+  color:var(--cream);margin-bottom:8px;position:relative;z-index:1;}
+.cta-s{font-size:14px;color:rgba(250,247,240,.44);margin-bottom:22px;position:relative;z-index:1;}
+.cta-btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1;}
+.btn-grad{font-family:'Be Vietnam Pro',sans-serif;font-size:13px;font-weight:600;cursor:pointer;
+  padding:10px 22px;border-radius:9px;border:none;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;text-decoration:none;}
+.btn-glass{font-family:'Be Vietnam Pro',sans-serif;font-size:13px;font-weight:500;
+  padding:10px 22px;border-radius:9px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.14);color:var(--cream);text-decoration:none;}
+
+footer{background:#050F09;padding:26px 28px;border-top:1px solid rgba(255,255,255,.05);}
+.ft{max-width:780px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.ft-logo{font-family:'Playfair Display',serif;font-size:15px;color:rgba(250,247,240,.38);}
+.ft-links{display:flex;gap:16px;}
+.ftl{font-size:11px;color:rgba(250,247,240,.22);text-decoration:none;}
+.ftl:hover{color:rgba(250,247,240,.55);}
+.ft-copy{font-size:11px;color:rgba(250,247,240,.16);}
+
+@media(max-width:680px){
+  nav.main{padding:0 16px;}
+  .wrap{padding:0 18px;}
+  .nav-links{display:none;}
+  .related-grid{grid-template-columns:1fr;}
+  .art-content h2{font-size:20px;}
+  .art-content p{font-size:15px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="main" aria-label="Điều hướng chính">
+  <a class="nav-logo" href="../index.html">
+    <svg width="33" height="33" viewBox="0 0 34 34" fill="none">
+      <defs><linearGradient id="lg" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1A5C3A"/><stop offset="100%" stop-color="#0D3040"/></linearGradient></defs>
+      <rect width="34" height="34" rx="9" fill="url(#lg)"/>
+      <rect x="5" y="16" width="24" height="2.2" fill="#D4A017" opacity=".95"/>
+      <rect x="16" y="5" width="2.2" height="24" fill="#D4A017" opacity=".95"/>
+      <polygon points="8,8 12,12 8,16 4,12" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="26,8 30,12 26,16 22,12" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="8,26 12,22 16,26 12,30" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="26,26 30,22 26,18 22,22" fill="#7DE8DC" opacity=".8"/>
+      <circle cx="17" cy="17" r="4" fill="#D4A017"/>
+      <circle cx="17" cy="17" r="2" fill="#0A2018"/>
+    </svg>
+    <span class="logo-name">Tiếng Mường</span>
+  </a>
+  <div class="nav-links">
+    <a class="nl" href="../index.html">Trang chủ</a>
+    <a class="nl" href="../index.html">Từ điển</a>
+    <a class="nl" href="../blog.html">Blog</a>
+    <a class="nl" href="../about.html">Về dự án</a>
+    <a class="nl" href="../ung-ho.html">Ủng hộ ♡</a>
+    <button class="nl-cta">+ Đóng góp</button>
+  </div>
+</nav>
+
+<!-- ARTICLE HEADER -->
+<header class="article-header">
+  <div class="orb o1"></div>
+  <div class="wrap ah-inner">
+
+    <!-- Breadcrumb — Google đọc để hiểu cấu trúc site -->
+    <nav class="bcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Trang chủ</a>
+      <span aria-hidden="true">›</span>
+      <a href="../blog.html">Blog</a>
+      <span aria-hidden="true">›</span>
+      <!-- ⑧ TÊN NGẮN trong breadcrumb -->
+      <span aria-current="page">[Tên ngắn của bài]</span>
+    </nav>
+
+    <!-- ⑦ CATEGORY — chọn class phù hợp: cat-lang / cat-culture / cat-guide / cat-compare / cat-community -->
+    <span class="art-cat cat-lang">[Category]</span>
+
+    <!-- ① TIÊU ĐỀ ĐẦY ĐỦ -->
+    <h1 class="art-h1">[Tiêu đề đầy đủ của bài viết]</h1>
+
+    <!-- META -->
+    <div class="art-meta">
+      <span>Tiếng Mường</span>
+      <span class="meta-sep"></span>
+      <!-- ⑥ NGÀY ĐĂNG -->
+      <time datetime="[2025-MM-DD]">[Ngày tháng năm đăng]</time>
+      <span class="meta-sep"></span>
+      <!-- ⑨ THỜI GIAN ĐỌC ước tính -->
+      <span>[X] phút đọc</span>
+    </div>
+
+    <!-- LEAD — đoạn mở đầu hấp dẫn, 2–3 câu -->
+    <p class="art-lead">[Đoạn mở đầu của bài viết — nên hấp dẫn, nêu rõ bài viết sẽ trả lời câu hỏi gì hoặc tiết lộ điều gì thú vị.]</p>
+
+  </div>
+</header>
+
+<!-- ARTICLE BODY -->
+<article class="article-body" itemscope itemtype="https://schema.org/BlogPosting">
+
+  <!-- Hidden meta for crawlers -->
+  <meta itemprop="headline" content="[Tiêu đề đầy đủ]">
+  <meta itemprop="datePublished" content="[2025-MM-DD]">
+  <meta itemprop="dateModified" content="[2025-MM-DD]">
+  <meta itemprop="author" content="Tiếng Mường">
+  <meta itemprop="url" content="https://muong.wiki/bai-viet/[slug]/
+
+  <div class="wrap art-content" itemprop="articleBody">
+
+    <!--
+    ═══════════════════════════════════════
+    NỘI DUNG BÀI VIẾT — VIẾT TỪ ĐÂY
+    ═══════════════════════════════════════
+
+    CÁC COMPONENT SẴN CÓ:
+
+    1. TIÊU ĐỀ MỤC:
+    <h2>Tiêu đề mục lớn</h2>
+    <h3>Tiêu đề mục nhỏ hơn</h3>
+
+    2. ĐOẠN VĂN:
+    <p>Nội dung đoạn văn...</p>
+
+    3. TRÍCH DẪN:
+    <blockquote>
+      Câu trích dẫn hay...
+      <cite>— Nguồn trích dẫn</cite>
+    </blockquote>
+
+    4. VÍ DỤ TỪ VỰNG:
+    <div class="word-box">
+      <div class="wb-vi">nước</div>
+      <div class="wb-row"><span class="wb-tag hb">Hòa Bình</span><span class="wb-muong">đác</span><span class="wb-phonetic">/ɗak˧/</span></div>
+      <div class="wb-row"><span class="wb-tag th">Thanh Hóa</span><span class="wb-muong">đák</span><span class="wb-phonetic">/ɗak˥/</span></div>
+    </div>
+
+    5. GHI CHÚ / CALLOUT:
+    <div class="note">Ghi chú thông thường (xanh lá)</div>
+    <div class="note warn">Cảnh báo / lưu ý (cam đất)</div>
+    <div class="note gold">Thông tin thú vị (vàng)</div>
+
+    6. ẢNH (khi có):
+    <figure class="art-img">
+      <img src="../../assets/bai-viet/ten-anh.jpg" alt="[Mô tả ảnh chi tiết — quan trọng cho SEO]" loading="lazy">
+      <figcaption>Chú thích ảnh</figcaption>
+    </figure>
+
+    7. DANH SÁCH:
+    <ul>
+      <li>Mục 1</li>
+      <li>Mục 2</li>
+    </ul>
+
+    8. ĐƯỜNG KẺ PHÂN CÁCH:
+    <div class="art-divider"></div>
+    ═══════════════════════════════════════
+    -->
+
+    <p>[Đoạn đầu tiên của bài viết — tiếp nối từ lead paragraph...]</p>
+
+    <h2>[Tiêu đề mục 1]</h2>
+    <p>[Nội dung mục 1...]</p>
+
+    <h2>[Tiêu đề mục 2]</h2>
+    <p>[Nội dung mục 2...]</p>
+
+    <!-- ⑩ TAGS — thêm các tag liên quan -->
+    <div class="art-tags" aria-label="Tags">
+      <a href="../blog.html" class="art-tag">tiếng Mường</a>
+      <a href="../blog.html" class="art-tag">[tag 2]</a>
+      <a href="../blog.html" class="art-tag">[tag 3]</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- RELATED ARTICLES — thay link và tiêu đề bài liên quan -->
+<section class="related" aria-labelledby="related-h">
+  <div class="wrap">
+    <h2 class="related-h" id="related-h">Bài viết liên quan</h2>
+    <div class="related-grid">
+      <a class="rel-card" href="#">
+        <p class="rel-cat">Ngôn ngữ học</p>
+        <p class="rel-title">[Tiêu đề bài liên quan 1]</p>
+      </a>
+      <a class="rel-card" href="#">
+        <p class="rel-cat">Văn hóa</p>
+        <p class="rel-title">[Tiêu đề bài liên quan 2]</p>
+      </a>
+      <a class="rel-card" href="#">
+        <p class="rel-cat">Hướng dẫn</p>
+        <p class="rel-title">[Tiêu đề bài liên quan 3]</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="art-cta">
+  <div class="cta-orb"></div>
+  <h2 class="cta-t">Bạn biết tiếng Mường?</h2>
+  <p class="cta-s">Đóng góp từ vựng để xây dựng từ điển cộng đồng.</p>
+  <div class="cta-btns">
+    <a class="btn-grad" href="../index.html">+ Đóng góp từ vựng</a>
+    <a class="btn-glass" href="../blog.html">← Về trang Blog</a>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <span class="ft-logo">Tiếng Mường</span>
+    <nav class="ft-links">
+      <a href="../index.html" class="ftl">Trang chủ</a>
+      <a href="../blog.html" class="ftl">Blog</a>
+      <a href="../about.html" class="ftl">Về dự án</a>
+      <a href="../ung-ho.html" class="ftl">Ủng hộ</a>
+    </nav>
+    <span class="ft-copy">muong.wiki · CC-BY 4.0</span>
+  </div>
+</footer>
+
+</body>
+</html>

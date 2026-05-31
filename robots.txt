@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block thư mục không cần index
+Disallow: /assets/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://muong.wiki/sitemap.xml

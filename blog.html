@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog — Tiếng Mường | Bài viết & Nguồn tham khảo về văn hóa Mường</title>
 <meta name="description" content="Bài viết về ngôn ngữ, văn hóa người Mường — từ cộng đồng Tiếng Mường và các nguồn báo chí uy tín được tuyển chọn.">
+<meta name="keywords" content="blog tiếng Mường, văn hóa Mường, ngôn ngữ Mường, bài viết người Mường, nghiên cứu tiếng Mường">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://muong.wiki/blog/">
 <meta property="og:type" content="website">
@@ -13,6 +14,68 @@
 <meta property="og:description" content="Bài viết về ngôn ngữ, văn hóa người Mường từ cộng đồng và báo chí uy tín.">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:site_name" content="Tiếng Mường">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog Tiếng Mường — Bài viết & Nguồn tham khảo">
+<meta name="twitter:description" content="Bài viết về ngôn ngữ, văn hóa người Mường từ cộng đồng và báo chí uy tín.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://muong.wiki/blog/#webpage",
+      "url": "https://muong.wiki/blog/",
+      "name": "Blog Tiếng Mường",
+      "description": "Bài viết về ngôn ngữ, văn hóa người Mường từ cộng đồng và báo chí uy tín.",
+      "inLanguage": "vi",
+      "isPartOf": {"@id": "https://muong.wiki/#website"},
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Trang chủ","item":"https://muong.wiki/"},
+          {"@type":"ListItem","position":2,"name":"Blog","item":"https://muong.wiki/blog/"}
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://muong.wiki/#website",
+      "url": "https://muong.wiki/",
+      "name": "Tiếng Mường",
+      "description": "Từ điển Việt–Mường cộng đồng",
+      "inLanguage": "vi",
+      "publisher": {"@id": "https://muong.wiki/#org"}
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://muong.wiki/#org",
+      "name": "Tiếng Mường",
+      "url": "https://muong.wiki/"
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://muong.wiki/blog/#blog",
+      "url": "https://muong.wiki/blog/",
+      "name": "Blog Tiếng Mường",
+      "description": "Bài viết về ngôn ngữ và văn hóa người Mường",
+      "inLanguage": "vi",
+      "publisher": {"@id": "https://muong.wiki/#org"},
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Tiếng Mường ở Ngọc Lặc: Mường Trong và Mường Ngoài khác nhau thế nào?",
+          "url": "https://muong.wiki/bai-viet/tieng-muong-ngoc-lac-muong-trong-muong-ngoai/",
+          "datePublished": "2025-05-25",
+          "dateModified": "2025-05-25",
+          "author": {"@id": "https://muong.wiki/#org"},
+          "keywords": ["tiếng Mường", "Ngọc Lặc", "phương ngữ", "ngôn ngữ học"],
+          "articleSection": "Ngôn ngữ học"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -188,6 +251,10 @@ nav.main{position:sticky;top:0;z-index:200;padding:0 32px;display:flex;align-ite
 .chip.history.on{background:rgba(192,85,58,.3);border-color:#C0553A;}
 .chip.travel{background:rgba(26,122,110,.15);border-color:rgba(26,122,110,.25);color:#7DE8DC;}
 .chip.travel.on{background:rgba(26,122,110,.3);border-color:#1A7A6E;}
+.chip.guide{background:rgba(26,92,138,.15);border-color:rgba(26,92,138,.25);color:#7BBFE8;}
+.chip.guide.on{background:rgba(26,92,138,.3);border-color:#2A7AB8;}
+.chip.community{background:rgba(45,106,79,.15);border-color:rgba(45,106,79,.25);color:#7DE8B0;}
+.chip.community.on{background:rgba(45,106,79,.3);border-color:#2D6A4F;}
 
 /* Source cards */
 .sources-grid{display:grid;gap:14px;}
@@ -227,7 +294,20 @@ nav.main{position:sticky;top:0;z-index:200;padding:0 32px;display:flex;align-ite
   color:rgba(250,247,240,.22);margin:28px 0 12px;padding-bottom:8px;
   border-bottom:1px solid rgba(255,255,255,.06);}
 
-/* ── CTA ── */
+/* Ensure all cards visible without JS (Google crawl) */
+.ac[style*="display: none"]{display:flex!important;}
+.featured[style*="display: none"]{display:grid!important;}
+</style>
+<noscript>
+<style>
+  .filter-row{display:none;}
+  .ac{display:flex!important;}
+  .featured{display:grid!important;}
+  .src{display:grid!important;}
+  .panel{display:block!important;}
+  .tab-bar{display:none;}
+</style>
+</noscript>
 .cta-strip{background:linear-gradient(135deg,var(--d1) 0%,#0A2010 50%,var(--d4) 100%);
   padding:56px 28px;text-align:center;position:relative;overflow:hidden;}
 .cta-orb{position:absolute;width:500px;height:500px;top:50%;left:50%;
@@ -347,8 +427,18 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
 <div class="panel active" id="panel-own" role="tabpanel">
   <div class="wrap">
 
+    <!-- Filter -->
+    <div class="filter-row" role="group" aria-label="Lọc bài viết">
+      <button class="chip all on" onclick="filterOwn('all',this)">Tất cả</button>
+      <button class="chip lang" onclick="filterOwn('lang',this)">Ngôn ngữ học</button>
+      <button class="chip culture" onclick="filterOwn('culture',this)">Văn hóa</button>
+      <button class="chip guide" onclick="filterOwn('guide',this)">Hướng dẫn</button>
+      <button class="chip compare" onclick="filterOwn('compare',this)">So sánh</button>
+      <button class="chip community" onclick="filterOwn('community',this)">Cộng đồng</button>
+    </div>
+
     <!-- FEATURED -->
-    <article class="featured" onclick="location.href='#'">
+    <article class="featured" data-cat="lang" onclick="location.href='#'" id="featured-card">
       <div class="ft-img">
         <svg class="ft-pat" viewBox="0 0 300 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <defs><pattern id="bp" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
@@ -381,7 +471,7 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
     <!-- ARTICLES GRID -->
     <div class="articles-grid">
 
-      <article class="ac" onclick="location.href='#'">
+      <article class="ac" data-cat="culture" onclick="location.href='#'">
         <div class="ac-head culture">
           <h3>Sử thi "Đẻ đất đẻ nước" — kho từ vựng cổ còn sót lại</h3>
           <span class="ac-emoji">📖</span>
@@ -393,7 +483,7 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
         </div>
       </article>
 
-      <article class="ac" onclick="location.href='#'">
+      <article class="ac" data-cat="guide" onclick="location.href='#'">
         <div class="ac-head guide">
           <h3>Cách ghi âm phát âm tiếng Mường đúng kỹ thuật bằng điện thoại</h3>
           <span class="ac-emoji">🎙️</span>
@@ -405,7 +495,7 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
         </div>
       </article>
 
-      <article class="ac" onclick="location.href='#'">
+      <article class="ac" data-cat="compare" onclick="location.href='#'">
         <div class="ac-head compare">
           <h3>Tiếng Mường và tiếng Việt cổ: anh em tách ra từ thế kỷ 12</h3>
           <span class="ac-emoji">🔍</span>
@@ -417,7 +507,7 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
         </div>
       </article>
 
-      <article class="ac ac-coming" onclick="location.href='#'">
+      <article class="ac ac-coming" data-cat="community" onclick="location.href='#'">
         <div class="ac-head community">
           <h3>"Tôi sợ con mình không còn hiểu ông bà nói gì"</h3>
           <span class="ac-emoji">🤝</span>
@@ -429,7 +519,7 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
         </div>
       </article>
 
-      <article class="ac ac-coming" onclick="location.href='#'">
+      <article class="ac ac-coming" data-cat="lang" onclick="location.href='#'">
         <div class="ac-head lang">
           <h3>Bộ chữ viết tiếng Mường 2016: ưu điểm, hạn chế và cách dự án này dùng</h3>
           <span class="ac-emoji">✍️</span>
@@ -615,6 +705,21 @@ function switchTab(id, btn){
   btn.setAttribute('aria-selected','true');
 }
 
+// Own articles filtering
+function filterOwn(cat, btn){
+  document.querySelectorAll('#panel-own .filter-row .chip').forEach(c=>c.classList.remove('on'));
+  btn.classList.add('on');
+  const featured = document.getElementById('featured-card');
+  const articles = document.querySelectorAll('#panel-own .articles-grid .ac');
+  if(cat==='all'){
+    featured.style.display='grid';
+    articles.forEach(a=>a.style.display='flex');
+  } else {
+    featured.style.display = featured.dataset.cat===cat ? 'grid' : 'none';
+    articles.forEach(a=> a.style.display = a.dataset.cat===cat ? 'flex' : 'none');
+  }
+}
+
 // Source filtering
 function filterSrc(tag, btn){
   document.querySelectorAll('.filter-row .chip').forEach(c=>c.classList.remove('on'));
@@ -622,7 +727,6 @@ function filterSrc(tag, btn){
   document.querySelectorAll('#sources-grid .src').forEach(s=>{
     s.style.display = (tag==='all' || s.dataset.tags.includes(tag)) ? 'grid' : 'none';
   });
-  // group labels
   document.querySelectorAll('.src-group-label').forEach(l=>l.style.display = tag==='all' ? 'block' : 'none');
 }
 

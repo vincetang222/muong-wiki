@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Từ điển Việt–Mường | muong.wiki</title>
+<meta name="description" content="Tra cứu từ vựng tiếng Mường theo vùng phương ngữ — Hòa Bình, Thanh Hóa, Phú Thọ, Ninh Bình. Từ điển Việt–Mường cộng đồng.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://muong.wiki/tu-dien/">
+<meta property="og:title" content="Từ điển Việt–Mường | muong.wiki">
+<meta property="og:description" content="Tra cứu từ vựng tiếng Mường theo vùng phương ngữ.">
+<meta property="og:locale" content="vi_VN">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="theme-color" content="#1A5C3A">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --d1:#071510;--d2:#0F2A1C;--d4:#0D3040;
+  --g1:#D4A017;--g2:#E8762A;--teal:#1A7A6E;
+  --cream:#FAF7F0;--ink:#1A1A18;--ink2:#4A4A42;--ink3:#8A8A7E;
+  --bD:rgba(255,255,255,.08);--bL:rgba(0,0,0,.08);--R:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cream);min-height:100vh;}
+.wrap{max-width:900px;margin:0 auto;padding:0 28px;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;padding:0 32px;display:flex;align-items:center;
+  height:60px;gap:16px;background:rgba(7,21,16,.9);
+  backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);}
+.nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none;}
+.logo-name{font-family:'Playfair Display',serif;font-size:18px;color:var(--cream);}
+.nav-links{margin-left:auto;display:flex;align-items:center;gap:4px;}
+.nl{font-size:12px;font-weight:500;color:rgba(250,247,240,.5);background:none;border:none;
+  cursor:pointer;padding:7px 13px;border-radius:9px;transition:.18s;
+  font-family:'Be Vietnam Pro',sans-serif;text-decoration:none;display:inline-flex;}
+.nl:hover{color:var(--cream);background:rgba(255,255,255,.07);}
+.nl.active{color:var(--cream);background:rgba(255,255,255,.1);}
+.nl-cta{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;font-weight:600;
+  cursor:pointer;padding:7px 16px;border-radius:9px;border:none;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;
+  background:none;border:none;padding:8px;border-radius:8px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--cream);
+  border-radius:2px;transition:transform .25s,opacity .25s;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;position:fixed;inset:60px 0 0 0;z-index:199;
+  background:rgba(7,21,16,.97);backdrop-filter:blur(24px);
+  flex-direction:column;padding:24px;gap:6px;border-top:1px solid rgba(255,255,255,.06);}
+.mobile-menu.open{display:flex;}
+.mobile-menu .nl{font-size:16px;padding:14px 16px;border-radius:10px;color:rgba(250,247,240,.65);}
+.mobile-menu .nl-cta{font-family:'Be Vietnam Pro',sans-serif;font-size:15px;font-weight:600;
+  cursor:pointer;padding:14px 16px;border-radius:10px;border:none;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;margin-top:8px;}
+
+/* HERO SEARCH */
+.hero{background:linear-gradient(135deg,#071510 0%,#0A2818 55%,#0D2030 100%);
+  padding:52px 0 0;position:relative;overflow:hidden;}
+.orb{position:absolute;border-radius:50%;pointer-events:none;}
+.o1{width:500px;height:500px;top:-150px;right:-80px;
+  background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 65%);}
+.o2{width:350px;height:350px;bottom:-60px;left:-60px;
+  background:radial-gradient(circle,rgba(26,122,110,.12) 0%,transparent 65%);}
+.hero-inner{position:relative;z-index:1;text-align:center;}
+.hero-eye{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
+  background:linear-gradient(90deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  margin-bottom:10px;}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);
+  font-weight:600;color:var(--cream);line-height:1.15;margin-bottom:6px;}
+.hero-h1 em{font-style:italic;background:linear-gradient(135deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.hero-sub{font-size:14px;color:rgba(250,247,240,.45);margin-bottom:28px;}
+
+/* SEARCH BOX */
+.search-box{
+  background:rgba(255,255,255,.07);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:20px 20px 0 0;
+  padding:20px 24px;
+  max-width:680px;margin:0 auto;
+}
+.search-row{display:flex;gap:10px;align-items:center;margin-bottom:14px;}
+.search-input{
+  flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:11px;padding:12px 18px;font-family:'Be Vietnam Pro',sans-serif;
+  font-size:16px;color:var(--cream);outline:none;transition:.2s;}
+.search-input:focus{border-color:rgba(212,160,23,.5);background:rgba(255,255,255,.1);}
+.search-input::placeholder{color:rgba(250,247,240,.3);}
+.search-btn{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:600;
+  padding:12px 22px;border-radius:10px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;
+  white-space:nowrap;transition:.15s;}
+.search-btn:hover{opacity:.88;}
+
+/* Region filter */
+.region-row{display:flex;gap:7px;flex-wrap:wrap;}
+.rtab{font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:500;
+  padding:5px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);color:rgba(250,247,240,.55);
+  cursor:pointer;transition:.15s;}
+.rtab:hover{background:rgba(255,255,255,.1);color:var(--cream);}
+.rtab.on{color:var(--cream);}
+.rtab.on-all{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);}
+.rtab.on-hb{background:rgba(26,122,110,.3);border-color:rgba(26,122,110,.5);color:#7DE8DC;}
+.rtab.on-th{background:rgba(212,160,23,.2);border-color:rgba(212,160,23,.4);color:#FAC775;}
+.rtab.on-pt{background:rgba(127,119,221,.2);border-color:rgba(127,119,221,.4);color:#CECBF6;}
+.rtab.on-nb{background:rgba(192,85,58,.2);border-color:rgba(192,85,58,.4);color:#F5C4B3;}
+
+/* QUICK SEARCH CHIPS */
+.quick-chips{padding:12px 24px;max-width:680px;margin:0 auto;
+  display:flex;gap:7px;flex-wrap:wrap;}
+.qc{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;padding:4px 12px;
+  border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
+  color:rgba(250,247,240,.55);cursor:pointer;transition:.15s;}
+.qc:hover{background:rgba(255,255,255,.1);color:var(--cream);}
+
+/* STATS BAR */
+.stats-bar{background:rgba(0,0,0,.25);backdrop-filter:blur(8px);
+  padding:10px 24px;max-width:680px;margin:0 auto;
+  border:1px solid rgba(255,255,255,.06);border-top:none;border-radius:0 0 16px 16px;
+  display:flex;align-items:center;gap:12px;font-size:12px;color:rgba(250,247,240,.35);}
+.stats-num{font-weight:600;background:linear-gradient(90deg,var(--g1),var(--g2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+
+/* MAIN CONTENT */
+.content{padding:32px 0 72px;}
+
+/* RESULTS */
+.results-header{display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:16px;flex-wrap:wrap;gap:8px;}
+.results-count{font-size:13px;color:rgba(250,247,240,.45);}
+.results-count strong{color:var(--cream);}
+.sort-select{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  border-radius:8px;padding:5px 10px;color:rgba(250,247,240,.6);cursor:pointer;outline:none;}
+
+/* WORD CARDS */
+.words-grid{display:flex;flex-direction:column;gap:10px;}
+
+.word-card{
+  background:rgba(255,255,255,.05);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--R);
+  padding:18px 20px;
+  transition:.18s;
+  cursor:pointer;
+}
+.word-card:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);transform:translateX(3px);}
+.wc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px;}
+.wc-left{}
+.wc-muong{font-family:'Playfair Display',serif;font-size:26px;color:var(--cream);line-height:1.1;margin-bottom:3px;}
+.wc-nghia{font-size:15px;color:rgba(250,247,240,.7);line-height:1.4;}
+.wc-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0;}
+.wc-badge{font-size:10px;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap;}
+.badge-hb{background:rgba(26,122,110,.2);color:#7DE8DC;border:1px solid rgba(26,122,110,.3);}
+.badge-th{background:rgba(212,160,23,.15);color:#FAC775;border:1px solid rgba(212,160,23,.25);}
+.badge-pt{background:rgba(127,119,221,.15);color:#CECBF6;border:1px solid rgba(127,119,221,.25);}
+.badge-nb{background:rgba(192,85,58,.15);color:#F5C4B3;border:1px solid rgba(192,85,58,.25);}
+.badge-default{background:rgba(255,255,255,.08);color:rgba(250,247,240,.5);border:1px solid rgba(255,255,255,.1);}
+.wc-status{font-size:10px;color:rgba(250,247,240,.25);}
+.wc-status.verified{color:#7DE8DC;}
+.wc-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:10px;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.wc-full{font-size:12px;color:rgba(250,247,240,.35);line-height:1.55;flex:1;font-style:italic;}
+.wc-actions{display:flex;gap:6px;}
+.vote-btn{font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:500;
+  padding:4px 10px;border-radius:7px;border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.05);color:rgba(250,247,240,.45);
+  cursor:pointer;transition:.15s;}
+.vote-btn:hover{background:rgba(255,255,255,.1);color:var(--cream);}
+.vote-btn.voted{background:rgba(26,122,110,.2);color:#7DE8DC;border-color:rgba(26,122,110,.3);}
+.wc-source{font-size:10px;color:rgba(250,247,240,.2);}
+
+/* EMPTY / LOADING STATES */
+.state-box{text-align:center;padding:60px 20px;}
+.state-icon{font-size:40px;margin-bottom:14px;display:block;}
+.state-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);margin-bottom:8px;}
+.state-sub{font-size:14px;color:rgba(250,247,240,.4);line-height:1.65;}
+.spinner{width:32px;height:32px;border:3px solid rgba(255,255,255,.1);
+  border-top-color:var(--g1);border-radius:50%;
+  animation:spin .7s linear infinite;margin:0 auto 16px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* LOAD MORE */
+.load-more{display:flex;justify-content:center;margin-top:20px;}
+.load-more-btn{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:500;
+  padding:11px 28px;border-radius:10px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  color:rgba(250,247,240,.6);cursor:pointer;transition:.15s;}
+.load-more-btn:hover{background:rgba(255,255,255,.12);color:var(--cream);}
+
+/* OCR NOTE */
+.ocr-note{background:rgba(212,160,23,.07);border:1px solid rgba(212,160,23,.15);
+  border-radius:var(--R);padding:12px 16px;margin-bottom:20px;
+  font-size:12px;color:rgba(255,221,100,.6);line-height:1.65;}
+
+/* FOOTER */
+footer{background:#050F09;padding:26px 28px;border-top:1px solid rgba(255,255,255,.05);}
+.ft{max-width:900px;margin:0 auto;display:flex;align-items:center;
+  justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.ft-logo{font-family:'Playfair Display',serif;font-size:15px;color:rgba(250,247,240,.38);}
+.ft-links{display:flex;gap:16px;}
+.ftl{font-size:11px;color:rgba(250,247,240,.22);text-decoration:none;}
+.ftl:hover{color:rgba(250,247,240,.55);}
+.ft-copy{font-size:11px;color:rgba(250,247,240,.16);}
+
+@media(max-width:680px){
+  nav{padding:0 16px;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .wrap{padding:0 16px;}
+  .wc-muong{font-size:22px;}
+  .hero{padding:40px 0 0;}
+  .search-box,.quick-chips,.stats-bar{padding-left:16px;padding-right:16px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="Điều hướng chính">
+  <a class="nav-logo" href="index.html">
+    <svg width="33" height="33" viewBox="0 0 34 34" fill="none">
+      <defs><linearGradient id="lg" x1="0" y1="0" x2="34" y2="34" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#1A5C3A"/><stop offset="100%" stop-color="#0D3040"/></linearGradient></defs>
+      <rect width="34" height="34" rx="9" fill="url(#lg)"/>
+      <rect x="5" y="16" width="24" height="2.2" fill="#D4A017" opacity=".95"/>
+      <rect x="16" y="5" width="2.2" height="24" fill="#D4A017" opacity=".95"/>
+      <polygon points="8,8 12,12 8,16 4,12" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="26,8 30,12 26,16 22,12" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="8,26 12,22 16,26 12,30" fill="#7DE8DC" opacity=".8"/>
+      <polygon points="26,26 30,22 26,18 22,22" fill="#7DE8DC" opacity=".8"/>
+      <circle cx="17" cy="17" r="4" fill="#D4A017"/>
+      <circle cx="17" cy="17" r="2" fill="#0A2018"/>
+    </svg>
+    <span class="logo-name">Tiếng Mường</span>
+  </a>
+  <div class="nav-links">
+    <a class="nl" href="index.html">Trang chủ</a>
+    <a class="nl active" href="tu-dien.html">Từ điển</a>
+    <a class="nl" href="blog.html">Blog</a>
+    <a class="nl" href="about.html">Về dự án</a>
+    <a class="nl" href="ung-ho.html">Ủng hộ ♡</a>
+    <button class="nl-cta">+ Đóng góp</button>
+  </div>
+  <button class="hamburger" onclick="toggleMenu(this)" aria-label="Mở menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a class="nl" href="index.html">Trang chủ</a>
+  <a class="nl active" href="tu-dien.html">Từ điển</a>
+  <a class="nl" href="blog.html">Blog</a>
+  <a class="nl" href="about.html">Về dự án</a>
+  <a class="nl" href="ung-ho.html">Ủng hộ ♡</a>
+  <button class="nl-cta">+ Đóng góp</button>
+</div>
+
+<!-- HERO SEARCH -->
+<header class="hero">
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="wrap hero-inner">
+    <p class="hero-eye">Từ điển cộng đồng</p>
+    <h1 class="hero-h1">Tra cứu <em>tiếng Mường</em></h1>
+    <p class="hero-sub">Nhập từ tiếng Việt hoặc tiếng Mường để tìm kiếm</p>
+  </div>
+
+  <div class="search-box" role="search">
+    <div class="search-row">
+      <input class="search-input" id="q" type="search" placeholder="Nhập từ cần tìm... (ví dụ: nước, mẹ, đi)"
+        autocomplete="off" autocorrect="off" spellcheck="false"
+        oninput="onInput()" onkeydown="onKey(event)" aria-label="Tìm từ vựng">
+      <button class="search-btn" onclick="doSearch()" aria-label="Tìm kiếm">Tìm →</button>
+    </div>
+    <div class="region-row" role="group" aria-label="Lọc theo vùng">
+      <button class="rtab on on-all" data-vung="" onclick="setVung('',this)">Tất cả vùng</button>
+      <button class="rtab" data-vung="Hòa Bình" onclick="setVung('Hòa Bình',this)">Hòa Bình</button>
+      <button class="rtab" data-vung="Thanh Hóa" onclick="setVung('Thanh Hóa',this)">Thanh Hóa</button>
+      <button class="rtab" data-vung="Phú Thọ" onclick="setVung('Phú Thọ',this)">Phú Thọ</button>
+      <button class="rtab" data-vung="Ninh Bình" onclick="setVung('Ninh Bình',this)">Ninh Bình</button>
+    </div>
+  </div>
+
+  <div class="quick-chips" aria-label="Tìm kiếm nhanh">
+    <span style="font-size:11px;color:rgba(250,247,240,.28);align-self:center;">Thử ngay:</span>
+    <button class="qc" onclick="quickSearch('nước')">nước</button>
+    <button class="qc" onclick="quickSearch('mẹ')">mẹ</button>
+    <button class="qc" onclick="quickSearch('đi')">đi</button>
+    <button class="qc" onclick="quickSearch('cơm')">cơm</button>
+    <button class="qc" onclick="quickSearch('nhà')">nhà</button>
+    <button class="qc" onclick="quickSearch('trâu')">trâu</button>
+    <button class="qc" onclick="quickSearch('lửa')">lửa</button>
+    <button class="qc" onclick="quickSearch('con')">con</button>
+  </div>
+
+  <div class="stats-bar" id="stats-bar" aria-live="polite">
+    <span class="stats-num" id="stat-total">—</span>
+    <span>từ vựng trong database</span>
+    <span>·</span>
+    <span class="stats-num" id="stat-verified">—</span>
+    <span>đã xác nhận</span>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="content">
+  <div class="wrap">
+
+    <div class="ocr-note" id="ocr-note">
+      📖 Dữ liệu hiện tại được OCR từ <strong>Từ điển Mường-Việt</strong> (Nguyễn Văn Khang, 2001) — phương ngữ <strong>Mường Bi · Tân Lạc · Hòa Bình</strong>. Một số từ có thể chưa chính xác — bạn có thể bỏ phiếu hoặc đóng góp sửa chữa.
+    </div>
+
+    <div id="results-header" class="results-header" style="display:none;">
+      <p class="results-count" id="results-count"></p>
+    </div>
+
+    <div id="results" class="words-grid" aria-live="polite" aria-label="Kết quả tìm kiếm"></div>
+
+    <div class="load-more" id="load-more-wrap" style="display:none;">
+      <button class="load-more-btn" onclick="loadMore()">Xem thêm kết quả</button>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="ft">
+    <span class="ft-logo">Tiếng Mường</span>
+    <nav class="ft-links">
+      <a href="index.html" class="ftl">Trang chủ</a>
+      <a href="tu-dien.html" class="ftl" style="color:rgba(250,247,240,.5);">Từ điển</a>
+      <a href="about.html" class="ftl">Về dự án</a>
+      <a href="ung-ho.html" class="ftl">Ủng hộ</a>
+    </nav>
+    <span class="ft-copy">muong.wiki · CC-BY 4.0</span>
+  </div>
+</footer>
+
+<script>
+const SUPA_URL = 'https://ptkuihmaedfoaqwgpigc.supabase.co';
+const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB0a3VpaG1hZWRmb2Fxd2dwaWdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMzYyODcsImV4cCI6MjA5NTgxMjI4N30.GwHcKi5b5IiirWXVKLQesq12lEwgDhKrzEgUnv_wzmU';
+
+const HEADERS = {
+  'apikey': SUPA_KEY,
+  'Authorization': 'Bearer ' + SUPA_KEY,
+  'Content-Type': 'application/json'
+};
+
+let currentVung = '';
+let currentPage = 0;
+let currentQuery = '';
+let totalCount = 0;
+const PAGE_SIZE = 20;
+let votedWords = JSON.parse(sessionStorage.getItem('voted') || '{}');
+
+// ── INIT ────────────────────────────────────────────────────────
+async function init() {
+  await loadStats();
+  // Show random words on load
+  await showBrowse();
+  // Check URL param
+  const q = new URLSearchParams(location.search).get('q');
+  if (q) {
+    document.getElementById('q').value = q;
+    doSearch();
+  }
+}
+
+// ── STATS ────────────────────────────────────────────────────────
+async function loadStats() {
+  try {
+    const r = await fetch(`${SUPA_URL}/rest/v1/rpc/get_stats`, {
+      method: 'POST', headers: HEADERS, body: '{}'
+    });
+    const d = await r.json();
+    document.getElementById('stat-total').textContent = (d.tong_tu_vung || 0).toLocaleString('vi');
+    document.getElementById('stat-verified').textContent = (d.da_xac_nhan || 0).toLocaleString('vi');
+  } catch(e) {}
+}
+
+// ── BROWSE (no query) ─────────────────────────────────────────────
+async function showBrowse() {
+  setLoading(true);
+  try {
+    let url = `${SUPA_URL}/rest/v1/words?trang_thai=in.(da_xac_nhan,can_kiem_tra)&order=tu_muong.asc&limit=${PAGE_SIZE}&offset=0`;
+    if (currentVung) url += `&vung=eq.${encodeURIComponent(currentVung)}`;
+    const r = await fetch(url, { headers: {...HEADERS, 'Prefer': 'count=exact'} });
+    const data = await r.json();
+    totalCount = parseInt(r.headers.get('content-range')?.split('/')[1] || data.length);
+    currentPage = 1;
+    renderResults(data, false, 'Từ vựng A–Z');
+  } catch(e) {
+    showError();
+  }
+  setLoading(false);
+}
+
+// ── SEARCH ───────────────────────────────────────────────────────
+async function doSearch() {
+  const q = document.getElementById('q').value.trim();
+  currentQuery = q;
+  currentPage = 0;
+
+  if (!q) { showBrowse(); return; }
+
+  // Update URL
+  history.replaceState({}, '', `?q=${encodeURIComponent(q)}`);
+
+  setLoading(true);
+  try {
+    const body = JSON.stringify({
+      query: q,
+      vung_filter: currentVung || null,
+      limit_n: PAGE_SIZE
+    });
+    const r = await fetch(`${SUPA_URL}/rest/v1/rpc/search_words`, {
+      method: 'POST', headers: HEADERS, body
+    });
+    const data = await r.json();
+    totalCount = data.length;
+    renderResults(data, false, `Kết quả cho "<strong>${q}</strong>"`);
+  } catch(e) {
+    showError();
+  }
+  setLoading(false);
+}
+
+// ── LOAD MORE ─────────────────────────────────────────────────────
+async function loadMore() {
+  const offset = currentPage * PAGE_SIZE;
+  setLoading(true, true);
+  try {
+    let url = `${SUPA_URL}/rest/v1/words?trang_thai=in.(da_xac_nhan,can_kiem_tra)&order=tu_muong.asc&limit=${PAGE_SIZE}&offset=${offset}`;
+    if (currentVung) url += `&vung=eq.${encodeURIComponent(currentVung)}`;
+    const r = await fetch(url, { headers: HEADERS });
+    const data = await r.json();
+    currentPage++;
+    renderResults(data, true);
+  } catch(e) {}
+  setLoading(false, true);
+}
+
+// ── RENDER ────────────────────────────────────────────────────────
+function renderResults(data, append=false, label='') {
+  const container = document.getElementById('results');
+  const header = document.getElementById('results-header');
+  const countEl = document.getElementById('results-count');
+  const loadWrap = document.getElementById('load-more-wrap');
+
+  if (!append) container.innerHTML = '';
+
+  if (!data || data.length === 0) {
+    if (!append) {
+      container.innerHTML = noResults();
+      header.style.display = 'none';
+      loadWrap.style.display = 'none';
+    }
+    return;
+  }
+
+  // Header
+  if (!append && label) {
+    header.style.display = 'flex';
+    countEl.innerHTML = `${label} — <strong>${totalCount.toLocaleString('vi')}</strong> từ`;
+  }
+
+  // Cards
+  data.forEach(w => {
+    container.insertAdjacentHTML('beforeend', wordCard(w));
+  });
+
+  // Load more button
+  const shown = container.querySelectorAll('.word-card').length;
+  loadWrap.style.display = (!currentQuery && shown < totalCount) ? 'flex' : 'none';
+}
+
+function badgeClass(vung) {
+  if (!vung) return 'badge-default';
+  if (vung.includes('Hòa Bình')) return 'badge-hb';
+  if (vung.includes('Thanh Hóa')) return 'badge-th';
+  if (vung.includes('Phú Thọ')) return 'badge-pt';
+  if (vung.includes('Ninh Bình')) return 'badge-nb';
+  return 'badge-default';
+}
+
+function wordCard(w) {
+  const bc = badgeClass(w.vung);
+  const pn = w.phuong_ngu || '';
+  const isVerified = w.trang_thai === 'da_xac_nhan';
+  const voted = votedWords[w.id];
+  const hasContext = w.van_ban_goc && w.van_ban_goc.length > 10 && w.van_ban_goc !== w.nghia_viet;
+  const contextHtml = hasContext
+    ? `<div class="wc-bottom">
+        <p class="wc-full">${escHtml(w.van_ban_goc.slice(0, 120))}${w.van_ban_goc.length > 120 ? '…' : ''}</p>
+        <div class="wc-actions">
+          <button class="vote-btn ${voted === 1 ? 'voted' : ''}" onclick="vote('${w.id}',1,this)" title="Từ này đúng">✓ Đúng${w.luot_upvote > 0 ? ' ('+w.luot_upvote+')' : ''}</button>
+          <button class="vote-btn ${voted === -1 ? 'voted' : ''}" onclick="vote('${w.id}',-1,this)" title="Từ này có vấn đề">✗ Sai</button>
+        </div>
+      </div>`
+    : `<div class="wc-bottom" style="justify-content:flex-end;">
+        <div class="wc-actions">
+          <button class="vote-btn ${voted === 1 ? 'voted' : ''}" onclick="vote('${w.id}',1,this)">✓ Đúng${w.luot_upvote > 0 ? ' ('+w.luot_upvote+')' : ''}</button>
+          <button class="vote-btn ${voted === -1 ? 'voted' : ''}" onclick="vote('${w.id}',-1,this)">✗ Sai</button>
+        </div>
+      </div>`;
+
+  return `
+  <article class="word-card" aria-label="${escHtml(w.tu_muong)} — ${escHtml(w.nghia_viet)}">
+    <div class="wc-top">
+      <div class="wc-left">
+        <div class="wc-muong">${escHtml(w.tu_muong)}</div>
+        <div class="wc-nghia">${escHtml(w.nghia_viet)}</div>
+      </div>
+      <div class="wc-right">
+        <span class="wc-badge ${bc}">${escHtml(w.vung || 'Không rõ')}</span>
+        ${pn ? `<span class="wc-source">${escHtml(pn)}</span>` : ''}
+        <span class="wc-status ${isVerified ? 'verified' : ''}">${isVerified ? '✓ Đã xác nhận' : 'Chờ xác nhận'}</span>
+      </div>
+    </div>
+    ${contextHtml}
+  </article>`;
+}
+
+function noResults() {
+  const q = currentQuery;
+  return `<div class="state-box">
+    <span class="state-icon">🔍</span>
+    <p class="state-title">Không tìm thấy "${escHtml(q)}"</p>
+    <p class="state-sub">Từ này chưa có trong database.<br>
+    Bạn biết cách nói "${escHtml(q)}" trong tiếng Mường không? <a href="index.html" style="color:#7DE8DC;">Đóng góp ngay →</a></p>
+  </div>`;
+}
+
+// ── VOTE ─────────────────────────────────────────────────────────
+async function vote(wordId, value, btn) {
+  if (votedWords[wordId]) return;
+  try {
+    const sessionId = getSession();
+    await fetch(`${SUPA_URL}/rest/v1/votes`, {
+      method: 'POST',
+      headers: HEADERS,
+      body: JSON.stringify({ word_id: wordId, session_id: sessionId, gia_tri: value })
+    });
+    votedWords[wordId] = value;
+    sessionStorage.setItem('voted', JSON.stringify(votedWords));
+    // Update UI
+    const card = btn.closest('.word-card');
+    card.querySelectorAll('.vote-btn').forEach(b => b.classList.remove('voted'));
+    btn.classList.add('voted');
+  } catch(e) {}
+}
+
+function getSession() {
+  let s = sessionStorage.getItem('sid');
+  if (!s) { s = Math.random().toString(36).slice(2); sessionStorage.setItem('sid', s); }
+  return s;
+}
+
+// ── REGION FILTER ─────────────────────────────────────────────────
+function setVung(vung, btn) {
+  currentVung = vung;
+  document.querySelectorAll('.rtab').forEach(b => {
+    b.className = 'rtab';
+    if (b.dataset.vung === vung) {
+      if (!vung) b.classList.add('on', 'on-all');
+      else if (vung.includes('Hòa')) b.classList.add('on', 'on-hb');
+      else if (vung.includes('Thanh')) b.classList.add('on', 'on-th');
+      else if (vung.includes('Phú')) b.classList.add('on', 'on-pt');
+      else if (vung.includes('Ninh')) b.classList.add('on', 'on-nb');
+    }
+  });
+  currentQuery ? doSearch() : showBrowse();
+}
+
+// ── HELPERS ───────────────────────────────────────────────────────
+function quickSearch(word) {
+  document.getElementById('q').value = word;
+  doSearch();
+}
+function onInput() {
+  const q = document.getElementById('q').value.trim();
+  if (!q) { history.replaceState({}, '', location.pathname); showBrowse(); }
+}
+function onKey(e) { if (e.key === 'Enter') doSearch(); }
+function escHtml(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function setLoading(on, append=false) {
+  const r = document.getElementById('results');
+  if (on && !append) {
+    r.innerHTML = `<div class="state-box"><div class="spinner"></div><p class="state-sub">Đang tìm kiếm…</p></div>`;
+    document.getElementById('results-header').style.display = 'none';
+    document.getElementById('load-more-wrap').style.display = 'none';
+  }
+}
+function showError() {
+  document.getElementById('results').innerHTML = `<div class="state-box">
+    <span class="state-icon">⚠️</span>
+    <p class="state-title">Không kết nối được database</p>
+    <p class="state-sub">Vui lòng thử lại sau.</p>
+  </div>`;
+}
+function toggleMenu(btn) {
+  const menu = document.getElementById('mobile-menu');
+  const open = menu.classList.toggle('open');
+  btn.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+document.addEventListener('click', e => {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.querySelector('.hamburger');
+  if (menu && menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.remove('open'); btn.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+
+init();
+</script>
+</body>
+</html>

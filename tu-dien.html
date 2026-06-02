@@ -27,7 +27,7 @@ html{scroll-behavior:smooth;}
 body{font-family:'Be Vietnam Pro',sans-serif;background:var(--d1);color:var(--cream);min-height:100vh;}
 .wrap{max-width:900px;margin:0 auto;padding:0 28px;}
 
-/* NAV */
+/* ── NAV ── */
 nav{position:sticky;top:0;z-index:200;padding:0 32px;display:flex;align-items:center;
   height:60px;gap:16px;background:rgba(7,21,16,.9);
   backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);}
@@ -44,8 +44,7 @@ nav{position:sticky;top:0;z-index:200;padding:0 32px;display:flex;align-items:ce
   background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;
   background:none;border:none;padding:8px;border-radius:8px;}
-.hamburger span{display:block;width:22px;height:2px;background:var(--cream);
-  border-radius:2px;transition:transform .25s,opacity .25s;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--cream);border-radius:2px;transition:transform .25s,opacity .25s;}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
@@ -58,154 +57,183 @@ nav{position:sticky;top:0;z-index:200;padding:0 32px;display:flex;align-items:ce
   cursor:pointer;padding:14px 16px;border-radius:10px;border:none;
   background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;margin-top:8px;}
 
-/* HERO SEARCH */
+/* ── HERO ── */
 .hero{background:linear-gradient(135deg,#071510 0%,#0A2818 55%,#0D2030 100%);
   padding:52px 0 0;position:relative;overflow:hidden;}
 .orb{position:absolute;border-radius:50%;pointer-events:none;}
-.o1{width:500px;height:500px;top:-150px;right:-80px;
-  background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 65%);}
-.o2{width:350px;height:350px;bottom:-60px;left:-60px;
-  background:radial-gradient(circle,rgba(26,122,110,.12) 0%,transparent 65%);}
+.o1{width:500px;height:500px;top:-150px;right:-80px;background:radial-gradient(circle,rgba(212,160,23,.1) 0%,transparent 65%);}
+.o2{width:350px;height:350px;bottom:-60px;left:-60px;background:radial-gradient(circle,rgba(26,122,110,.12) 0%,transparent 65%);}
 .hero-inner{position:relative;z-index:1;text-align:center;}
 .hero-eye{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;
-  background:linear-gradient(90deg,var(--g1),var(--g2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-  margin-bottom:10px;}
-.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);
-  font-weight:600;color:var(--cream);line-height:1.15;margin-bottom:6px;}
-.hero-h1 em{font-style:italic;background:linear-gradient(135deg,var(--g1),var(--g2));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+  background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px;}
+.hero-h1{font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);font-weight:600;color:var(--cream);line-height:1.15;margin-bottom:6px;}
+.hero-h1 em{font-style:italic;background:linear-gradient(135deg,var(--g1),var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .hero-sub{font-size:14px;color:rgba(250,247,240,.45);margin-bottom:28px;}
 
-/* SEARCH BOX */
-.search-box{
-  background:rgba(255,255,255,.07);
-  backdrop-filter:blur(20px);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:20px 20px 0 0;
-  padding:20px 24px;
-  max-width:680px;margin:0 auto;
-}
+/* ── SEARCH BOX ── */
+.search-box{background:rgba(255,255,255,.07);backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.12);border-radius:20px 20px 0 0;
+  padding:20px 24px;max-width:680px;margin:0 auto;}
 .search-row{display:flex;gap:10px;align-items:center;margin-bottom:14px;}
-.search-input{
-  flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+.search-input{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
   border-radius:11px;padding:12px 18px;font-family:'Be Vietnam Pro',sans-serif;
   font-size:16px;color:var(--cream);outline:none;transition:.2s;}
 .search-input:focus{border-color:rgba(212,160,23,.5);background:rgba(255,255,255,.1);}
 .search-input::placeholder{color:rgba(250,247,240,.3);}
 .search-btn{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:600;
   padding:12px 22px;border-radius:10px;border:none;cursor:pointer;
-  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;
-  white-space:nowrap;transition:.15s;}
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;white-space:nowrap;}
 .search-btn:hover{opacity:.88;}
-
-/* Region filter */
 .region-row{display:flex;gap:7px;flex-wrap:wrap;}
 .rtab{font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:500;
   padding:5px 12px;border-radius:16px;border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.06);color:rgba(250,247,240,.55);
-  cursor:pointer;transition:.15s;}
+  background:rgba(255,255,255,.06);color:rgba(250,247,240,.55);cursor:pointer;transition:.15s;}
 .rtab:hover{background:rgba(255,255,255,.1);color:var(--cream);}
-.rtab.on{color:var(--cream);}
-.rtab.on-all{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);}
+.rtab.on-all{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.25);color:var(--cream);}
 .rtab.on-hb{background:rgba(26,122,110,.3);border-color:rgba(26,122,110,.5);color:#7DE8DC;}
 .rtab.on-th{background:rgba(212,160,23,.2);border-color:rgba(212,160,23,.4);color:#FAC775;}
 .rtab.on-pt{background:rgba(127,119,221,.2);border-color:rgba(127,119,221,.4);color:#CECBF6;}
 .rtab.on-nb{background:rgba(192,85,58,.2);border-color:rgba(192,85,58,.4);color:#F5C4B3;}
-
-/* QUICK SEARCH CHIPS */
-.quick-chips{padding:12px 24px;max-width:680px;margin:0 auto;
-  display:flex;gap:7px;flex-wrap:wrap;}
+.quick-chips{padding:12px 24px;max-width:680px;margin:0 auto;display:flex;gap:7px;flex-wrap:wrap;}
 .qc{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;padding:4px 12px;
   border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
   color:rgba(250,247,240,.55);cursor:pointer;transition:.15s;}
 .qc:hover{background:rgba(255,255,255,.1);color:var(--cream);}
-
-/* STATS BAR */
-.stats-bar{background:rgba(0,0,0,.25);backdrop-filter:blur(8px);
-  padding:10px 24px;max-width:680px;margin:0 auto;
-  border:1px solid rgba(255,255,255,.06);border-top:none;border-radius:0 0 16px 16px;
-  display:flex;align-items:center;gap:12px;font-size:12px;color:rgba(250,247,240,.35);}
+.stats-bar{background:rgba(0,0,0,.25);backdrop-filter:blur(8px);padding:10px 24px;
+  max-width:680px;margin:0 auto;border:1px solid rgba(255,255,255,.06);border-top:none;
+  border-radius:0 0 16px 16px;display:flex;align-items:center;gap:12px;
+  font-size:12px;color:rgba(250,247,240,.35);}
 .stats-num{font-weight:600;background:linear-gradient(90deg,var(--g1),var(--g2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 
-/* MAIN CONTENT */
+/* ── MAIN ── */
 .content{padding:32px 0 72px;}
-
-/* RESULTS */
-.results-header{display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:16px;flex-wrap:wrap;gap:8px;}
+.results-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;}
 .results-count{font-size:13px;color:rgba(250,247,240,.45);}
 .results-count strong{color:var(--cream);}
-.sort-select{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;
-  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
-  border-radius:8px;padding:5px 10px;color:rgba(250,247,240,.6);cursor:pointer;outline:none;}
-
-/* WORD CARDS */
 .words-grid{display:flex;flex-direction:column;gap:10px;}
 
-.word-card{
-  background:rgba(255,255,255,.05);
-  backdrop-filter:blur(16px);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:var(--R);
-  padding:18px 20px;
-  transition:.18s;
-  cursor:pointer;
-}
-.word-card:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.14);transform:translateX(3px);}
-.wc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px;}
-.wc-left{}
+/* ── WORD CARD ── */
+.word-card{background:rgba(255,255,255,.05);backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.08);border-radius:var(--R);padding:18px 20px;transition:.18s;}
+.word-card:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);}
+.wc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:12px;}
 .wc-muong{font-family:'Playfair Display',serif;font-size:26px;color:var(--cream);line-height:1.1;margin-bottom:3px;}
-.wc-nghia{font-size:15px;color:rgba(250,247,240,.7);line-height:1.4;}
-.wc-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0;}
+.wc-nghia{font-size:15px;color:rgba(250,247,240,.7);}
+.wc-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0;}
 .wc-badge{font-size:10px;font-weight:600;padding:3px 10px;border-radius:12px;white-space:nowrap;}
 .badge-hb{background:rgba(26,122,110,.2);color:#7DE8DC;border:1px solid rgba(26,122,110,.3);}
 .badge-th{background:rgba(212,160,23,.15);color:#FAC775;border:1px solid rgba(212,160,23,.25);}
 .badge-pt{background:rgba(127,119,221,.15);color:#CECBF6;border:1px solid rgba(127,119,221,.25);}
 .badge-nb{background:rgba(192,85,58,.15);color:#F5C4B3;border:1px solid rgba(192,85,58,.25);}
 .badge-default{background:rgba(255,255,255,.08);color:rgba(250,247,240,.5);border:1px solid rgba(255,255,255,.1);}
-.wc-status{font-size:10px;color:rgba(250,247,240,.25);}
+.wc-status{font-size:10px;color:rgba(250,247,240,.3);}
 .wc-status.verified{color:#7DE8DC;}
-.wc-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:10px;
+
+/* card footer — vote + contribute */
+.wc-footer{border-top:1px solid rgba(255,255,255,.06);padding-top:10px;
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
-.wc-full{font-size:12px;color:rgba(250,247,240,.35);line-height:1.55;flex:1;font-style:italic;}
-.wc-actions{display:flex;gap:6px;}
+.wc-actions{display:flex;gap:6px;flex-wrap:wrap;}
 .vote-btn{font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:500;
   padding:4px 10px;border-radius:7px;border:1px solid rgba(255,255,255,.1);
-  background:rgba(255,255,255,.05);color:rgba(250,247,240,.45);
-  cursor:pointer;transition:.15s;}
+  background:rgba(255,255,255,.05);color:rgba(250,247,240,.5);cursor:pointer;transition:.15s;}
 .vote-btn:hover{background:rgba(255,255,255,.1);color:var(--cream);}
-.vote-btn.voted{background:rgba(26,122,110,.2);color:#7DE8DC;border-color:rgba(26,122,110,.3);}
-.wc-source{font-size:10px;color:rgba(250,247,240,.2);}
+.vote-btn.voted-up{background:rgba(26,122,110,.2);color:#7DE8DC;border-color:rgba(26,122,110,.3);}
+.vote-btn.voted-down{background:rgba(192,85,58,.2);color:#F5C4B3;border-color:rgba(192,85,58,.3);}
+.add-variant-btn{font-family:'Be Vietnam Pro',sans-serif;font-size:11px;font-weight:600;
+  padding:4px 12px;border-radius:7px;border:1px solid rgba(212,160,23,.3);
+  background:rgba(212,160,23,.1);color:var(--g1);cursor:pointer;transition:.15s;}
+.add-variant-btn:hover{background:rgba(212,160,23,.2);}
 
-/* EMPTY / LOADING STATES */
-.state-box{text-align:center;padding:60px 20px;}
-.state-icon{font-size:40px;margin-bottom:14px;display:block;}
-.state-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);margin-bottom:8px;}
-.state-sub{font-size:14px;color:rgba(250,247,240,.4);line-height:1.65;}
-.spinner{width:32px;height:32px;border:3px solid rgba(255,255,255,.1);
-  border-top-color:var(--g1);border-radius:50%;
-  animation:spin .7s linear infinite;margin:0 auto 16px;}
-@keyframes spin{to{transform:rotate(360deg);}}
+/* context text */
+.wc-context{font-size:12px;color:rgba(250,247,240,.3);font-style:italic;
+  margin-bottom:10px;line-height:1.5;border-left:2px solid rgba(255,255,255,.08);padding-left:10px;}
 
-/* LOAD MORE */
-.load-more{display:flex;justify-content:center;margin-top:20px;}
-.load-more-btn{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:500;
-  padding:11px 28px;border-radius:10px;
+/* ── INLINE CONTRIBUTION FORM ── */
+.contrib-form{
+  margin-top:12px;
+  background:rgba(212,160,23,.07);
+  border:1px solid rgba(212,160,23,.2);
+  border-radius:11px;padding:16px;
+  display:none;
+}
+.contrib-form.open{display:block;}
+.cf-title{font-size:12px;font-weight:600;color:var(--g1);margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+.cf-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
+.cf-full{grid-column:1/3;}
+.cf-label{font-size:11px;color:rgba(250,247,240,.5);margin-bottom:4px;}
+.cf-input,.cf-select{width:100%;font-family:'Be Vietnam Pro',sans-serif;font-size:13px;
   background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
-  color:rgba(250,247,240,.6);cursor:pointer;transition:.15s;}
-.load-more-btn:hover{background:rgba(255,255,255,.12);color:var(--cream);}
+  border-radius:8px;padding:8px 12px;color:var(--cream);outline:none;transition:.15s;}
+.cf-input:focus,.cf-select:focus{border-color:rgba(212,160,23,.4);}
+.cf-input::placeholder{color:rgba(250,247,240,.25);}
+.cf-select option{background:#1A3D2C;color:var(--cream);}
+.cf-note{font-size:11px;color:rgba(250,247,240,.35);line-height:1.6;margin-bottom:12px;}
+.cf-btns{display:flex;gap:8px;justify-content:flex-end;}
+.cf-cancel{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;font-weight:500;
+  padding:7px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.1);
+  background:none;color:rgba(250,247,240,.5);cursor:pointer;}
+.cf-cancel:hover{color:var(--cream);}
+.cf-submit{font-family:'Be Vietnam Pro',sans-serif;font-size:12px;font-weight:600;
+  padding:7px 18px;border-radius:8px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;transition:.15s;}
+.cf-submit:hover{opacity:.88;}
+.cf-submit:disabled{opacity:.4;cursor:not-allowed;}
+.cf-success{font-size:12px;color:#7DE8DC;display:none;align-items:center;gap:6px;
+  padding:8px 12px;background:rgba(26,122,110,.15);border-radius:8px;border:1px solid rgba(26,122,110,.25);}
+.cf-success.show{display:flex;}
 
-/* OCR NOTE */
+/* ── MODAL: Đóng góp từ mới ── */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,.7);backdrop-filter:blur(8px);
+  align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:linear-gradient(135deg,#0F2A1C,#0D2030);
+  border:1px solid rgba(255,255,255,.1);border-radius:20px;
+  padding:28px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;}
+.modal-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;}
+.modal-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);}
+.modal-close{font-size:20px;color:rgba(250,247,240,.4);background:none;border:none;
+  cursor:pointer;width:32px;height:32px;display:flex;align-items:center;justify-content:center;
+  border-radius:8px;transition:.15s;font-family:sans-serif;}
+.modal-close:hover{background:rgba(255,255,255,.08);color:var(--cream);}
+.modal .cf-grid{grid-template-columns:1fr 1fr;}
+.modal .cf-label{font-size:12px;}
+.modal .cf-input,.modal .cf-select{font-size:14px;padding:10px 14px;}
+.native-checkbox{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(250,247,240,.6);cursor:pointer;}
+.native-checkbox input{width:16px;height:16px;accent-color:var(--teal);}
+
+/* ── OCR NOTE ── */
 .ocr-note{background:rgba(212,160,23,.07);border:1px solid rgba(212,160,23,.15);
   border-radius:var(--R);padding:12px 16px;margin-bottom:20px;
   font-size:12px;color:rgba(255,221,100,.6);line-height:1.65;}
 
-/* FOOTER */
+/* ── EMPTY/LOADING ── */
+.state-box{text-align:center;padding:60px 20px;}
+.state-icon{font-size:40px;margin-bottom:14px;display:block;}
+.state-title{font-family:'Playfair Display',serif;font-size:20px;color:var(--cream);margin-bottom:8px;}
+.state-sub{font-size:14px;color:rgba(250,247,240,.4);line-height:1.65;}
+.state-sub a{color:#7DE8DC;}
+.spinner{width:32px;height:32px;border:3px solid rgba(255,255,255,.1);
+  border-top-color:var(--g1);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 16px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* contribute CTA in empty state */
+.empty-cta{margin-top:20px;display:inline-flex;align-items:center;gap:8px;
+  font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:600;
+  padding:12px 24px;border-radius:10px;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--g1),var(--g2));color:#1A1A00;}
+
+/* load more */
+.load-more{display:flex;justify-content:center;margin-top:20px;}
+.load-more-btn{font-family:'Be Vietnam Pro',sans-serif;font-size:14px;font-weight:500;
+  padding:11px 28px;border-radius:10px;background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);color:rgba(250,247,240,.6);cursor:pointer;transition:.15s;}
+.load-more-btn:hover{background:rgba(255,255,255,.12);color:var(--cream);}
+
+/* footer */
 footer{background:#050F09;padding:26px 28px;border-top:1px solid rgba(255,255,255,.05);}
-.ft{max-width:900px;margin:0 auto;display:flex;align-items:center;
-  justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.ft{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
 .ft-logo{font-family:'Playfair Display',serif;font-size:15px;color:rgba(250,247,240,.38);}
 .ft-links{display:flex;gap:16px;}
 .ftl{font-size:11px;color:rgba(250,247,240,.22);text-decoration:none;}
@@ -213,11 +241,11 @@ footer{background:#050F09;padding:26px 28px;border-top:1px solid rgba(255,255,25
 .ft-copy{font-size:11px;color:rgba(250,247,240,.16);}
 
 @media(max-width:680px){
-  nav{padding:0 16px;}
-  .nav-links{display:none;}
-  .hamburger{display:flex;}
+  nav{padding:0 16px;} .nav-links{display:none;} .hamburger{display:flex;}
   .wrap{padding:0 16px;}
   .wc-muong{font-size:22px;}
+  .cf-grid,.modal .cf-grid{grid-template-columns:1fr;}
+  .cf-full{grid-column:1;}
   .hero{padding:40px 0 0;}
   .search-box,.quick-chips,.stats-bar{padding-left:16px;padding-right:16px;}
 }
@@ -248,7 +276,7 @@ footer{background:#050F09;padding:26px 28px;border-top:1px solid rgba(255,255,25
     <a class="nl" href="blog.html">Blog</a>
     <a class="nl" href="about.html">Về dự án</a>
     <a class="nl" href="ung-ho.html">Ủng hộ ♡</a>
-    <button class="nl-cta">+ Đóng góp</button>
+    <button class="nl-cta" onclick="openNewWordModal()">+ Đóng góp</button>
   </div>
   <button class="hamburger" onclick="toggleMenu(this)" aria-label="Mở menu">
     <span></span><span></span><span></span>
@@ -260,36 +288,34 @@ footer{background:#050F09;padding:26px 28px;border-top:1px solid rgba(255,255,25
   <a class="nl" href="blog.html">Blog</a>
   <a class="nl" href="about.html">Về dự án</a>
   <a class="nl" href="ung-ho.html">Ủng hộ ♡</a>
-  <button class="nl-cta">+ Đóng góp</button>
+  <button class="nl-cta" onclick="openNewWordModal()">+ Đóng góp từ vựng</button>
 </div>
 
 <!-- HERO SEARCH -->
 <header class="hero">
-  <div class="orb o1"></div>
-  <div class="orb o2"></div>
+  <div class="orb o1"></div><div class="orb o2"></div>
   <div class="wrap hero-inner">
     <p class="hero-eye">Từ điển cộng đồng</p>
     <h1 class="hero-h1">Tra cứu <em>tiếng Mường</em></h1>
     <p class="hero-sub">Nhập từ tiếng Việt hoặc tiếng Mường để tìm kiếm</p>
   </div>
-
   <div class="search-box" role="search">
     <div class="search-row">
-      <input class="search-input" id="q" type="search" placeholder="Nhập từ cần tìm... (ví dụ: nước, mẹ, đi)"
-        autocomplete="off" autocorrect="off" spellcheck="false"
+      <input class="search-input" id="q" type="search"
+        placeholder="Nhập từ cần tìm... (ví dụ: nước, mẹ, đi)"
+        autocomplete="off" spellcheck="false"
         oninput="onInput()" onkeydown="onKey(event)" aria-label="Tìm từ vựng">
-      <button class="search-btn" onclick="doSearch()" aria-label="Tìm kiếm">Tìm →</button>
+      <button class="search-btn" onclick="doSearch()">Tìm →</button>
     </div>
     <div class="region-row" role="group" aria-label="Lọc theo vùng">
-      <button class="rtab on on-all" data-vung="" onclick="setVung('',this)">Tất cả vùng</button>
-      <button class="rtab" data-vung="Hòa Bình" onclick="setVung('Hòa Bình',this)">Hòa Bình</button>
-      <button class="rtab" data-vung="Thanh Hóa" onclick="setVung('Thanh Hóa',this)">Thanh Hóa</button>
-      <button class="rtab" data-vung="Phú Thọ" onclick="setVung('Phú Thọ',this)">Phú Thọ</button>
-      <button class="rtab" data-vung="Ninh Bình" onclick="setVung('Ninh Bình',this)">Ninh Bình</button>
+      <button class="rtab on-all" data-v="" onclick="setVung('',this)">Tất cả vùng</button>
+      <button class="rtab" data-v="Hòa Bình" onclick="setVung('Hòa Bình',this)">Hòa Bình</button>
+      <button class="rtab" data-v="Thanh Hóa" onclick="setVung('Thanh Hóa',this)">Thanh Hóa</button>
+      <button class="rtab" data-v="Phú Thọ" onclick="setVung('Phú Thọ',this)">Phú Thọ</button>
+      <button class="rtab" data-v="Ninh Bình" onclick="setVung('Ninh Bình',this)">Ninh Bình</button>
     </div>
   </div>
-
-  <div class="quick-chips" aria-label="Tìm kiếm nhanh">
+  <div class="quick-chips">
     <span style="font-size:11px;color:rgba(250,247,240,.28);align-self:center;">Thử ngay:</span>
     <button class="qc" onclick="quickSearch('nước')">nước</button>
     <button class="qc" onclick="quickSearch('mẹ')">mẹ</button>
@@ -298,38 +324,86 @@ footer{background:#050F09;padding:26px 28px;border-top:1px solid rgba(255,255,25
     <button class="qc" onclick="quickSearch('nhà')">nhà</button>
     <button class="qc" onclick="quickSearch('trâu')">trâu</button>
     <button class="qc" onclick="quickSearch('lửa')">lửa</button>
-    <button class="qc" onclick="quickSearch('con')">con</button>
   </div>
-
-  <div class="stats-bar" id="stats-bar" aria-live="polite">
-    <span class="stats-num" id="stat-total">—</span>
-    <span>từ vựng trong database</span>
+  <div class="stats-bar">
+    <span class="stats-num" id="stat-total">—</span><span>từ vựng</span>
     <span>·</span>
-    <span class="stats-num" id="stat-verified">—</span>
-    <span>đã xác nhận</span>
+    <span class="stats-num" id="stat-contrib">—</span><span>đóng góp đang chờ duyệt</span>
   </div>
 </header>
 
 <!-- MAIN -->
 <main class="content">
   <div class="wrap">
-
     <div class="ocr-note" id="ocr-note">
-      📖 Dữ liệu hiện tại được OCR từ <strong>Từ điển Mường-Việt</strong> (Nguyễn Văn Khang, 2001) — phương ngữ <strong>Mường Bi · Tân Lạc · Hòa Bình</strong>. Một số từ có thể chưa chính xác — bạn có thể bỏ phiếu hoặc đóng góp sửa chữa.
+      📖 Dữ liệu từ <strong>Từ điển Mường-Việt</strong> (Nguyễn Văn Khang, 2001) — phương ngữ <strong>Mường Bi · Tân Lạc · Hòa Bình</strong>. Bạn nói tiếng Mường vùng khác? Bấm <strong>"+ Thêm cách nói của vùng tôi"</strong> trên mỗi từ để đóng góp.
     </div>
-
     <div id="results-header" class="results-header" style="display:none;">
       <p class="results-count" id="results-count"></p>
     </div>
-
-    <div id="results" class="words-grid" aria-live="polite" aria-label="Kết quả tìm kiếm"></div>
-
+    <div id="results" class="words-grid" aria-live="polite"></div>
     <div class="load-more" id="load-more-wrap" style="display:none;">
-      <button class="load-more-btn" onclick="loadMore()">Xem thêm kết quả</button>
+      <button class="load-more-btn" onclick="loadMore()">Xem thêm</button>
     </div>
-
   </div>
 </main>
+
+<!-- MODAL: Đóng góp từ mới -->
+<div class="modal-overlay" id="modal-new" onclick="closeModal(event)">
+  <div class="modal" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-title">+ Đóng góp từ vựng mới</h2>
+      <button class="modal-close" onclick="closeModal()" aria-label="Đóng">✕</button>
+    </div>
+
+    <div id="modal-success" class="cf-success" style="margin-bottom:16px;">
+      ✓ Đã gửi! Cảm ơn bạn. Từ sẽ được kiểm duyệt trước khi xuất hiện.
+    </div>
+
+    <div id="modal-form-content">
+      <div class="cf-grid">
+        <div>
+          <div class="cf-label">Từ tiếng Việt *</div>
+          <input class="cf-input" id="nw-viet" placeholder="VD: nước, mẹ, đi...">
+        </div>
+        <div>
+          <div class="cf-label">Từ tiếng Mường *</div>
+          <input class="cf-input" id="nw-muong" placeholder="Cách nói của vùng bạn">
+        </div>
+        <div>
+          <div class="cf-label">Vùng phương ngữ *</div>
+          <select class="cf-select" id="nw-vung">
+            <option value="">— Chọn vùng của bạn —</option>
+            <option value="Hòa Bình">Hòa Bình (Mường Bi, Mường Vang...)</option>
+            <option value="Thanh Hóa">Thanh Hóa (Ngọc Lặc, Cẩm Thủy...)</option>
+            <option value="Phú Thọ">Phú Thọ</option>
+            <option value="Ninh Bình">Ninh Bình</option>
+            <option value="Khác">Vùng khác</option>
+          </select>
+        </div>
+        <div>
+          <div class="cf-label">Huyện / xã (tuỳ chọn)</div>
+          <input class="cf-input" id="nw-huyen" placeholder="VD: Ngọc Lặc, Tân Lạc...">
+        </div>
+        <div class="cf-full">
+          <div class="cf-label">Câu ví dụ tiếng Mường (tuỳ chọn)</div>
+          <input class="cf-input" id="nw-vidu" placeholder="Câu có dùng từ này...">
+        </div>
+        <div class="cf-full">
+          <label class="native-checkbox">
+            <input type="checkbox" id="nw-native">
+            Tôi là người Mường bản ngữ của vùng này
+          </label>
+        </div>
+      </div>
+      <p class="cf-note">Từ sẽ được lưu vào hàng chờ và kiểm duyệt trước khi xuất hiện trên trang. Cảm ơn đóng góp của bạn!</p>
+      <div class="cf-btns">
+        <button class="cf-cancel" onclick="closeModal()">Huỷ</button>
+        <button class="cf-submit" id="nw-submit" onclick="submitNewWord()">Gửi đóng góp →</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer>
   <div class="ft">
@@ -345,281 +419,323 @@ footer{background:#050F09;padding:26px 28px;border-top:1px solid rgba(255,255,25
 </footer>
 
 <script>
-const SUPA_URL = 'https://ptkuihmaedfoaqwgpigc.supabase.co';
-const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB0a3VpaG1hZWRmb2Fxd2dwaWdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMzYyODcsImV4cCI6MjA5NTgxMjI4N30.GwHcKi5b5IiirWXVKLQesq12lEwgDhKrzEgUnv_wzmU';
+const SUPA = 'https://ptkuihmaedfoaqwgpigc.supabase.co';
+const KEY  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB0a3VpaG1hZWRmb2Fxd2dwaWdjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAyMzYyODcsImV4cCI6MjA5NTgxMjI4N30.GwHcKi5b5IiirWXVKLQesq12lEwgDhKrzEgUnv_wzmU';
+const H    = {'apikey':KEY,'Authorization':'Bearer '+KEY,'Content-Type':'application/json'};
 
-const HEADERS = {
-  'apikey': SUPA_KEY,
-  'Authorization': 'Bearer ' + SUPA_KEY,
-  'Content-Type': 'application/json'
-};
+let vung='', page=0, query='', total=0;
+const PAGE=20;
+let voted = JSON.parse(sessionStorage.getItem('v')||'{}');
+function sid(){let s=sessionStorage.getItem('sid');if(!s){s=Math.random().toString(36).slice(2);sessionStorage.setItem('sid',s);}return s;}
 
-let currentVung = '';
-let currentPage = 0;
-let currentQuery = '';
-let totalCount = 0;
-const PAGE_SIZE = 20;
-let votedWords = JSON.parse(sessionStorage.getItem('voted') || '{}');
-
-// ── INIT ────────────────────────────────────────────────────────
-async function init() {
-  await loadStats();
-  // Show random words on load
-  await showBrowse();
-  // Check URL param
-  const q = new URLSearchParams(location.search).get('q');
-  if (q) {
-    document.getElementById('q').value = q;
-    doSearch();
-  }
+// ── INIT ─────────────────────────────────────────────────────────
+async function init(){
+  loadStats();
+  showBrowse();
+  const q=new URLSearchParams(location.search).get('q');
+  if(q){document.getElementById('q').value=q;doSearch();}
 }
 
-// ── STATS ────────────────────────────────────────────────────────
-async function loadStats() {
-  try {
-    const r = await fetch(`${SUPA_URL}/rest/v1/rpc/get_stats`, {
-      method: 'POST', headers: HEADERS, body: '{}'
-    });
-    const d = await r.json();
-    document.getElementById('stat-total').textContent = (d.tong_tu_vung || 0).toLocaleString('vi');
-    document.getElementById('stat-verified').textContent = (d.da_xac_nhan || 0).toLocaleString('vi');
-  } catch(e) {}
+async function loadStats(){
+  try{
+    const r=await fetch(`${SUPA}/rest/v1/rpc/get_stats`,{method:'POST',headers:H,body:'{}'});
+    const d=await r.json();
+    document.getElementById('stat-total').textContent=(d.tong_tu_vung||0).toLocaleString('vi');
+    // Pending contributions
+    const r2=await fetch(`${SUPA}/rest/v1/contributions?trang_thai=eq.cho_duyet&select=id`,{headers:{...H,'Prefer':'count=exact'}});
+    const cnt=parseInt(r2.headers.get('content-range')?.split('/')[1]||0);
+    document.getElementById('stat-contrib').textContent=cnt;
+  }catch(e){}
 }
 
-// ── BROWSE (no query) ─────────────────────────────────────────────
-async function showBrowse() {
+// ── SEARCH / BROWSE ───────────────────────────────────────────────
+async function showBrowse(){
   setLoading(true);
-  try {
-    let url = `${SUPA_URL}/rest/v1/words?trang_thai=in.(da_xac_nhan,can_kiem_tra)&order=tu_muong.asc&limit=${PAGE_SIZE}&offset=0`;
-    if (currentVung) url += `&vung=eq.${encodeURIComponent(currentVung)}`;
-    const r = await fetch(url, { headers: {...HEADERS, 'Prefer': 'count=exact'} });
-    const data = await r.json();
-    totalCount = parseInt(r.headers.get('content-range')?.split('/')[1] || data.length);
-    currentPage = 1;
-    renderResults(data, false, 'Từ vựng A–Z');
-  } catch(e) {
-    showError();
-  }
+  try{
+    let url=`${SUPA}/rest/v1/words?trang_thai=in.(da_xac_nhan,can_kiem_tra)&order=tu_muong.asc&limit=${PAGE}&offset=0`;
+    if(vung) url+=`&vung=eq.${enc(vung)}`;
+    const r=await fetch(url,{headers:{...H,'Prefer':'count=exact'}});
+    const d=await r.json();
+    total=parseInt(r.headers.get('content-range')?.split('/')[1]||d.length);
+    page=1; renderResults(d,false,'Từ vựng A–Z');
+  }catch(e){showError();}
   setLoading(false);
 }
 
-// ── SEARCH ───────────────────────────────────────────────────────
-async function doSearch() {
-  const q = document.getElementById('q').value.trim();
-  currentQuery = q;
-  currentPage = 0;
-
-  if (!q) { showBrowse(); return; }
-
-  // Update URL
-  history.replaceState({}, '', `?q=${encodeURIComponent(q)}`);
-
+async function doSearch(){
+  const q=document.getElementById('q').value.trim();
+  query=q; page=0;
+  if(!q){history.replaceState({},'',location.pathname);showBrowse();return;}
+  history.replaceState({},'',`?q=${enc(q)}`);
   setLoading(true);
-  try {
-    const body = JSON.stringify({
-      query: q,
-      vung_filter: currentVung || null,
-      limit_n: PAGE_SIZE
-    });
-    const r = await fetch(`${SUPA_URL}/rest/v1/rpc/search_words`, {
-      method: 'POST', headers: HEADERS, body
-    });
-    const data = await r.json();
-    totalCount = data.length;
-    renderResults(data, false, `Kết quả cho "<strong>${q}</strong>"`);
-  } catch(e) {
-    showError();
-  }
+  try{
+    const r=await fetch(`${SUPA}/rest/v1/rpc/search_words`,{method:'POST',headers:H,
+      body:JSON.stringify({query:q,vung_filter:vung||null,limit_n:PAGE})});
+    const d=await r.json();
+    total=d.length; renderResults(d,false,`Kết quả cho "<strong>${esc(q)}</strong>"`);
+  }catch(e){showError();}
   setLoading(false);
 }
 
-// ── LOAD MORE ─────────────────────────────────────────────────────
-async function loadMore() {
-  const offset = currentPage * PAGE_SIZE;
-  setLoading(true, true);
-  try {
-    let url = `${SUPA_URL}/rest/v1/words?trang_thai=in.(da_xac_nhan,can_kiem_tra)&order=tu_muong.asc&limit=${PAGE_SIZE}&offset=${offset}`;
-    if (currentVung) url += `&vung=eq.${encodeURIComponent(currentVung)}`;
-    const r = await fetch(url, { headers: HEADERS });
-    const data = await r.json();
-    currentPage++;
-    renderResults(data, true);
-  } catch(e) {}
-  setLoading(false, true);
+async function loadMore(){
+  const offset=page*PAGE;
+  try{
+    let url=`${SUPA}/rest/v1/words?trang_thai=in.(da_xac_nhan,can_kiem_tra)&order=tu_muong.asc&limit=${PAGE}&offset=${offset}`;
+    if(vung) url+=`&vung=eq.${enc(vung)}`;
+    const r=await fetch(url,{headers:H});
+    const d=await r.json();
+    page++; renderResults(d,true);
+  }catch(e){}
 }
 
 // ── RENDER ────────────────────────────────────────────────────────
-function renderResults(data, append=false, label='') {
-  const container = document.getElementById('results');
-  const header = document.getElementById('results-header');
-  const countEl = document.getElementById('results-count');
-  const loadWrap = document.getElementById('load-more-wrap');
-
-  if (!append) container.innerHTML = '';
-
-  if (!data || data.length === 0) {
-    if (!append) {
-      container.innerHTML = noResults();
-      header.style.display = 'none';
-      loadWrap.style.display = 'none';
-    }
+function renderResults(data,append=false,label=''){
+  const box=document.getElementById('results');
+  const hdr=document.getElementById('results-header');
+  const cnt=document.getElementById('results-count');
+  const lm =document.getElementById('load-more-wrap');
+  if(!append) box.innerHTML='';
+  if(!data||data.length===0){
+    if(!append){box.innerHTML=noResultsHTML();hdr.style.display='none';lm.style.display='none';}
     return;
   }
-
-  // Header
-  if (!append && label) {
-    header.style.display = 'flex';
-    countEl.innerHTML = `${label} — <strong>${totalCount.toLocaleString('vi')}</strong> từ`;
-  }
-
-  // Cards
-  data.forEach(w => {
-    container.insertAdjacentHTML('beforeend', wordCard(w));
-  });
-
-  // Load more button
-  const shown = container.querySelectorAll('.word-card').length;
-  loadWrap.style.display = (!currentQuery && shown < totalCount) ? 'flex' : 'none';
+  if(!append&&label){hdr.style.display='flex';cnt.innerHTML=`${label} — <strong>${total.toLocaleString('vi')}</strong> từ`;}
+  data.forEach(w=>box.insertAdjacentHTML('beforeend',cardHTML(w)));
+  const shown=box.querySelectorAll('.word-card').length;
+  lm.style.display=(!query&&shown<total)?'flex':'none';
 }
 
-function badgeClass(vung) {
-  if (!vung) return 'badge-default';
-  if (vung.includes('Hòa Bình')) return 'badge-hb';
-  if (vung.includes('Thanh Hóa')) return 'badge-th';
-  if (vung.includes('Phú Thọ')) return 'badge-pt';
-  if (vung.includes('Ninh Bình')) return 'badge-nb';
+function badgeClass(v){
+  if(!v) return 'badge-default';
+  if(v.includes('Hòa')) return 'badge-hb';
+  if(v.includes('Thanh')) return 'badge-th';
+  if(v.includes('Phú')) return 'badge-pt';
+  if(v.includes('Ninh')) return 'badge-nb';
   return 'badge-default';
 }
 
-function wordCard(w) {
-  const bc = badgeClass(w.vung);
-  const pn = w.phuong_ngu || '';
-  const isVerified = w.trang_thai === 'da_xac_nhan';
-  const voted = votedWords[w.id];
-  const hasContext = w.van_ban_goc && w.van_ban_goc.length > 10 && w.van_ban_goc !== w.nghia_viet;
-  const contextHtml = hasContext
-    ? `<div class="wc-bottom">
-        <p class="wc-full">${escHtml(w.van_ban_goc.slice(0, 120))}${w.van_ban_goc.length > 120 ? '…' : ''}</p>
-        <div class="wc-actions">
-          <button class="vote-btn ${voted === 1 ? 'voted' : ''}" onclick="vote('${w.id}',1,this)" title="Từ này đúng">✓ Đúng${w.luot_upvote > 0 ? ' ('+w.luot_upvote+')' : ''}</button>
-          <button class="vote-btn ${voted === -1 ? 'voted' : ''}" onclick="vote('${w.id}',-1,this)" title="Từ này có vấn đề">✗ Sai</button>
-        </div>
-      </div>`
-    : `<div class="wc-bottom" style="justify-content:flex-end;">
-        <div class="wc-actions">
-          <button class="vote-btn ${voted === 1 ? 'voted' : ''}" onclick="vote('${w.id}',1,this)">✓ Đúng${w.luot_upvote > 0 ? ' ('+w.luot_upvote+')' : ''}</button>
-          <button class="vote-btn ${voted === -1 ? 'voted' : ''}" onclick="vote('${w.id}',-1,this)">✗ Sai</button>
-        </div>
-      </div>`;
-
+function cardHTML(w){
+  const bc=badgeClass(w.vung);
+  const isOk=w.trang_thai==='da_xac_nhan';
+  const vt=voted[w.id];
+  const ctx=w.van_ban_goc&&w.van_ban_goc.length>20&&w.van_ban_goc!==w.nghia_viet;
   return `
-  <article class="word-card" aria-label="${escHtml(w.tu_muong)} — ${escHtml(w.nghia_viet)}">
-    <div class="wc-top">
-      <div class="wc-left">
-        <div class="wc-muong">${escHtml(w.tu_muong)}</div>
-        <div class="wc-nghia">${escHtml(w.nghia_viet)}</div>
+<article class="word-card" id="card-${w.id}">
+  <div class="wc-top">
+    <div>
+      <div class="wc-muong">${esc(w.tu_muong)}</div>
+      <div class="wc-nghia">${esc(w.nghia_viet)}</div>
+    </div>
+    <div class="wc-right">
+      <span class="wc-badge ${bc}">${esc(w.vung||'Không rõ')}</span>
+      ${w.phuong_ngu?`<span class="wc-status">${esc(w.phuong_ngu)}</span>`:''}
+      <span class="wc-status ${isOk?'verified':''}">${isOk?'✓ Đã xác nhận':'Chờ xác nhận'}</span>
+    </div>
+  </div>
+  ${ctx?`<p class="wc-context">${esc(w.van_ban_goc.slice(0,110))}${w.van_ban_goc.length>110?'…':''}</p>`:''}
+  <div class="wc-footer">
+    <div class="wc-actions">
+      <button class="vote-btn ${vt===1?'voted-up':''}" onclick="vote('${w.id}',1,this)">✓ Đúng${w.luot_upvote>0?' ('+w.luot_upvote+')':''}</button>
+      <button class="vote-btn ${vt===-1?'voted-down':''}" onclick="vote('${w.id}',-1,this)">✗ Sai</button>
+    </div>
+    <button class="add-variant-btn" onclick="toggleVariantForm('${w.id}','${esc(w.tu_muong)}','${esc(w.nghia_viet)}')">
+      + Thêm cách nói của vùng tôi
+    </button>
+  </div>
+  <!-- Inline variant form -->
+  <div class="contrib-form" id="vf-${w.id}">
+    <div class="cf-title">🌿 Thêm biến thể phương ngữ cho "<strong>${esc(w.tu_muong)}</strong> = ${esc(w.nghia_viet)}"</div>
+    <div class="cf-success" id="vfs-${w.id}">✓ Đã gửi! Cảm ơn đóng góp của bạn.</div>
+    <div class="cf-grid" id="vff-${w.id}">
+      <div>
+        <div class="cf-label">Cách nói của vùng bạn *</div>
+        <input class="cf-input" id="vf-muong-${w.id}" placeholder="Từ tiếng Mường vùng bạn">
       </div>
-      <div class="wc-right">
-        <span class="wc-badge ${bc}">${escHtml(w.vung || 'Không rõ')}</span>
-        ${pn ? `<span class="wc-source">${escHtml(pn)}</span>` : ''}
-        <span class="wc-status ${isVerified ? 'verified' : ''}">${isVerified ? '✓ Đã xác nhận' : 'Chờ xác nhận'}</span>
+      <div>
+        <div class="cf-label">Vùng của bạn *</div>
+        <select class="cf-select" id="vf-vung-${w.id}">
+          <option value="">— Chọn —</option>
+          <option value="Hòa Bình">Hòa Bình</option>
+          <option value="Thanh Hóa">Thanh Hóa</option>
+          <option value="Phú Thọ">Phú Thọ</option>
+          <option value="Ninh Bình">Ninh Bình</option>
+          <option value="Khác">Khác</option>
+        </select>
+      </div>
+      <div class="cf-full">
+        <div class="cf-label">Huyện / xã (tuỳ chọn)</div>
+        <input class="cf-input" id="vf-huyen-${w.id}" placeholder="VD: Ngọc Lặc, Thạch Thành...">
+      </div>
+      <div class="cf-full">
+        <label class="native-checkbox">
+          <input type="checkbox" id="vf-native-${w.id}">
+          Tôi là người Mường bản ngữ của vùng này
+        </label>
       </div>
     </div>
-    ${contextHtml}
-  </article>`;
+    <p class="cf-note">Từ sẽ lưu vào hàng chờ, được kiểm duyệt trước khi hiện lên trang.</p>
+    <div class="cf-btns">
+      <button class="cf-cancel" onclick="toggleVariantForm('${w.id}')">Huỷ</button>
+      <button class="cf-submit" onclick="submitVariant('${w.id}','${esc(w.tu_muong)}','${esc(w.nghia_viet)}')">Gửi →</button>
+    </div>
+  </div>
+</article>`;
 }
 
-function noResults() {
-  const q = currentQuery;
+function noResultsHTML(){
+  const q=query;
   return `<div class="state-box">
     <span class="state-icon">🔍</span>
-    <p class="state-title">Không tìm thấy "${escHtml(q)}"</p>
-    <p class="state-sub">Từ này chưa có trong database.<br>
-    Bạn biết cách nói "${escHtml(q)}" trong tiếng Mường không? <a href="index.html" style="color:#7DE8DC;">Đóng góp ngay →</a></p>
+    <p class="state-title">Không tìm thấy "${esc(q)}"</p>
+    <p class="state-sub">Từ này chưa có trong database.<br>Bạn biết cách nói "${esc(q)}" trong tiếng Mường không?</p>
+    <button class="empty-cta" onclick="openNewWordModal('${esc(q)}')">+ Đóng góp từ "${esc(q)}" ngay</button>
   </div>`;
 }
 
 // ── VOTE ─────────────────────────────────────────────────────────
-async function vote(wordId, value, btn) {
-  if (votedWords[wordId]) return;
-  try {
-    const sessionId = getSession();
-    await fetch(`${SUPA_URL}/rest/v1/votes`, {
-      method: 'POST',
-      headers: HEADERS,
-      body: JSON.stringify({ word_id: wordId, session_id: sessionId, gia_tri: value })
-    });
-    votedWords[wordId] = value;
-    sessionStorage.setItem('voted', JSON.stringify(votedWords));
-    // Update UI
-    const card = btn.closest('.word-card');
-    card.querySelectorAll('.vote-btn').forEach(b => b.classList.remove('voted'));
-    btn.classList.add('voted');
-  } catch(e) {}
+async function vote(wid,val,btn){
+  if(voted[wid]) return;
+  try{
+    await fetch(`${SUPA}/rest/v1/votes`,{method:'POST',headers:H,
+      body:JSON.stringify({word_id:wid,session_id:sid(),gia_tri:val})});
+    voted[wid]=val;
+    sessionStorage.setItem('v',JSON.stringify(voted));
+    const card=document.getElementById(`card-${wid}`);
+    card.querySelectorAll('.vote-btn').forEach(b=>{b.classList.remove('voted-up','voted-down');});
+    btn.classList.add(val===1?'voted-up':'voted-down');
+  }catch(e){}
 }
 
-function getSession() {
-  let s = sessionStorage.getItem('sid');
-  if (!s) { s = Math.random().toString(36).slice(2); sessionStorage.setItem('sid', s); }
-  return s;
+// ── VARIANT FORM ─────────────────────────────────────────────────
+function toggleVariantForm(wid, muong='', nghia=''){
+  const form=document.getElementById(`vf-${wid}`);
+  const isOpen=form.classList.contains('open');
+  // Close all other forms first
+  document.querySelectorAll('.contrib-form.open').forEach(f=>f.classList.remove('open'));
+  if(!isOpen) form.classList.add('open');
 }
 
-// ── REGION FILTER ─────────────────────────────────────────────────
-function setVung(vung, btn) {
-  currentVung = vung;
-  document.querySelectorAll('.rtab').forEach(b => {
-    b.className = 'rtab';
-    if (b.dataset.vung === vung) {
-      if (!vung) b.classList.add('on', 'on-all');
-      else if (vung.includes('Hòa')) b.classList.add('on', 'on-hb');
-      else if (vung.includes('Thanh')) b.classList.add('on', 'on-th');
-      else if (vung.includes('Phú')) b.classList.add('on', 'on-pt');
-      else if (vung.includes('Ninh')) b.classList.add('on', 'on-nb');
+async function submitVariant(wid, tuViet, tuNghia){
+  const muong=document.getElementById(`vf-muong-${wid}`).value.trim();
+  const v=document.getElementById(`vf-vung-${wid}`).value;
+  const huyen=document.getElementById(`vf-huyen-${wid}`).value.trim();
+  const native=document.getElementById(`vf-native-${wid}`).checked;
+  if(!muong||!v){alert('Vui lòng điền từ tiếng Mường và chọn vùng.');return;}
+  try{
+    await fetch(`${SUPA}/rest/v1/contributions`,{method:'POST',headers:H,
+      body:JSON.stringify({
+        word_id:wid,
+        tu_muong:muong,
+        nghia_viet:tuNghia,
+        vung:v,
+        huyen_xa:huyen||null,
+        la_nguoi_ban_ngu:native,
+        loai:'tu_moi',
+        trang_thai:'cho_duyet',
+        ghi_chu:`Biến thể vùng ${v} của từ "${tuViet}"`
+      })});
+    document.getElementById(`vff-${wid}`).style.display='none';
+    const s=document.getElementById(`vfs-${wid}`);
+    s.classList.add('show');
+    setTimeout(()=>{
+      document.getElementById(`vf-${wid}`).classList.remove('open');
+      s.classList.remove('show');
+      document.getElementById(`vff-${wid}`).style.display='';
+    },3000);
+    // Update stat
+    loadStats();
+  }catch(e){alert('Có lỗi xảy ra. Vui lòng thử lại.');}
+}
+
+// ── NEW WORD MODAL ────────────────────────────────────────────────
+function openNewWordModal(prefill=''){
+  document.getElementById('modal-new').classList.add('open');
+  document.body.style.overflow='hidden';
+  if(prefill) document.getElementById('nw-viet').value=prefill;
+  document.getElementById('modal-success').style.display='none';
+  document.getElementById('modal-form-content').style.display='block';
+}
+function closeModal(e){
+  if(e&&e.target!==document.getElementById('modal-new')) return;
+  document.getElementById('modal-new').classList.remove('open');
+  document.body.style.overflow='';
+}
+async function submitNewWord(){
+  const viet=document.getElementById('nw-viet').value.trim();
+  const muong=document.getElementById('nw-muong').value.trim();
+  const v=document.getElementById('nw-vung').value;
+  const huyen=document.getElementById('nw-huyen').value.trim();
+  const vidu=document.getElementById('nw-vidu').value.trim();
+  const native=document.getElementById('nw-native').checked;
+  if(!viet||!muong||!v){alert('Vui lòng điền từ tiếng Việt, từ tiếng Mường và chọn vùng.');return;}
+  const btn=document.getElementById('nw-submit');
+  btn.disabled=true; btn.textContent='Đang gửi…';
+  try{
+    await fetch(`${SUPA}/rest/v1/contributions`,{method:'POST',headers:H,
+      body:JSON.stringify({
+        tu_muong:muong,
+        nghia_viet:viet,
+        vi_du_muong:vidu||null,
+        vung:v,
+        huyen_xa:huyen||null,
+        la_nguoi_ban_ngu:native,
+        loai:'tu_moi',
+        trang_thai:'cho_duyet'
+      })});
+    document.getElementById('modal-form-content').style.display='none';
+    const s=document.getElementById('modal-success');
+    s.style.display='flex';
+    // Reset form
+    ['nw-viet','nw-muong','nw-huyen','nw-vidu'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('nw-vung').value='';
+    document.getElementById('nw-native').checked=false;
+    loadStats();
+    setTimeout(()=>closeModal(),3000);
+  }catch(e){alert('Có lỗi xảy ra. Vui lòng thử lại.');}
+  btn.disabled=false; btn.textContent='Gửi đóng góp →';
+}
+
+// ── REGION / HELPERS ──────────────────────────────────────────────
+function setVung(v,btn){
+  vung=v;
+  document.querySelectorAll('.rtab').forEach(b=>{
+    b.className='rtab';
+    if(b.dataset.v===v){
+      if(!v) b.classList.add('on-all');
+      else if(v.includes('Hòa')) b.classList.add('on-hb');
+      else if(v.includes('Thanh')) b.classList.add('on-th');
+      else if(v.includes('Phú')) b.classList.add('on-pt');
+      else if(v.includes('Ninh')) b.classList.add('on-nb');
     }
   });
-  currentQuery ? doSearch() : showBrowse();
+  query?doSearch():showBrowse();
 }
-
-// ── HELPERS ───────────────────────────────────────────────────────
-function quickSearch(word) {
-  document.getElementById('q').value = word;
-  doSearch();
-}
-function onInput() {
-  const q = document.getElementById('q').value.trim();
-  if (!q) { history.replaceState({}, '', location.pathname); showBrowse(); }
-}
-function onKey(e) { if (e.key === 'Enter') doSearch(); }
-function escHtml(s) {
-  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-function setLoading(on, append=false) {
-  const r = document.getElementById('results');
-  if (on && !append) {
-    r.innerHTML = `<div class="state-box"><div class="spinner"></div><p class="state-sub">Đang tìm kiếm…</p></div>`;
-    document.getElementById('results-header').style.display = 'none';
-    document.getElementById('load-more-wrap').style.display = 'none';
+function quickSearch(w){document.getElementById('q').value=w;doSearch();}
+function onInput(){const q=document.getElementById('q').value.trim();if(!q){history.replaceState({},'',location.pathname);showBrowse();}}
+function onKey(e){if(e.key==='Enter')doSearch();}
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function enc(s){return encodeURIComponent(s);}
+function setLoading(on){
+  if(on){
+    document.getElementById('results').innerHTML=`<div class="state-box"><div class="spinner"></div><p class="state-sub">Đang tìm kiếm…</p></div>`;
+    document.getElementById('results-header').style.display='none';
+    document.getElementById('load-more-wrap').style.display='none';
   }
 }
-function showError() {
-  document.getElementById('results').innerHTML = `<div class="state-box">
-    <span class="state-icon">⚠️</span>
-    <p class="state-title">Không kết nối được database</p>
-    <p class="state-sub">Vui lòng thử lại sau.</p>
-  </div>`;
+function showError(){
+  document.getElementById('results').innerHTML=`<div class="state-box"><span class="state-icon">⚠️</span><p class="state-title">Không kết nối được</p><p class="state-sub">Vui lòng thử lại sau.</p></div>`;
 }
-function toggleMenu(btn) {
-  const menu = document.getElementById('mobile-menu');
-  const open = menu.classList.toggle('open');
-  btn.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
+function toggleMenu(btn){
+  const m=document.getElementById('mobile-menu');
+  const o=m.classList.toggle('open');
+  btn.classList.toggle('open',o);
+  document.body.style.overflow=o?'hidden':'';
 }
-document.addEventListener('click', e => {
-  const menu = document.getElementById('mobile-menu');
-  const btn = document.querySelector('.hamburger');
-  if (menu && menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
-    menu.classList.remove('open'); btn.classList.remove('open');
-    document.body.style.overflow = '';
+document.addEventListener('click',e=>{
+  const m=document.getElementById('mobile-menu');
+  const b=document.querySelector('.hamburger');
+  if(m&&m.classList.contains('open')&&!m.contains(e.target)&&!b.contains(e.target)){
+    m.classList.remove('open');b.classList.remove('open');document.body.style.overflow='';
   }
 });
 

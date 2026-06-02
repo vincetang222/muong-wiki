@@ -232,6 +232,12 @@ nav.main{position:sticky;top:0;z-index:200;padding:0 32px;display:flex;align-ite
 .src-tag.lang{background:rgba(26,92,138,.2);color:#7BBFE8;}
 .src-tag.history{background:rgba(192,85,58,.2);color:#F5C4B3;}
 .src-tag.travel{background:rgba(26,122,110,.2);color:#7DE8DC;}
+.src-tag.policy{background:rgba(212,160,23,.2);color:#FAC775;}
+.src-tag.research{background:rgba(127,119,221,.2);color:#CECBF6;}
+.src-logo.sl-bvhttdl{background:linear-gradient(135deg,#1A3A6E,#0D2A50);color:#A0C0F0;font-size:9px;text-align:center;}
+.src-logo.sl-cpv{background:linear-gradient(135deg,#8A0000,#600000);color:#FFB0B0;font-size:10px;}
+.src-logo.sl-hoabinh{background:linear-gradient(135deg,#0D4A1A,#083510);color:#7DE8DC;font-size:9px;text-align:center;}
+.src-logo.sl-phuongnam{background:linear-gradient(135deg,#2A4A8A,#1A2A60);color:#A0C0F0;font-size:9px;text-align:center;}
 .src-arrow{font-size:18px;color:rgba(250,247,240,.2);flex-shrink:0;transition:.15s;}
 .src:hover .src-arrow{color:var(--g1);transform:translateX(3px);}
 
@@ -306,8 +312,7 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
     <span class="logo-name">Tiếng Mường</span>
   </a>
   <div class="nav-links">
-    <a class="nl" href="index.html">Trang chủ</a>
-    <a class="nl" href="index.html">Từ điển</a>
+    <a class="nl" href="tu-dien.html">Từ điển</a>
     <a class="nl active" href="blog.html">Blog</a>
     <a class="nl" href="about.html">Về dự án</a>
     <a class="nl" href="ung-ho.html">Ủng hộ ♡</a>
@@ -320,8 +325,7 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
-  <a class="nl" href="index.html">Trang chủ</a>
-  <a class="nl" href="index.html">Từ điển</a>
+  <a class="nl" href="tu-dien.html">Từ điển</a>
   <a class="nl active" href="blog.html">Blog</a>
   <a class="nl" href="about.html">Về dự án</a>
   <a class="nl" href="ung-ho.html">Ủng hộ ♡</a>
@@ -351,7 +355,10 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
       ✍️ Bài viết của dự án <span class="tab-count">5</span>
     </button>
     <button class="tab" role="tab" aria-selected="false" aria-controls="panel-ext" onclick="switchTab('ext',this)">
-      📰 Nguồn tham khảo <span class="tab-count">9</span>
+      📰 Nguồn tham khảo <span class="tab-count">40+</span>
+    </button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="panel-policy" onclick="switchTab('policy',this)">
+      🏛️ Chính sách Nhà nước <span class="tab-count">12</span>
     </button>
   </div>
 </div>
@@ -481,7 +488,7 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
 
     <div class="sources-grid" id="sources-grid">
 
-      <p class="src-group-label">Báo chí & Tạp chí</p>
+      <p class="src-group-label">📖 Từ điển & Ngôn ngữ học</p>
 
       <a class="src" href="https://heritagevietnamairlines.com/mo-muong-va-nghi-le-mat-nha/" target="_blank" rel="noopener noreferrer" data-tags="culture travel">
         <div class="src-logo sl-heritage">Heritage<br>VNA</div>
@@ -497,9 +504,9 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
       <a class="src" href="https://vhds.baothanhhoa.vn/nguyen-xuan-luat-nbsp-va-25-nam-cay-ai-voi-tu-dien-viet-muong-thanh-hoa-43321.htm" target="_blank" rel="noopener noreferrer" data-tags="lang history">
         <div class="src-logo sl-bth">Báo<br>Thanh<br>Hóa</div>
         <div class="src-content">
-          <div class="src-source-name">Báo Thanh Hóa — Văn hóa & Đời sống <span class="src-badge">Báo địa phương</span></div>
+          <div class="src-source-name">Báo Thanh Hóa <span class="src-badge">Báo địa phương</span></div>
           <p class="src-title">Nguyễn Xuân Luật và 25 năm cày ải với Từ điển Việt-Mường Thanh Hóa</p>
-          <p class="src-desc">Câu chuyện về tác giả người Kinh dành 25 năm biên soạn 12.800 từ vựng tiếng Mường Thanh Hóa — bộ từ điển riêng cho phương ngữ Mường xứ Thanh.</p>
+          <p class="src-desc">Câu chuyện về tác giả dành 25 năm biên soạn 12.800 từ vựng tiếng Mường Thanh Hóa.</p>
           <div class="src-tags"><span class="src-tag lang">Ngôn ngữ</span><span class="src-tag history">Lịch sử</span></div>
         </div>
         <span class="src-arrow" aria-hidden="true">→</span>
@@ -508,56 +515,10 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
       <a class="src" href="https://vhds.baothanhhoa.vn/tu-dien-viet-muong-thanh-hoa-mot-cuon-sach-quy-32307.htm" target="_blank" rel="noopener noreferrer" data-tags="lang">
         <div class="src-logo sl-bth">Báo<br>Thanh<br>Hóa</div>
         <div class="src-content">
-          <div class="src-source-name">Báo Thanh Hóa — Văn hóa & Đời sống <span class="src-badge">Báo địa phương</span></div>
+          <div class="src-source-name">Báo Thanh Hóa <span class="src-badge">Báo địa phương</span></div>
           <p class="src-title">Từ điển Việt-Mường Thanh Hóa — Một cuốn sách quý</p>
-          <p class="src-desc">Giới thiệu cuốn từ điển Việt-Mường riêng cho phương ngữ Thanh Hóa, ghi lại những truyện thơ Mường như Nàng Nga - Hai Mối, Nàng Ờm và chàng Bồng Hương.</p>
+          <p class="src-desc">Giới thiệu bộ từ điển Việt-Mường riêng cho phương ngữ Thanh Hóa, ghi lại truyện thơ Mường như Nàng Nga - Hai Mối.</p>
           <div class="src-tags"><span class="src-tag lang">Ngôn ngữ</span></div>
-        </div>
-        <span class="src-arrow" aria-hidden="true">→</span>
-      </a>
-
-      <a class="src" href="https://vhds.baothanhhoa.vn/gin-giu-net-dep-van-hoa-cua-nguoi-muong-thai-tinh-thanh-hoa-34677.htm" target="_blank" rel="noopener noreferrer" data-tags="culture history">
-        <div class="src-logo sl-bth">Báo<br>Thanh<br>Hóa</div>
-        <div class="src-content">
-          <div class="src-source-name">Báo Thanh Hóa — Văn hóa & Đời sống <span class="src-badge">Báo địa phương</span></div>
-          <p class="src-title">Gìn giữ nét đẹp văn hóa của người Mường, Thái tỉnh Thanh Hóa</p>
-          <p class="src-desc">Người Mường là dân tộc thiểu số đông nhất Thanh Hóa, tập trung ở Thạch Thành, Ngọc Lặc, Cẩm Thủy, Bá Thước. Bài viết về nỗ lực bảo tồn văn hóa truyền thống.</p>
-          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag history">Lịch sử</span></div>
-        </div>
-        <span class="src-arrow" aria-hidden="true">→</span>
-      </a>
-
-      <a class="src" href="https://nhandan.vn/chu-de/dan-toc-muong" target="_blank" rel="noopener noreferrer" data-tags="culture history">
-        <div class="src-logo sl-nhandan">Nhân<br>Dân</div>
-        <div class="src-content">
-          <div class="src-source-name">Báo Nhân Dân <span class="src-badge">Báo Trung ương</span></div>
-          <p class="src-title">Chuyên mục dân tộc Mường</p>
-          <p class="src-desc">Tổng hợp các bài viết về đời sống, văn hóa, phong tục và chính sách bảo tồn bản sắc dân tộc Mường.</p>
-          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag history">Lịch sử</span></div>
-        </div>
-        <span class="src-arrow" aria-hidden="true">→</span>
-      </a>
-
-      <a class="src" href="https://vnexpress.net/tag/nguoi-muong" target="_blank" rel="noopener noreferrer" data-tags="culture">
-        <div class="src-logo sl-vnexpress">VN<br>Express</div>
-        <div class="src-content">
-          <div class="src-source-name">VnExpress <span class="src-badge">Báo điện tử</span></div>
-          <p class="src-title">Người Mường — Chủ đề trên VnExpress</p>
-          <p class="src-desc">Tổng hợp tin tức, phóng sự và bài viết về người Mường — từ văn hóa truyền thống đến đời sống hiện đại.</p>
-          <div class="src-tags"><span class="src-tag culture">Văn hóa</span></div>
-        </div>
-        <span class="src-arrow" aria-hidden="true">→</span>
-      </a>
-
-      <p class="src-group-label">Nghiên cứu & Bách khoa</p>
-
-      <a class="src" href="https://vi.wikipedia.org/wiki/Ng%C6%B0%E1%BB%9Di_M%C6%B0%E1%BB%9Dng" target="_blank" rel="noopener noreferrer" data-tags="history lang">
-        <div class="src-logo sl-wiki">Wiki<br>pedia</div>
-        <div class="src-content">
-          <div class="src-source-name">Wikipedia tiếng Việt <span class="src-badge">Bách khoa mở</span></div>
-          <p class="src-title">Người Mường — Wikipedia</p>
-          <p class="src-desc">Tổng quan về dân tộc Mường: lịch sử, phân bố địa lý, ngôn ngữ, phong tục và văn hóa.</p>
-          <div class="src-tags"><span class="src-tag history">Lịch sử</span><span class="src-tag lang">Ngôn ngữ</span></div>
         </div>
         <span class="src-arrow" aria-hidden="true">→</span>
       </a>
@@ -573,13 +534,307 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
         <span class="src-arrow" aria-hidden="true">→</span>
       </a>
 
+      <p class="src-group-label">🌿 Văn hóa & Di sản</p>
+
+      <a class="src" href="https://nhandan.vn/dan-toc-muong-post723894.html" target="_blank" rel="noopener noreferrer" data-tags="culture history">
+        <div class="src-logo sl-nhandan">Nhân<br>Dân</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Nhân Dân <span class="src-badge">Báo Trung ương</span></div>
+          <p class="src-title">Dân tộc Mường — Tổng quan</p>
+          <p class="src-desc">Người Mường có 1.452.095 người (2019), đông thứ 4 cả nước. Tập trung ở Hòa Bình, Thanh Hóa, Phú Thọ, Sơn La. Văn hóa phong phú, giàu bản sắc tộc người.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag history">Lịch sử</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://nhandan.vn/gin-giu-gia-tri-van-hoa-doc-dao-cua-mo-muong-post709320.html" target="_blank" rel="noopener noreferrer" data-tags="culture">
+        <div class="src-logo sl-nhandan">Nhân<br>Dân</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Nhân Dân <span class="src-badge">Báo Trung ương</span></div>
+          <p class="src-title">Gìn giữ giá trị văn hóa độc đáo của Mo Mường</p>
+          <p class="src-desc">Mo Mường là sự kết tinh kinh nghiệm lao động sản xuất, triết lý nhân sinh của người Mường. Mo Mường đang trên hành trình trở thành di sản phi vật thể UNESCO.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://www.vietnamplus.vn/trinh-unesco-ho-so-di-san-van-hoa-phi-vat-the-voi-mo-muong-va-nghe-thuat-cheo-post937352.vnp" target="_blank" rel="noopener noreferrer" data-tags="culture">
+        <div class="src-logo sl-phuongnam" style="background:linear-gradient(135deg,#1A5C3A,#0D3A28);color:#7DE8DC;font-size:9px;">Vietnam<br>Plus</div>
+        <div class="src-content">
+          <div class="src-source-name">VietnamPlus / TTXVN <span class="src-badge">Thông tấn xã</span></div>
+          <p class="src-title">Trình UNESCO hồ sơ Di sản Văn hóa phi vật thể: Mo Mường và Nghệ thuật Chèo</p>
+          <p class="src-desc">Năm 2024, Chính phủ đồng ý đệ trình Mo Mường vào Danh sách Di sản phi vật thể cần bảo vệ khẩn cấp của UNESCO.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag policy">Chính sách</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://nhandan.vn/bao-ton-van-hoa-dan-toc-muong-va-nen-van-hoa-hoa-binh-post792396.html" target="_blank" rel="noopener noreferrer" data-tags="culture history">
+        <div class="src-logo sl-nhandan">Nhân<br>Dân</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Nhân Dân <span class="src-badge">Báo Trung ương</span></div>
+          <p class="src-title">Bảo tồn văn hóa dân tộc Mường và nền "Văn hóa Hòa Bình"</p>
+          <p class="src-desc">Tỉnh Hòa Bình ban hành Đề án Bảo tồn (11/2023): lập hồ sơ 5 di sản phi vật thể đề nghị công nhận quốc gia, phục dựng lễ hội, chiêng Mường, nhà sàn.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag history">Lịch sử</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://vhds.baothanhhoa.vn/bao-ton-gin-giu-phong-tuc-mo-cua-nguoi-muong-25006.htm" target="_blank" rel="noopener noreferrer" data-tags="culture">
+        <div class="src-logo sl-bth">Báo<br>Thanh<br>Hóa</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Thanh Hóa <span class="src-badge">Báo địa phương</span></div>
+          <p class="src-title">Bảo tồn, gìn giữ phong tục "mo" của người Mường</p>
+          <p class="src-desc">Khảo sát phong tục làm mo của người Mường — vừa rất khoa học vừa giàu tính nhân văn. Người Mường là dân tộc thiểu số đông thứ ba Việt Nam.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://vhds.baothanhhoa.vn/doc-dao-mo-muong-40080.htm" target="_blank" rel="noopener noreferrer" data-tags="culture">
+        <div class="src-logo sl-bth">Báo<br>Thanh<br>Hóa</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Thanh Hóa <span class="src-badge">Báo địa phương</span></div>
+          <p class="src-title">Độc đáo Mo Mường</p>
+          <p class="src-desc">Người Mường không có chữ viết, nhưng các bài Mo vẫn được lưu giữ vẹn nguyên nhờ truyền miệng qua các thầy Mo. Mo Mường đang hướng tới UNESCO.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://vhds.baothanhhoa.vn/gin-giu-net-dep-van-hoa-cua-nguoi-muong-thai-tinh-thanh-hoa-34677.htm" target="_blank" rel="noopener noreferrer" data-tags="culture history">
+        <div class="src-logo sl-bth">Báo<br>Thanh<br>Hóa</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Thanh Hóa <span class="src-badge">Báo địa phương</span></div>
+          <p class="src-title">Gìn giữ nét đẹp văn hóa của người Mường, Thái tỉnh Thanh Hóa</p>
+          <p class="src-desc">Người Mường là dân tộc thiểu số đông nhất Thanh Hóa, tập trung ở Thạch Thành, Ngọc Lặc, Cẩm Thủy, Bá Thước.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag history">Lịch sử</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://www.baohoabinh.com.vn/40/66133/Cong-chieng-tr111ng-doi-song-nguoi-Muong.htm" target="_blank" rel="noopener noreferrer" data-tags="culture">
+        <div class="src-logo sl-hoabinh">Báo<br>Hòa<br>Bình</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Hòa Bình <span class="src-badge">Báo địa phương</span></div>
+          <p class="src-title">Cồng chiêng trong đời sống người Mường</p>
+          <p class="src-desc">Cồng chiêng là nhạc cụ thiêng liêng gắn bó với mọi nghi lễ của người Mường — từ lễ tang đến lễ mừng nhà mới, lễ hội mùa màng.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://baophutho.vn/doc-dao-van-hoa-muong-vang-235564.htm" target="_blank" rel="noopener noreferrer" data-tags="culture">
+        <div class="src-logo sl-phuongnam" style="background:linear-gradient(135deg,#6B3FA0,#4A1A7A);color:#C4A0F0;font-size:9px;">Báo<br>Phú<br>Thọ</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Phú Thọ <span class="src-badge">Báo địa phương</span></div>
+          <p class="src-title">Độc đáo văn hóa Mường Vang</p>
+          <p class="src-desc">Mường Vang lưu giữ 1.200 chiêng, 19.000 nhà sàn, 10 câu lạc bộ hát dân ca thường rang bộ mẹng — điểm sáng bảo tồn văn hóa Mường Phú Thọ.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://dansinh.dantri.com.vn/dien-dan-dan-sinh/doc-dao-net-dep-nha-san-nguoi-muong-o-xu-thanh-20211108055633000.htm" target="_blank" rel="noopener noreferrer" data-tags="culture travel">
+        <div class="src-logo sl-phuongnam" style="background:linear-gradient(135deg,#1A3A6E,#0D2050);color:#A0C0F0;font-size:10px;">Dân<br>Trí</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Dân Trí <span class="src-badge">Báo điện tử</span></div>
+          <p class="src-title">Độc đáo nét đẹp nhà sàn người Mường ở xứ Thanh</p>
+          <p class="src-desc">Nhà sàn Mường chia 4 gian: Móng Tông (gian thiêng), Móng Mụ (gian bà), Buồng dâu, Buồng con. Cầu thang là hiện vật hữu dụng không thể thiếu.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag travel">Du lịch</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://dantoc.vietnamtourism.gov.vn/thanh-hoa-giu-hon-nha-san-cua-nguoi-muong/" target="_blank" rel="noopener noreferrer" data-tags="culture travel">
+        <div class="src-logo sl-bvhttdl">Tổng<br>cục<br>DL</div>
+        <div class="src-content">
+          <div class="src-source-name">Tổng cục Du lịch <span class="src-badge">Cơ quan nhà nước</span></div>
+          <p class="src-title">Thanh Hóa: "Giữ hồn" nhà sàn của người Mường</p>
+          <p class="src-desc">Nhà sàn Mường Thanh Hóa vừa được bảo tồn vừa phát triển du lịch cộng đồng — mô hình thành công ở Thạch Lập, Ngọc Lặc.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag travel">Du lịch</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <p class="src-group-label">📚 Nghiên cứu & Bách khoa</p>
+
+      <a class="src" href="https://vi.wikipedia.org/wiki/Ng%C6%B0%E1%BB%9Di_M%C6%B0%E1%BB%9Dng" target="_blank" rel="noopener noreferrer" data-tags="history lang">
+        <div class="src-logo sl-wiki">Wiki<br>pedia</div>
+        <div class="src-content">
+          <div class="src-source-name">Wikipedia tiếng Việt <span class="src-badge">Bách khoa mở</span></div>
+          <p class="src-title">Người Mường — Wikipedia</p>
+          <p class="src-desc">Tổng quan về dân tộc Mường: lịch sử, phân bố địa lý, ngôn ngữ, phong tục và văn hóa. Điểm khởi đầu tốt cho người mới tìm hiểu.</p>
+          <div class="src-tags"><span class="src-tag history">Lịch sử</span><span class="src-tag lang">Ngôn ngữ</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
       <a class="src" href="https://svhttdl.thanhhoa.gov.vn/van-hoa/bao-ton-va-phat-huy-ban-sac-van-hoa-dan-toc-muong-bai-1-suc-song-manh-liet-lau-ben-cua-van-hoa-dan-toc-muong-1005262" target="_blank" rel="noopener noreferrer" data-tags="culture history">
         <div class="src-logo sl-sovat">Sở<br>VHTTDL<br>TH</div>
         <div class="src-content">
           <div class="src-source-name">Sở VHTTDL Thanh Hóa <span class="src-badge">Cơ quan nhà nước</span></div>
           <p class="src-title">Sức sống mãnh liệt của văn hóa dân tộc Mường</p>
-          <p class="src-desc">Bài viết về bảo tồn và phát huy bản sắc văn hóa dân tộc Mường tỉnh Thanh Hóa.</p>
+          <p class="src-desc">Bài 1 trong loạt bài của Sở Văn hóa, Thể thao và Du lịch Thanh Hóa về bảo tồn và phát huy bản sắc văn hóa dân tộc Mường.</p>
           <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag history">Lịch sử</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://vnexpress.net/tag/nguoi-muong" target="_blank" rel="noopener noreferrer" data-tags="culture">
+        <div class="src-logo sl-vnexpress">VN<br>Express</div>
+        <div class="src-content">
+          <div class="src-source-name">VnExpress <span class="src-badge">Báo điện tử</span></div>
+          <p class="src-title">Người Mường — Chủ đề trên VnExpress</p>
+          <p class="src-desc">Tổng hợp tin tức, phóng sự về người Mường trên VnExpress — từ văn hóa truyền thống đến đời sống hiện đại.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://lacson.hoabinh.gov.vn/index.php/van-hoa-xa-h-i/12992-ba-o-ta-n-v-n-ha-a-da-n-ta-c-m-a-ng-va-na-n-a-v-n-ha-a-ha-a-ba-nha" target="_blank" rel="noopener noreferrer" data-tags="culture policy">
+        <div class="src-logo sl-hoabinh">Huyện<br>Lạc<br>Sơn</div>
+        <div class="src-content">
+          <div class="src-source-name">UBND huyện Lạc Sơn, Hòa Bình <span class="src-badge">Cơ quan nhà nước</span></div>
+          <p class="src-title">Bảo tồn văn hóa dân tộc Mường và nền "Văn hóa Hòa Bình"</p>
+          <p class="src-desc">Tài liệu chính thức về công tác bảo tồn văn hóa Mường tại địa phương, gồm phục dựng lễ hội, khôi phục nhà sàn và nghề dệt thổ cẩm.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag policy">Chính sách</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+
+        <p style="font-size:12px;color:rgba(250,247,240,.25);margin-top:24px;text-align:center;">
+      Biết bài viết hay về tiếng Mường? <a href="ung-ho.html" style="color:rgba(125,232,220,.6);">Gửi gợi ý →</a>
+    </p>
+
+  </div>
+</div>
+
+<!-- ══ TAB 3: CHÍNH SÁCH NHÀ NƯỚC ══ -->
+<div class="panel" id="panel-policy" role="tabpanel" aria-labelledby="tab-policy">
+  <div class="wrap">
+
+    <div class="sources-intro">
+      <span class="si-icon">🏛️</span>
+      <p class="si-text">Các văn bản, chính sách và chương trình của Đảng và Nhà nước về bảo tồn văn hóa, ngôn ngữ dân tộc Mường. Nguồn chính thức từ các cơ quan nhà nước.</p>
+    </div>
+
+    <div class="sources-grid">
+
+      <p class="src-group-label">📜 Văn bản & Chính sách cấp Trung ương</p>
+
+      <a class="src" href="https://nhandan.vn/bao-ton-tieng-noi-chu-viet-dan-toc-muong-post787358.html" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-nhandan">Nhân<br>Dân</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Nhân Dân <span class="src-badge">Trung ương</span></div>
+          <p class="src-title">Bảo tồn tiếng nói, chữ viết dân tộc Mường</p>
+          <p class="src-desc">Năm 2023, Trường CĐSP Hòa Bình mở 20 lớp giáo viên, 3 lớp lực lượng vũ trang dạy tiếng Mường. Kế hoạch 2024-2025: bồi dưỡng 2.500 CBCCVC và 2.500 giáo viên.</p>
+          <div class="src-tags"><span class="src-tag policy">Chính sách</span><span class="src-tag lang">Ngôn ngữ</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://bvhttdl.gov.vn/hoa-binh-bao-ton-tieng-noi-chu-viet-dan-toc-muong-20231103082027952.htm" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-bvhttdl">Bộ<br>VHTT<br>DL</div>
+        <div class="src-content">
+          <div class="src-source-name">Bộ Văn hóa, Thể thao và Du lịch <span class="src-badge">Bộ ngành</span></div>
+          <p class="src-title">Hòa Bình: Bảo tồn tiếng nói, chữ viết dân tộc Mường</p>
+          <p class="src-desc">Năm 2016, tỉnh Hòa Bình xây dựng và đưa vào sử dụng bộ chữ viết dân tộc Mường — dấu mốc lịch sử. Đề án dạy và học tiếng Mường 2018-2025, tầm nhìn 2030.</p>
+          <div class="src-tags"><span class="src-tag policy">Chính sách</span><span class="src-tag lang">Ngôn ngữ</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://nhandan.vn/bao-ton-ngon-ngu-cac-dan-toc-thieu-so-post701223.html" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-nhandan">Nhân<br>Dân</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Nhân Dân <span class="src-badge">Trung ương</span></div>
+          <p class="src-title">Bảo tồn ngôn ngữ các dân tộc thiểu số</p>
+          <p class="src-desc">14/10/2021: Thủ tướng ký Quyết định phê duyệt Chương trình mục tiêu quốc gia phát triển KT-XH vùng đồng bào DTTS 2021-2030, có dự án bảo tồn ngôn ngữ.</p>
+          <div class="src-tags"><span class="src-tag policy">Chính sách</span><span class="src-tag lang">Ngôn ngữ</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://nhandan.vn/giu-ngon-ngu-de-bao-ton-ban-sac-post739724.html" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-nhandan">Nhân<br>Dân</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Nhân Dân <span class="src-badge">Trung ương</span></div>
+          <p class="src-title">Giữ ngôn ngữ để bảo tồn bản sắc</p>
+          <p class="src-desc">Phóng sự thực địa: người Mường ở Yên Thủy, Hòa Bình đang dần không dùng tiếng Mường trong đời sống. Vai trò chủ thể của chính cộng đồng dân tộc.</p>
+          <div class="src-tags"><span class="src-tag policy">Chính sách</span><span class="src-tag lang">Ngôn ngữ</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://baochinhphu.vn/de-trinh-unesco-2-di-san-van-hoa-phi-vat-the-10224032916481175.htm" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-cpv">Báo<br>CP</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Chính phủ <span class="src-badge">Cơ quan Chính phủ</span></div>
+          <p class="src-title">Đệ trình UNESCO 2 Di sản văn hóa phi vật thể: Mo Mường và Nghệ thuật Chèo</p>
+          <p class="src-desc">Phó Thủ tướng Trần Hồng Hà đồng ý đệ trình UNESCO xem xét đưa Mo Mường vào Danh sách Di sản phi vật thể cần bảo vệ khẩn cấp (2024).</p>
+          <div class="src-tags"><span class="src-tag policy">Chính sách</span><span class="src-tag culture">Văn hóa</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <p class="src-group-label">📍 Chính sách cấp Tỉnh</p>
+
+      <a class="src" href="https://baophutho.vn/bao-ton-va-lan-toa-tieng-noi-chu-viet-dan-toc-muong-237933.htm" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-phuongnam" style="background:linear-gradient(135deg,#6B3FA0,#4A1A7A);color:#C4A0F0;font-size:9px;">Báo<br>Phú<br>Thọ</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Phú Thọ <span class="src-badge">Báo địa phương</span></div>
+          <p class="src-title">Bảo tồn và lan tỏa tiếng nói, chữ viết dân tộc Mường</p>
+          <p class="src-desc">Đề án dạy và học tiếng Mường 2018-2025 của Hòa Bình: đào tạo giáo viên, bồi dưỡng cán bộ. Năm 2024 cấp chứng chỉ cho 576 học viên các huyện.</p>
+          <div class="src-tags"><span class="src-tag policy">Chính sách</span><span class="src-tag lang">Ngôn ngữ</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="http://www.baohoabinh.com.vn/16/183393/Bao-ton-tieng-noi,-chu-viet-dan-toc-Muong.htm" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-hoabinh">Báo<br>Hòa<br>Bình</div>
+        <div class="src-content">
+          <div class="src-source-name">Báo Hòa Bình <span class="src-badge">Báo địa phương</span></div>
+          <p class="src-title">Bảo tồn tiếng nói, chữ viết dân tộc Mường</p>
+          <p class="src-desc">Bộ chữ Mường 2016 được xây dựng trên cơ sở chữ quốc ngữ. Kế hoạch 2024-2025: bồi dưỡng 5.000 CBCCVC và giáo viên toàn tỉnh Hòa Bình.</p>
+          <div class="src-tags"><span class="src-tag policy">Chính sách</span><span class="src-tag lang">Ngôn ngữ</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <p class="src-group-label">🎓 Nghiên cứu học thuật</p>
+
+      <a class="src" href="https://vienngonnguhoc.vass.gov.vn/" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-bvhttdl">Viện<br>NNH</div>
+        <div class="src-content">
+          <div class="src-source-name">Viện Ngôn ngữ học — VASS <span class="src-badge">Học thuật</span></div>
+          <p class="src-title">Viện Ngôn ngữ học — Trang chủ</p>
+          <p class="src-desc">Đơn vị biên soạn Từ điển Mường-Việt (2001). Hiện đang hợp tác với Viettel AI phát triển mô hình ngôn ngữ lớn tiếng Việt. Số 9 Kim Mã Thượng, Hà Nội.</p>
+          <div class="src-tags"><span class="src-tag research">Nghiên cứu</span><span class="src-tag lang">Ngôn ngữ</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://ubdt.gov.vn/2011-02-18/77a8690045d4d96884a0aeaf6baf0786-cema.htm" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-bvhttdl">Ủy ban<br>DT</div>
+        <div class="src-content">
+          <div class="src-source-name">Ủy ban Dân tộc <span class="src-badge">Bộ ngành</span></div>
+          <p class="src-title">Nhà sàn cổ của người Mường</p>
+          <p class="src-desc">Tư liệu về kiến trúc nhà sàn Mường: 3 tầng chức năng, nguyên liệu gỗ quý, cột thiêng đặt bàn thờ tổ tiên, bếp là linh hồn ngôi nhà.</p>
+          <div class="src-tags"><span class="src-tag culture">Văn hóa</span><span class="src-tag research">Nghiên cứu</span></div>
+        </div>
+        <span class="src-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a class="src" href="https://vietnamnet.vn/de-trinh-unesco-mo-muong-nghe-thuat-cheo-la-di-san-van-hoa-phi-vat-the-2265164.html" target="_blank" rel="noopener noreferrer">
+        <div class="src-logo sl-phuongnam" style="background:linear-gradient(135deg,#0D4A8A,#0A2A60);color:#8ABCE8;font-size:9px;">Vietnam<br>Net</div>
+        <div class="src-content">
+          <div class="src-source-name">VietnamNet <span class="src-badge">Báo điện tử</span></div>
+          <p class="src-title">Đệ trình UNESCO Mo Mường, Nghệ thuật Chèo là Di sản phi vật thể</p>
+          <p class="src-desc">Mo Mường có 9 thể loại nghi lễ. Không có chữ viết riêng nên được thầy Mo truyền miệng qua nhiều thế hệ. Đây là di sản thiêng liêng cần bảo vệ khẩn cấp.</p>
+          <div class="src-tags"><span class="src-tag policy">Chính sách</span><span class="src-tag culture">Văn hóa</span></div>
         </div>
         <span class="src-arrow" aria-hidden="true">→</span>
       </a>
@@ -587,7 +842,7 @@ footer{background:#050F09;padding:28px;border-top:1px solid rgba(255,255,255,.05
     </div>
 
     <p style="font-size:12px;color:rgba(250,247,240,.25);margin-top:24px;text-align:center;">
-      Biết bài viết hay về tiếng Mường? <a href="ung-ho.html" style="color:rgba(125,232,220,.6);">Gửi gợi ý →</a>
+      Biết văn bản chính sách liên quan? <a href="ung-ho.html" style="color:rgba(125,232,220,.6);">Gửi gợi ý →</a>
     </p>
 
   </div>
